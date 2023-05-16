@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PetStoreManagementApp"
         mc:Ignorable="d"
-        Title="PetStoreManagementApp" Height="450" Width="800">
-    <Grid Background="White">
-        <Button Content="hi!" Width="50" Height="25" Background="Aqua" Click="Button_Click" Margin="375,205,375,204"></Button>
+        Title="PetStoreManagementApp - Version 0.0.1" Height="450" Width="800">
+    <Grid>
+        
     </Grid>
 </Window>
