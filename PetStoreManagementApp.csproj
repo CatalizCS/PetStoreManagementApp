@@ -38,7 +38,8 @@
     <StartupObject>PetStoreManagementApp.App</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -125,6 +126,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\email.png" />
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\linkedin.png" />
+    <Resource Include="Images\lock.png" />
+    <Resource Include="Images\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
