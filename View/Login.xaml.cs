@@ -15,14 +15,17 @@ namespace PetStoreManagementApp.View
             InitializeComponent();
         }
 
-        private void Border_Mouseown(object sender, MouseButtonEventArgs e)
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if(e.ChangedButton == MouseButton.Left)
             {
                 this.DragMove();
             }
         }
+
+        // Disable zoom
         private bool IsMaximized = false;
+
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if(e.ClickCount == 2)
