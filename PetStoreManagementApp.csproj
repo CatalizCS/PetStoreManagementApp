@@ -142,15 +142,12 @@
     <Resource Include="Images\user_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\password_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\close.png" />
-    <Resource Include="Images\email.png" />
-    <Resource Include="Images\facebook.png" />
-    <Resource Include="Images\linkedin.png" />
-    <Resource Include="Images\lock.png" />
-    <Resource Include="Images\search.png" />
+    <Resource Include="Images\LoginIcon\close.png" />
+    <Resource Include="Images\LoginIcon\email.png" />
+    <Resource Include="Images\LoginIcon\facebook.png" />
+    <Resource Include="Images\LoginIcon\linkedin.png" />
+    <Resource Include="Images\LoginIcon\lock.png" />
+    <Resource Include="Images\LoginIcon\search.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MainIcon\moritaka.png" />
