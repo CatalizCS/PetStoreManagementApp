@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetStoreManagementApp.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,10 +62,9 @@ namespace Login
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Password))
-            {
-                MessageBox.Show("Successfull login!");
-            }
+            Main f = new Main();
+            f.Show();
+            this.Hide();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

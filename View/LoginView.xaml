@@ -37,7 +37,7 @@
                                Margin="20 30"/>
                     
                     <Button Content="Sign up" 
-                            Style="{StaticResource button}"/>
+                            Style="{StaticResource button}" Width="110"/>
                 </StackPanel>
             </Grid>
 
@@ -135,7 +135,7 @@
 
                 <Button Content="Go!" 
                         Click="Button_Click" 
-                        Style="{StaticResource mainbutton}"/>
+                        Style="{StaticResource mainbutton}" Width="100"/>
 
             </StackPanel>
         </Border>

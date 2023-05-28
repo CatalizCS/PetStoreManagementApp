@@ -7,25 +7,24 @@
         mc:Ignorable="d"
         Title="Pet Store Manager - version 1.0" 
         WindowStartupLocation="CenterScreen" 
-        AllowsTransparency="True"
-        Height="450" 
-        Width="800">
+        Height="720" 
+        Width="1280">
 
 
     <Grid>
         <Border Background="#FFDEB4" 
                 BorderBrush="Black" 
                 CornerRadius="0 30 30 0" 
-                Margin="0,0,668,0">
+                Margin="0,0,1080,0">
 
         </Border>
 
         <!--Avatar-->
         <Ellipse HorizontalAlignment="Left" 
-                 Height="45" 
-                 Margin="44,20,0,0" 
+                 Margin="60,33,0,0" 
                  VerticalAlignment="Top" 
-                 Width="44" 
+                 Height="80" 
+                 Width="80" 
                  RenderTransformOrigin="-0.527,0.433">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="/Images/MainIcon/moritaka.png" />
@@ -39,11 +38,12 @@
                  FontFamily="Constantia"
                  TextAlignment="Center"
                  Height="32" 
-                 Margin="10,70,0,0" 
+                 Margin="0,118,0,0" 
                  TextWrapping="Wrap" 
                  Text="Moritaka Sofujinia" 
                  VerticalAlignment="Top" 
-                 Width="114">
+                 Width="200"
+                 FontSize="15">
             <TextBox.TextDecorations>
                 <TextDecoration Location="Underline" 
                                 PenOffset="0" 
@@ -61,13 +61,13 @@
                  BorderThickness="0"
                  FontFamily="Constantia"
                  TextAlignment="Center"
-                 Height="32" 
-                 Margin="10,86,0,0" 
+                 Height="30" 
+                 Margin="0,139,0,0" 
                  TextWrapping="Wrap" 
                  Text="Administrators" 
                  VerticalAlignment="Top" 
-                 Width="112"
-                 FontSize="10"/>
+                 Width="200"
+                 FontSize="13"/>
 
         <!--Pets Manager Button-->
         <Button x:Name="btnPetsManager"
@@ -76,10 +76,11 @@
                 FontFamily="Constantia"
                 Background="White"
                 BorderThickness="0"
-                Height="40" 
-                Margin="0,137,0,0" 
+                Height="60" 
+                Margin="0,190,0,0" 
                 VerticalAlignment="Top" 
-                Width="134"/>
+                Width="200"
+                FontSize="15"/>
 
         <!--Services Button-->
         <Button x:Name="btnServices"
@@ -88,10 +89,11 @@
                 FontFamily="Constantia"
                 Background="White"
                 BorderThickness="0"
-                Height="40" 
-                Margin="0,177,0,0" 
+                Height="60" 
+                Margin="0,250,0,0" 
                 VerticalAlignment="Top" 
-                Width="134"/>
+                Width="200"
+                FontSize="15"/>
 
         <!--Customers Button-->
         <Button x:Name="btnCustomers"
@@ -100,10 +102,11 @@
                 FontFamily="Constantia"
                 Background="White"
                 BorderThickness="0"
-                Height="40" 
-                Margin="0,217,0,0" 
+                Height="60" 
+                Margin="0,310,0,0" 
                 VerticalAlignment="Top" 
-                Width="134"/>
+                Width="200"
+                FontSize="15"/>
 
         <!--Warehouse Button-->
         <Button x:Name="btnWarehouse"
@@ -112,10 +115,11 @@
                 FontFamily="Constantia"
                 Background="White"
                 BorderThickness="0"
-                Height="40" 
-                Margin="0,257,0,0" 
+                Height="60" 
+                Margin="0,370,0,0" 
                 VerticalAlignment="Top" 
-                Width="134"/>
+                Width="201"
+                FontSize="15"/>
 
     </Grid>
 </Window>
