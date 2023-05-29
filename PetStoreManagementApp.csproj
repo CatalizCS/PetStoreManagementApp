@@ -145,5 +145,8 @@
   <ItemGroup>
     <Resource Include="Images\MainIcon\moritaka.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainIcon\lookup.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

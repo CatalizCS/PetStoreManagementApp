@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Pet Store Manager - version 1.0" 
         WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        AllowsTransparency="True"
         Height="720" 
         Width="1280">
 
@@ -71,7 +73,7 @@
 
         <!--Pets Manager Button-->
         <Button x:Name="btnPetsManager"
-                Content="Pets Manager" 
+                Content="Pets Manager"
                 HorizontalAlignment="Left"
                 FontFamily="Constantia"
                 Background="White"
@@ -80,7 +82,8 @@
                 Margin="0,190,0,0" 
                 VerticalAlignment="Top" 
                 Width="200"
-                FontSize="15"/>
+                FontSize="15">
+        </Button>
 
         <!--Services Button-->
         <Button x:Name="btnServices"
@@ -120,6 +123,94 @@
                 VerticalAlignment="Top" 
                 Width="201"
                 FontSize="15"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="551" Margin="245,139,0,0" VerticalAlignment="Top" Width="997"/>
+
+        <!--Searching Bar-->
+        <Border BorderBrush="Black" 
+                BorderThickness="2" 
+                CornerRadius="30" 
+                Margin="245,33,389,624" 
+                Height="NaN" 
+                Width="NaN">
+            <TextBox HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Stretch" 
+                     Background="Transparent" 
+                     BorderThickness="0" 
+                     Padding="5" />
+        </Border>
+
+        <!--Search Button-->
+        <Button FontSize="20"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="158" 
+                Height="63" 
+                Margin="923,33,0,0">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#F9FBE7" BorderThickness="0" CornerRadius="30">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/MainIcon/lookup.png"
+                       Height="30"
+                       Width="30"
+                       Margin="0 0 15 0"/>
+                <TextBlock Text="Search" 
+                           VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <!--Setting Button-->
+        <Button FontSize="20"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="60" 
+                Height="63" 
+                Margin="1102,33,0,0">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#F9FBE7" BorderThickness="0" CornerRadius="30">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <StackPanel>
+                <Image Source="/Images/MainIcon/setting.png"
+                       Height="30"
+                       Width="30"/>
+            </StackPanel>
+        </Button>
+
+        <!--Logout Button-->
+        <Button FontSize="20"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="60" 
+                Height="63" 
+                Margin="1182,33,0,0">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#F9FBE7" BorderThickness="0" CornerRadius="30">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <StackPanel>
+                <Image Source="/Images/MainIcon/logout.png"
+                       Height="30"
+                       Width="30"/>
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Window>
