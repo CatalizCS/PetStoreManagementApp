@@ -106,7 +106,7 @@
                         <TextBlock x:Name="textEmail" 
                                    MouseDown="textEmail_MouseDown" 
                                    Text="Email" 
-                                   Style="{StaticResource textHint}"/>
+                                   Style="{StaticResource textHint}" FontSize="16" FontWeight="Bold"/>
                         
                         <TextBox x:Name="txtEmail" 
                                  TextChanged="txtEmail_TextChanged" 
@@ -131,15 +131,17 @@
                         <TextBlock x:Name="textPassword" 
                                    MouseDown="textPassword_MouseDown" 
                                    Text="Password" 
-                                   Style="{StaticResource textHint}"/>
-                        
+                                   Style="{StaticResource textHint}" FontSize="16" FontWeight="Bold"/>
+
                         <PasswordBox x:Name="txtPassword" 
-                                     PasswordChanged="txtPassword_PasswordChanged" 
-                                     Style="{StaticResource textBox}"/>
+                                        PasswordChanged ="txtPassword_PasswordChanged"
+                                        PreviewKeyUp="txtPassword_previewKeyUp"
+                                        Style="{StaticResource textBox}"/>
+
                     </Grid>
                 </Border>
 
-                <Button Content="Go!" 
+                <Button Content="Login" 
                         Click="Button_Click" 
                         Style="{StaticResource mainbutton}" Width="100"/>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,5 +70,21 @@ namespace PetStoreManagementApp.View
         {
 
         }
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow(); // Create an instance of the Login window
+            var result = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close(); // Close the current Main window
+                mw.Show();
+            }
+            else
+            {
+                this.Show();
+            }
+            
+        }
+
     }
 }

@@ -205,6 +205,8 @@
 
         <!--Logout Button-->
         <Button FontSize="20"
+                x:Name="logoutButton"
+                Click="LogoutButton_Click"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 Width="60" 
@@ -220,7 +222,7 @@
             </Button.Template>
 
             <StackPanel>
-                <Image Source="/Images/MainIcon/logout.png"
+                <Image x:Name="___No_Name_" Source="/Images/MainIcon/logout.png"
                        Height="30"
                        Width="30"/>
             </StackPanel>

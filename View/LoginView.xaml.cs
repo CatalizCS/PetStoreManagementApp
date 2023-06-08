@@ -13,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SQLite;
+
+
 
 namespace Login
 {
@@ -25,6 +28,9 @@ namespace Login
         {
             InitializeComponent();
         }
+        //sqlite
+        //SqlConnection conn = new SqlConnection("D:\Kì 3 năm 2\Lập trình window.exe\PetStoreManagementApp-moritaka_page\PetStoreManagementApp-moritaka_page\Properties\petstore.db");
+        SQLiteConnection conn = new SQLiteConnection("Data Source=Source/petstore.db; version = 3;");
 
         private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -60,11 +66,65 @@ namespace Login
             }
         }
 
+
+        /*private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Password))
+            {
+                MessageBox.Show("Successfull login!");
+            }
+        }*/
+        private void txtPassword_previewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Login();
+            }
+        }
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Main f = new Main();
-            f.Show();
-            this.Hide();
+            Login();
+        }
+
+        private void Login()
+        {
+            string email = txtEmail.Text;
+            string password = txtPassword.Password;
+
+            // Query the database to check if the entered email and password match
+            string query = "SELECT ID FROM Employee WHERE ID = @ID AND Password = @Password;";
+
+            using (SQLiteCommand command = new SQLiteCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@ID", email);
+                command.Parameters.AddWithValue("@Password", password);
+
+                conn.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null) // If a matching record is found
+                {
+                    MessageBox.Show("You have successfully logged in!", "Login Success");
+                    txtPassword.Password = string.Empty;
+                    txtEmail.Focus();
+                    txtEmail.Text = string.Empty;
+                    Main m = new Main();
+                    m.Show();
+                    this.Hide();
+                }
+                else // If no matching record is found
+                {
+                    MessageBox.Show("Login Failed");
+                    txtPassword.Password = string.Empty;
+                    txtEmail.Focus();
+                    txtEmail.Text = string.Empty;
+                }
+
+                conn.Close();
+            }
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -79,5 +139,7 @@ namespace Login
         {
             Application.Current.Shutdown();
         }
+
+        
     }
 }
