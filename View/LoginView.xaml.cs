@@ -30,7 +30,7 @@ namespace Login
         }
         //sqlite
         //SqlConnection conn = new SqlConnection("D:\Kì 3 năm 2\Lập trình window.exe\PetStoreManagementApp-moritaka_page\PetStoreManagementApp-moritaka_page\Properties\petstore.db");
-        SQLiteConnection conn = new SQLiteConnection("Data Source=Source/petstore.db; version = 3;");
+        SQLiteConnection conn = new SQLiteConnection("Data Source=Source/storage.db; version = 3;");
 
         private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -94,7 +94,7 @@ namespace Login
             string password = txtPassword.Password;
 
             // Query the database to check if the entered email and password match
-            string query = "SELECT ID FROM Employee WHERE ID = @ID AND Password = @Password;";
+            string query = "SELECT ID FROM Employee_LoginData WHERE ID = @ID AND Password = @Password;";
 
             using (SQLiteCommand command = new SQLiteCommand(query, conn))
             {
