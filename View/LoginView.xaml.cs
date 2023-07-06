@@ -154,8 +154,7 @@ namespace Login
                 MessageBox.Show("Account creation failed.");
             }
         }
-
-
+        
         private bool signup()
         {
             string email = txtEmail.Text;
