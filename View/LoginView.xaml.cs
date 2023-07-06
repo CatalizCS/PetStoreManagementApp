@@ -140,6 +140,56 @@ namespace Login
             Application.Current.Shutdown();
         }
 
-        
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            bool success = signup();
+
+            if (success)
+            {
+                MessageBox.Show("Account creation successful.");
+                //Login();
+            }
+            else
+            {
+                MessageBox.Show("Account creation failed.");
+            }
+        }
+
+
+        private bool signup()
+        {
+            string email = txtEmail.Text;
+            string password = txtPassword.Password;
+
+            using (SQLiteConnection connect = new SQLiteConnection(conn))
+            {
+                connect.Open();
+
+                // Check if the account already exists
+                string checkSql = "SELECT COUNT(*) FROM Employee_LoginData WHERE ID = @ID";
+                using (SQLiteCommand checkCommand = new SQLiteCommand(checkSql, connect))
+                {
+                    checkCommand.Parameters.AddWithValue("@ID", email);
+                    int count = Convert.ToInt32(checkCommand.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        // Account already exists
+                        return false;
+                    }
+                }
+
+                // Account does not exist, proceed with insertion
+                string insertSql = "INSERT INTO Employee_LoginData (ID, Password) VALUES (@ID, @Password)";
+                using (SQLiteCommand insertCommand = new SQLiteCommand(insertSql, connect))
+                {
+                    insertCommand.Parameters.AddWithValue("@ID", email);
+                    insertCommand.Parameters.AddWithValue("@Password", password);
+                    insertCommand.ExecuteNonQuery();
+                }
+            }
+
+            return true;
+        }
     }
 }
