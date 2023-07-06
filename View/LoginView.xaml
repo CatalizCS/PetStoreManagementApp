@@ -43,7 +43,7 @@
                                Margin="20 30"/>
                     
                     <Button Content="Sign up" 
-                            Style="{StaticResource button}" Width="110"/>
+                            Style="{StaticResource button}" Width="110" Click="Button_Click_1"/>
                 </StackPanel>
             </Grid>
 
