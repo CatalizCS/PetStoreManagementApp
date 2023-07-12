@@ -168,9 +168,8 @@
             password.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             password.ForeColor = Color.FromArgb(169, 134, 115);
             password.Location = new Point(33, 198);
-            password.Multiline = true;
             password.Name = "password";
-            password.Size = new Size(237, 25);
+            password.Size = new Size(237, 16);
             password.TabIndex = 1;
             // 
             // username
@@ -180,9 +179,8 @@
             username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             username.ForeColor = Color.FromArgb(169, 134, 115);
             username.Location = new Point(33, 136);
-            username.Multiline = true;
             username.Name = "username";
-            username.Size = new Size(237, 25);
+            username.Size = new Size(237, 16);
             username.TabIndex = 0;
             // 
             // pictureBox3
