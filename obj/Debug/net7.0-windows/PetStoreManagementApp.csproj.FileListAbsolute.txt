@@ -26,3 +26,5 @@ C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetSto
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\bin\Debug\net7.0-windows\CircularProgressBar.dll
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\bin\Debug\net7.0-windows\WinFormAnimation.dll
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Dialogs.Form_Loader.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Settings.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Dialogs.form_SignUp.resources

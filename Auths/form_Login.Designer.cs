@@ -35,14 +35,14 @@
             pictureBox1 = new PictureBox();
             label4 = new Label();
             panel2 = new Panel();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            button2 = new Button();
-            button1 = new Button();
-            panel3 = new Panel();
-            panel6 = new Panel();
+            cancel_Button = new Button();
+            login_Button = new Button();
             password = new TextBox();
             username = new TextBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            panel3 = new Panel();
+            panel6 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -119,19 +119,71 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(cancel_Button);
+            panel2.Controls.Add(login_Button);
             panel2.Controls.Add(password);
             panel2.Controls.Add(username);
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(panel6);
             panel2.Controls.Add(label4);
             panel2.Location = new Point(286, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(273, 376);
             panel2.TabIndex = 3;
+            // 
+            // cancel_Button
+            // 
+            cancel_Button.BackColor = Color.Gray;
+            cancel_Button.FlatStyle = FlatStyle.Flat;
+            cancel_Button.Font = new Font("Constantia", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            cancel_Button.ForeColor = Color.White;
+            cancel_Button.Location = new Point(38, 284);
+            cancel_Button.Name = "cancel_Button";
+            cancel_Button.Size = new Size(204, 46);
+            cancel_Button.TabIndex = 3;
+            cancel_Button.Text = "Cancel";
+            cancel_Button.UseVisualStyleBackColor = false;
+            cancel_Button.Click += cancel_Button_Click;
+            // 
+            // login_Button
+            // 
+            login_Button.BackColor = Color.FromArgb(255, 222, 180);
+            login_Button.FlatStyle = FlatStyle.Flat;
+            login_Button.Font = new Font("Constantia", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            login_Button.ForeColor = Color.Black;
+            login_Button.Location = new Point(38, 232);
+            login_Button.Name = "login_Button";
+            login_Button.Size = new Size(204, 46);
+            login_Button.TabIndex = 2;
+            login_Button.Text = "Login";
+            login_Button.UseVisualStyleBackColor = false;
+            login_Button.Click += login_Button_Click;
+            // 
+            // password
+            // 
+            password.BackColor = Color.White;
+            password.BorderStyle = BorderStyle.None;
+            password.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            password.ForeColor = Color.FromArgb(169, 134, 115);
+            password.Location = new Point(33, 198);
+            password.Multiline = true;
+            password.Name = "password";
+            password.Size = new Size(237, 25);
+            password.TabIndex = 1;
+            // 
+            // username
+            // 
+            username.BackColor = Color.White;
+            username.BorderStyle = BorderStyle.None;
+            username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            username.ForeColor = Color.FromArgb(169, 134, 115);
+            username.Location = new Point(33, 136);
+            username.Multiline = true;
+            username.Name = "username";
+            username.Size = new Size(237, 25);
+            username.TabIndex = 0;
             // 
             // pictureBox3
             // 
@@ -153,32 +205,6 @@
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Gray;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Constantia", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(38, 284);
-            button2.Name = "button2";
-            button2.Size = new Size(204, 46);
-            button2.TabIndex = 18;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(255, 222, 180);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Constantia", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(38, 232);
-            button1.Name = "button1";
-            button1.Size = new Size(204, 46);
-            button1.TabIndex = 18;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(124, 139, 114);
@@ -194,30 +220,6 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(281, 2);
             panel6.TabIndex = 17;
-            // 
-            // password
-            // 
-            password.BackColor = Color.White;
-            password.BorderStyle = BorderStyle.None;
-            password.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            password.ForeColor = Color.FromArgb(169, 134, 115);
-            password.Location = new Point(33, 201);
-            password.Multiline = true;
-            password.Name = "password";
-            password.Size = new Size(237, 25);
-            password.TabIndex = 3;
-            // 
-            // username
-            // 
-            username.BackColor = Color.White;
-            username.BorderStyle = BorderStyle.None;
-            username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            username.ForeColor = Color.FromArgb(169, 134, 115);
-            username.Location = new Point(33, 139);
-            username.Multiline = true;
-            username.Name = "username";
-            username.Size = new Size(237, 25);
-            username.TabIndex = 3;
             // 
             // form_Login
             // 
@@ -254,9 +256,9 @@
         private Panel panel6;
         private Panel panel3;
         private TextBox password;
-        private Button button1;
+        private Button login_Button;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private Button button2;
+        private Button cancel_Button;
     }
 }

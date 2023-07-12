@@ -40,7 +40,7 @@ namespace PetStoreManagementApp.Dialogs
         private async void Form_Loader_Load(object sender, EventArgs e)
         {
             ConfigReader configReader = new ConfigReader("config.cfg");
-           
+
             if (configReader.validateConfig())
             {
                 configReader.ReadConfig();
@@ -52,21 +52,35 @@ namespace PetStoreManagementApp.Dialogs
                 // check database connection
                 if (DatabaseConnection.Instance.IsConnected())
                 {
-                    loadingBar.Value = 100;
+                    loadingBar.Value = 70;
                     await Task.Delay(1000);
+                    this.Hide();
+                    loaded = true;
                 }
                 else
                 {
                     MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //Application.Exit();
+                    Application.Exit();
                 }
 
+                // output all table name in database to console
+                DatabaseConnection.Instance.test();
+
                 new form_Login().Show();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Không thể đọc file cấu hình", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //Application.Exit();
+                Application.Exit();
             }
+
+            // check version from github and compare with current version
+            if (await VersionChecker.Instance.checkVersion())
+            {
+                MessageBox.Show("Đã có version mới!", "Update", MessageBoxButtons.OK);
+            }
+            loadingBar.Value = 100;
+
         }
     }
 }

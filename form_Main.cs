@@ -1,7 +1,8 @@
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using PetStoreManagementApp.Auths;
 using System.Windows.Forms;
 using PetStoreManagementApp.Dialogs;
+using PetStoreManagementApp.Libs.DTO;
 
 namespace PetStoreManagementApp
 {
@@ -128,7 +129,34 @@ namespace PetStoreManagementApp
         {
             Application.Exit();
         }
-
         // End button features
+
+
+        // Loading form
+        private void form_Main_Load(object sender, EventArgs e)
+        {
+            username.Text = DTO_UserInfo.Instance.LastName + " " + DTO_UserInfo.Instance.FirstName;
+            switch (DTO_LoginData.Instance.permission)
+            {
+                case Permission.admin:
+                    permission.Text = "Admin";
+                    break;
+                case Permission.employee:
+                    permission.Text = "Employee";
+                    break;
+                default:
+                    permission.Text = "Customer";
+                    break;
+            }
+
+
+            if (DTO_UserInfo.Instance.AvatarURL != "")
+            {
+                avatar_Image.Image = Image.FromFile(Path.Combine(DTO_UserInfo.Instance.AvatarURL));
+            } else
+            {
+                avatar_Image.Image = Properties.Resources.user_24px;
+            }
+        }
     }
 }

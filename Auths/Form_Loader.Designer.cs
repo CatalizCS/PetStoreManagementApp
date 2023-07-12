@@ -123,7 +123,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Loader";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "s";
+            Text = "PetStoreManagement - Loading";
             Load += Form_Loader_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

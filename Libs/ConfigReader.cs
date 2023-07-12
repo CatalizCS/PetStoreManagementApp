@@ -8,20 +8,20 @@ namespace PetStoreManagementApp.Libs
 {
     public class ConfigReader
     {
-        private string configFilePath;
+        private PathManagement configFilePath;
         string currentDirectory = Directory.GetCurrentDirectory();
-        private Dictionary<String, String> ConfigValue = new Dictionary<string, string>();
+        private Dictionary<string, string> ConfigValue = new Dictionary<string, string>();
 
         public ConfigReader(string configFilePath)
         {
-            this.configFilePath = configFilePath;
+            this.configFilePath = new PathManagement(configFilePath);
         }
 
         public bool validateConfig()
         {
             try
             {
-                string[] lines = File.ReadAllLines(Path.Combine(currentDirectory, configFilePath));
+                string[] lines = File.ReadAllLines(Path.Combine(currentDirectory, configFilePath.fullPath));
                 foreach (string line in lines)
                 {
                     string[] keyValuePair = line.Split('=');
@@ -38,7 +38,7 @@ namespace PetStoreManagementApp.Libs
         
         public bool ReadConfig()
         {
-            string[] lines = File.ReadAllLines(Path.Combine(currentDirectory, configFilePath));
+            string[] lines = File.ReadAllLines(Path.Combine(currentDirectory, configFilePath.fullPath));
             foreach (string line in lines)
             {
                 string[] keyValuePair = line.Split('=');
@@ -68,7 +68,7 @@ namespace PetStoreManagementApp.Libs
                     lines[i] = entry.Key + "=" + entry.Value;
                     i++;
                 }
-                File.WriteAllLines(Path.Combine(currentDirectory, configFilePath), lines);
+                File.WriteAllLines(Path.Combine(currentDirectory, configFilePath.fullPath), lines);
             }
             catch (Exception e)
             {

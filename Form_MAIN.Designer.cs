@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
-            perms = new Label();
+            permission = new Label();
             username = new Label();
             avatar_Image = new CircularPictureBox();
             slideBar_Container = new FlowLayoutPanel();
@@ -82,16 +82,16 @@
             panel1.Size = new Size(243, 2);
             panel1.TabIndex = 2;
             // 
-            // perms
+            // permission
             // 
-            perms.AutoSize = true;
-            perms.Font = new Font("Constantia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            perms.ForeColor = Color.FromArgb(95, 101, 96);
-            perms.Location = new Point(69, 30);
-            perms.Name = "perms";
-            perms.Size = new Size(48, 15);
-            perms.TabIndex = 1;
-            perms.Text = "Admin";
+            permission.AutoSize = true;
+            permission.Font = new Font("Constantia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            permission.ForeColor = Color.FromArgb(95, 101, 96);
+            permission.Location = new Point(69, 30);
+            permission.Name = "permission";
+            permission.Size = new Size(48, 15);
+            permission.TabIndex = 1;
+            permission.Text = "Admin";
             // 
             // username
             // 
@@ -106,7 +106,7 @@
             // 
             // avatar_Image
             // 
-            avatar_Image.Image = Properties.Resources.test_avatar;
+            avatar_Image.Image = Properties.Resources.user_24px;
             avatar_Image.Location = new Point(3, 3);
             avatar_Image.MaximumSize = new Size(60, 60);
             avatar_Image.MinimumSize = new Size(35, 35);
@@ -172,7 +172,7 @@
             // 
             info_Container.Controls.Add(avatar_Image);
             info_Container.Controls.Add(username);
-            info_Container.Controls.Add(perms);
+            info_Container.Controls.Add(permission);
             info_Container.Location = new Point(3, 47);
             info_Container.Name = "info_Container";
             info_Container.Size = new Size(243, 69);
@@ -191,8 +191,8 @@
             petManager_Button.Name = "petManager_Button";
             petManager_Button.Size = new Size(243, 38);
             petManager_Button.TabIndex = 1;
-            petManager_Button.Text = "Pet Manager";
-            petManager_Button.TextAlign = ContentAlignment.TopCenter;
+            petManager_Button.Text = "      Pet Manager";
+            petManager_Button.TextAlign = ContentAlignment.MiddleLeft;
             petManager_Button.UseVisualStyleBackColor = false;
             // 
             // panel6
@@ -470,6 +470,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "form_Main";
             Text = "Form1";
+            Load += form_Main_Load;
             ((System.ComponentModel.ISupportInitialize)avatar_Image).EndInit();
             slideBar_Container.ResumeLayout(false);
             menu_container.ResumeLayout(false);
@@ -490,7 +491,7 @@
         #endregion
         private CircularPictureBox avatar_Image;
         private Panel panel1;
-        private Label perms;
+        private Label permission;
         private Label username;
         private FlowLayoutPanel slideBar_Container;
         private Panel info_Container;
