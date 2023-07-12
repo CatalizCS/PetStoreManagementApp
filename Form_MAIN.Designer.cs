@@ -396,7 +396,7 @@
             // 
             // headerBar
             // 
-            headerBar.BackColor = Color.FromArgb(252, 220, 180);
+            headerBar.BackColor = Color.FromArgb(250, 240, 215);
             headerBar.Controls.Add(containerName);
             headerBar.Controls.Add(closeApp_Button);
             headerBar.Controls.Add(logout_Button);
@@ -450,7 +450,7 @@
             // 
             // mainInterface
             // 
-            mainInterface.BackColor = Color.FromArgb(115, 98, 99);
+            mainInterface.BackColor = Color.White;
             mainInterface.Dock = DockStyle.Fill;
             mainInterface.Location = new Point(249, 41);
             mainInterface.MaximumSize = new Size(1163, 543);

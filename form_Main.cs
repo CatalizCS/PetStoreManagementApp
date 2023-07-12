@@ -153,7 +153,8 @@ namespace PetStoreManagementApp
             if (DTO_UserInfo.Instance.AvatarURL != "")
             {
                 avatar_Image.Image = Image.FromFile(Path.Combine(DTO_UserInfo.Instance.AvatarURL));
-            } else
+            }
+            else
             {
                 avatar_Image.Image = Properties.Resources.user_24px;
             }
