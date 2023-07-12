@@ -54,7 +54,7 @@
             lab_examined = new Label();
             checkBox_vaccinated = new CheckBox();
             checkBox_examined = new CheckBox();
-            checkBox1 = new CheckBox();
+            checkBox_goodhealth = new CheckBox();
             btn_add = new Button();
             btn_edit = new Button();
             btn_delete = new Button();
@@ -277,15 +277,15 @@
             checkBox_examined.TabIndex = 17;
             checkBox_examined.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBox_goodhealth
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(418, 128);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(15, 14);
-            checkBox1.TabIndex = 18;
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBox_goodhealth.AutoSize = true;
+            checkBox_goodhealth.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox_goodhealth.Location = new Point(418, 128);
+            checkBox_goodhealth.Name = "checkBox_goodhealth";
+            checkBox_goodhealth.Size = new Size(15, 14);
+            checkBox_goodhealth.TabIndex = 18;
+            checkBox_goodhealth.UseVisualStyleBackColor = true;
             // 
             // btn_add
             // 
@@ -332,7 +332,7 @@
             Controls.Add(btn_delete);
             Controls.Add(btn_edit);
             Controls.Add(btn_add);
-            Controls.Add(checkBox1);
+            Controls.Add(checkBox_goodhealth);
             Controls.Add(checkBox_examined);
             Controls.Add(checkBox_vaccinated);
             Controls.Add(lab_examined);
@@ -379,7 +379,7 @@
         private Label lab_examined;
         private CheckBox checkBox_vaccinated;
         private CheckBox checkBox_examined;
-        private CheckBox checkBox1;
+        private CheckBox checkBox_goodhealth;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn age;
         private DataGridViewTextBoxColumn species;
