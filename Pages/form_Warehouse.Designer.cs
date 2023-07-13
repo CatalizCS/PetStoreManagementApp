@@ -239,6 +239,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(248, 232, 238);
             ClientSize = new Size(800, 450);
             Controls.Add(btn_uwu);
             Controls.Add(btn_delete);

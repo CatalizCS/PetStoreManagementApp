@@ -159,5 +159,20 @@ namespace PetStoreManagementApp
                 avatar_Image.Image = Properties.Resources.user_24px;
             }
         }
+
+        private void slideBar_Container_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logout_Button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

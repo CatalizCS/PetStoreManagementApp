@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
             panel1 = new Panel();
             permission = new Label();
             username = new Label();
@@ -61,6 +62,7 @@
             closeApp_Button = new Button();
             logout_Button = new Button();
             mainInterface = new Panel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)avatar_Image).BeginInit();
             slideBar_Container.SuspendLayout();
             menu_container.SuspendLayout();
@@ -76,8 +78,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(191, 191, 138);
-            panel1.Location = new Point(3, 122);
+            panel1.BackColor = Color.White;
+            panel1.Location = new Point(3, 196);
             panel1.Name = "panel1";
             panel1.Size = new Size(243, 2);
             panel1.TabIndex = 2;
@@ -87,7 +89,7 @@
             permission.AutoSize = true;
             permission.Font = new Font("Constantia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             permission.ForeColor = Color.FromArgb(95, 101, 96);
-            permission.Location = new Point(69, 30);
+            permission.Location = new Point(90, 76);
             permission.Name = "permission";
             permission.Size = new Size(48, 15);
             permission.TabIndex = 1;
@@ -98,7 +100,7 @@
             username.AutoSize = true;
             username.Font = new Font("Constantia", 12F, FontStyle.Bold, GraphicsUnit.Point);
             username.ForeColor = Color.FromArgb(88, 85, 78);
-            username.Location = new Point(69, 11);
+            username.Location = new Point(60, 91);
             username.Name = "username";
             username.Size = new Size(113, 19);
             username.TabIndex = 1;
@@ -107,7 +109,7 @@
             // avatar_Image
             // 
             avatar_Image.Image = Properties.Resources.user_24px;
-            avatar_Image.Location = new Point(3, 3);
+            avatar_Image.Location = new Point(84, 13);
             avatar_Image.MaximumSize = new Size(60, 60);
             avatar_Image.MinimumSize = new Size(35, 35);
             avatar_Image.Name = "avatar_Image";
@@ -118,7 +120,7 @@
             // 
             // slideBar_Container
             // 
-            slideBar_Container.BackColor = Color.FromArgb(255, 222, 180);
+            slideBar_Container.BackColor = Color.FromArgb(255, 217, 192);
             slideBar_Container.Controls.Add(menu_container);
             slideBar_Container.Controls.Add(info_Container);
             slideBar_Container.Controls.Add(panel1);
@@ -163,7 +165,7 @@
             menu_Button.Name = "menu_Button";
             menu_Button.Size = new Size(243, 38);
             menu_Button.TabIndex = 1;
-            menu_Button.Text = "☰       Menu";
+            menu_Button.Text = "☰      ";
             menu_Button.TextAlign = ContentAlignment.MiddleLeft;
             menu_Button.UseVisualStyleBackColor = false;
             menu_Button.Click += menu_Button_Click;
@@ -175,30 +177,32 @@
             info_Container.Controls.Add(permission);
             info_Container.Location = new Point(3, 47);
             info_Container.Name = "info_Container";
-            info_Container.Size = new Size(243, 69);
+            info_Container.Size = new Size(243, 143);
             info_Container.TabIndex = 4;
             // 
             // petManager_Button
             // 
+            petManager_Button.FlatAppearance.BorderSize = 0;
+            petManager_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             petManager_Button.FlatStyle = FlatStyle.Flat;
-            petManager_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            petManager_Button.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             petManager_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            petManager_Button.Image = Properties.Resources.logo_24px;
+            petManager_Button.Image = (Image)resources.GetObject("petManager_Button.Image");
             petManager_Button.ImageAlign = ContentAlignment.MiddleLeft;
-            petManager_Button.Location = new Point(3, 130);
+            petManager_Button.Location = new Point(3, 204);
             petManager_Button.MaximumSize = new Size(243, 38);
             petManager_Button.MinimumSize = new Size(38, 38);
             petManager_Button.Name = "petManager_Button";
             petManager_Button.Size = new Size(243, 38);
             petManager_Button.TabIndex = 1;
-            petManager_Button.Text = "      Pet Manager";
+            petManager_Button.Text = "              Pet Manager";
             petManager_Button.TextAlign = ContentAlignment.MiddleLeft;
             petManager_Button.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
-            panel6.BackColor = Color.FromArgb(124, 139, 114);
-            panel6.Location = new Point(3, 174);
+            panel6.BackColor = Color.White;
+            panel6.Location = new Point(3, 248);
             panel6.Name = "panel6";
             panel6.Size = new Size(243, 2);
             panel6.TabIndex = 15;
@@ -206,7 +210,7 @@
             // panel5
             // 
             panel5.Controls.Add(service_Button);
-            panel5.Location = new Point(3, 182);
+            panel5.Location = new Point(3, 256);
             panel5.MaximumSize = new Size(243, 38);
             panel5.MinimumSize = new Size(42, 38);
             panel5.Name = "panel5";
@@ -215,10 +219,12 @@
             // 
             // service_Button
             // 
+            service_Button.FlatAppearance.BorderSize = 0;
+            service_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             service_Button.FlatStyle = FlatStyle.Flat;
-            service_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            service_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             service_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            service_Button.Image = Properties.Resources.customer_service_24px;
+            service_Button.Image = (Image)resources.GetObject("service_Button.Image");
             service_Button.ImageAlign = ContentAlignment.MiddleLeft;
             service_Button.Location = new Point(0, 0);
             service_Button.MaximumSize = new Size(243, 38);
@@ -226,14 +232,14 @@
             service_Button.Name = "service_Button";
             service_Button.Size = new Size(243, 38);
             service_Button.TabIndex = 12;
-            service_Button.Text = "      Service";
+            service_Button.Text = "              Service";
             service_Button.TextAlign = ContentAlignment.MiddleLeft;
             service_Button.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(124, 139, 114);
-            panel7.Location = new Point(3, 226);
+            panel7.Location = new Point(3, 300);
             panel7.Name = "panel7";
             panel7.Size = new Size(243, 2);
             panel7.TabIndex = 15;
@@ -241,7 +247,7 @@
             // panel4
             // 
             panel4.Controls.Add(customer_Button);
-            panel4.Location = new Point(3, 234);
+            panel4.Location = new Point(3, 308);
             panel4.MaximumSize = new Size(243, 38);
             panel4.MinimumSize = new Size(42, 38);
             panel4.Name = "panel4";
@@ -250,10 +256,12 @@
             // 
             // customer_Button
             // 
+            customer_Button.FlatAppearance.BorderSize = 0;
+            customer_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             customer_Button.FlatStyle = FlatStyle.Flat;
-            customer_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            customer_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             customer_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            customer_Button.Image = Properties.Resources.customer_24px;
+            customer_Button.Image = (Image)resources.GetObject("customer_Button.Image");
             customer_Button.ImageAlign = ContentAlignment.MiddleLeft;
             customer_Button.Location = new Point(0, 0);
             customer_Button.MaximumSize = new Size(243, 38);
@@ -261,14 +269,14 @@
             customer_Button.Name = "customer_Button";
             customer_Button.Size = new Size(243, 38);
             customer_Button.TabIndex = 10;
-            customer_Button.Text = "      Customers";
+            customer_Button.Text = "              Customers";
             customer_Button.TextAlign = ContentAlignment.MiddleLeft;
             customer_Button.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(124, 139, 114);
-            panel8.Location = new Point(3, 278);
+            panel8.Location = new Point(3, 352);
             panel8.Name = "panel8";
             panel8.Size = new Size(243, 2);
             panel8.TabIndex = 15;
@@ -276,7 +284,7 @@
             // panel2
             // 
             panel2.Controls.Add(wareHouse_Button);
-            panel2.Location = new Point(3, 286);
+            panel2.Location = new Point(3, 360);
             panel2.MaximumSize = new Size(243, 38);
             panel2.MinimumSize = new Size(42, 38);
             panel2.Name = "panel2";
@@ -285,10 +293,12 @@
             // 
             // wareHouse_Button
             // 
+            wareHouse_Button.FlatAppearance.BorderSize = 0;
+            wareHouse_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             wareHouse_Button.FlatStyle = FlatStyle.Flat;
-            wareHouse_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            wareHouse_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             wareHouse_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            wareHouse_Button.Image = Properties.Resources.warehouse_24px;
+            wareHouse_Button.Image = (Image)resources.GetObject("wareHouse_Button.Image");
             wareHouse_Button.ImageAlign = ContentAlignment.MiddleLeft;
             wareHouse_Button.Location = new Point(0, 0);
             wareHouse_Button.MaximumSize = new Size(243, 38);
@@ -296,14 +306,14 @@
             wareHouse_Button.Name = "wareHouse_Button";
             wareHouse_Button.Size = new Size(243, 38);
             wareHouse_Button.TabIndex = 12;
-            wareHouse_Button.Text = "      Warehouse";
+            wareHouse_Button.Text = "              Warehouse";
             wareHouse_Button.TextAlign = ContentAlignment.MiddleLeft;
             wareHouse_Button.UseVisualStyleBackColor = false;
             // 
             // panel10
             // 
             panel10.BackColor = Color.FromArgb(124, 139, 114);
-            panel10.Location = new Point(3, 330);
+            panel10.Location = new Point(3, 404);
             panel10.Name = "panel10";
             panel10.Size = new Size(243, 2);
             panel10.TabIndex = 16;
@@ -311,7 +321,7 @@
             // panel11
             // 
             panel11.Controls.Add(about_Button);
-            panel11.Location = new Point(3, 338);
+            panel11.Location = new Point(3, 412);
             panel11.MaximumSize = new Size(243, 38);
             panel11.MinimumSize = new Size(42, 38);
             panel11.Name = "panel11";
@@ -320,10 +330,12 @@
             // 
             // about_Button
             // 
+            about_Button.FlatAppearance.BorderSize = 0;
+            about_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             about_Button.FlatStyle = FlatStyle.Flat;
-            about_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            about_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             about_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            about_Button.Image = Properties.Resources.info_24px;
+            about_Button.Image = (Image)resources.GetObject("about_Button.Image");
             about_Button.ImageAlign = ContentAlignment.MiddleLeft;
             about_Button.Location = new Point(0, 0);
             about_Button.MaximumSize = new Size(243, 38);
@@ -331,21 +343,21 @@
             about_Button.Name = "about_Button";
             about_Button.Size = new Size(243, 38);
             about_Button.TabIndex = 12;
-            about_Button.Text = "      About";
+            about_Button.Text = "              About";
             about_Button.TextAlign = ContentAlignment.MiddleLeft;
             about_Button.UseVisualStyleBackColor = false;
             // 
             // panel12
             // 
-            panel12.Location = new Point(3, 382);
+            panel12.Location = new Point(3, 456);
             panel12.Name = "panel12";
-            panel12.Size = new Size(243, 109);
+            panel12.Size = new Size(243, 33);
             panel12.TabIndex = 17;
             // 
             // panel13
             // 
             panel13.Controls.Add(setting_Button);
-            panel13.Location = new Point(3, 497);
+            panel13.Location = new Point(3, 495);
             panel13.MaximumSize = new Size(243, 38);
             panel13.MinimumSize = new Size(42, 38);
             panel13.Name = "panel13";
@@ -354,10 +366,11 @@
             // 
             // setting_Button
             // 
+            setting_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             setting_Button.FlatStyle = FlatStyle.Flat;
-            setting_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            setting_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             setting_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            setting_Button.Image = Properties.Resources.setting_24px;
+            setting_Button.Image = (Image)resources.GetObject("setting_Button.Image");
             setting_Button.ImageAlign = ContentAlignment.MiddleLeft;
             setting_Button.Location = new Point(0, 0);
             setting_Button.MaximumSize = new Size(243, 38);
@@ -365,14 +378,14 @@
             setting_Button.Name = "setting_Button";
             setting_Button.Size = new Size(243, 38);
             setting_Button.TabIndex = 12;
-            setting_Button.Text = "      Settings";
+            setting_Button.Text = "              Settings";
             setting_Button.TextAlign = ContentAlignment.MiddleLeft;
             setting_Button.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
             panel9.Controls.Add(versionNumber);
-            panel9.Location = new Point(3, 541);
+            panel9.Location = new Point(3, 539);
             panel9.MaximumSize = new Size(243, 38);
             panel9.MinimumSize = new Size(42, 38);
             panel9.Name = "panel9";
@@ -387,7 +400,7 @@
             versionNumber.Name = "versionNumber";
             versionNumber.Size = new Size(78, 15);
             versionNumber.TabIndex = 0;
-            versionNumber.Text = "Version 0.0.1";
+            versionNumber.Text = "Version 1.0.1";
             // 
             // slideBarTimer
             // 
@@ -397,6 +410,7 @@
             // headerBar
             // 
             headerBar.BackColor = Color.FromArgb(250, 240, 215);
+            headerBar.Controls.Add(button1);
             headerBar.Controls.Add(containerName);
             headerBar.Controls.Add(closeApp_Button);
             headerBar.Controls.Add(logout_Button);
@@ -412,25 +426,25 @@
             // containerName
             // 
             containerName.AutoSize = true;
-            containerName.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            containerName.Font = new Font("Lato", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             containerName.ForeColor = Color.FromArgb(65, 67, 54);
             containerName.Location = new Point(6, 5);
             containerName.Name = "containerName";
-            containerName.Size = new Size(250, 31);
+            containerName.Size = new Size(209, 28);
             containerName.TabIndex = 0;
-            containerName.Text = "CONTAINER_NAME";
+            containerName.Text = "  Pet Store Manager";
+            containerName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // closeApp_Button
             // 
             closeApp_Button.FlatAppearance.BorderSize = 0;
             closeApp_Button.FlatStyle = FlatStyle.Flat;
             closeApp_Button.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            closeApp_Button.ImageAlign = ContentAlignment.MiddleRight;
+            closeApp_Button.Image = (Image)resources.GetObject("closeApp_Button.Image");
             closeApp_Button.Location = new Point(735, 2);
             closeApp_Button.Name = "closeApp_Button";
             closeApp_Button.Size = new Size(33, 36);
             closeApp_Button.TabIndex = 5;
-            closeApp_Button.Text = "X";
             closeApp_Button.UseVisualStyleBackColor = true;
             closeApp_Button.Click += closeApp_Button_Click;
             // 
@@ -438,15 +452,14 @@
             // 
             logout_Button.FlatAppearance.BorderSize = 0;
             logout_Button.FlatStyle = FlatStyle.Flat;
-            logout_Button.Image = Properties.Resources.logout_24px;
-            logout_Button.ImageAlign = ContentAlignment.MiddleRight;
-            logout_Button.Location = new Point(641, 3);
+            logout_Button.Image = (Image)resources.GetObject("logout_Button.Image");
+            logout_Button.Location = new Point(695, 3);
             logout_Button.Name = "logout_Button";
-            logout_Button.Size = new Size(78, 36);
+            logout_Button.Size = new Size(34, 36);
             logout_Button.TabIndex = 5;
-            logout_Button.Text = "Logout";
             logout_Button.TextAlign = ContentAlignment.MiddleLeft;
             logout_Button.UseVisualStyleBackColor = true;
+            logout_Button.Click += logout_Button_Click;
             // 
             // mainInterface
             // 
@@ -458,6 +471,20 @@
             mainInterface.Name = "mainInterface";
             mainInterface.Size = new Size(771, 541);
             mainInterface.TabIndex = 5;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(651, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(38, 36);
+            button1.TabIndex = 6;
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // form_Main
             // 
@@ -521,5 +548,6 @@
         private Button closeApp_Button;
         private Label containerName;
         private Panel mainInterface;
+        private Button button1;
     }
 }
