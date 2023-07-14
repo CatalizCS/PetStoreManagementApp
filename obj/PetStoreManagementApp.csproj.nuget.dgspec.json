@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Moritaka\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {}
+    "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Moritaka\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {
+    "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Moritaka\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
+        "projectUniqueName": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
         "projectName": "PetStoreManagementApp",
-        "projectPath": "C:\\Users\\Moritaka\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
-        "packagesPath": "C:\\Users\\Moritaka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Moritaka\\Desktop\\PetStoreManagementApp\\obj\\",
+        "projectPath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
+        "packagesPath": "C:\\Users\\CatalizCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Moritaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\CatalizCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
