@@ -38,6 +38,7 @@ namespace PetStoreManagementApp
             menu_container = new Panel();
             menu_Button = new Button();
             info_Container = new Panel();
+            panel14 = new Panel();
             petManager_Button = new Button();
             panel6 = new Panel();
             panel5 = new Panel();
@@ -58,15 +59,17 @@ namespace PetStoreManagementApp
             versionNumber = new Label();
             slideBarTimer = new System.Windows.Forms.Timer(components);
             headerBar = new Panel();
+            notification_Button = new Button();
+            darkmode_Button = new Button();
             containerName = new Label();
             closeApp_Button = new Button();
             logout_Button = new Button();
             mainInterface = new Panel();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)avatar_Image).BeginInit();
             slideBar_Container.SuspendLayout();
             menu_container.SuspendLayout();
             info_Container.SuspendLayout();
+            panel14.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -79,41 +82,41 @@ namespace PetStoreManagementApp
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Location = new Point(3, 196);
+            panel1.Location = new Point(3, 190);
             panel1.Name = "panel1";
             panel1.Size = new Size(243, 2);
             panel1.TabIndex = 2;
             // 
             // permission
             // 
-            permission.AutoSize = true;
             permission.Font = new Font("Constantia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             permission.ForeColor = Color.FromArgb(95, 101, 96);
-            permission.Location = new Point(90, 76);
+            permission.Location = new Point(60, 83);
             permission.Name = "permission";
-            permission.Size = new Size(48, 15);
+            permission.Size = new Size(80, 27);
             permission.TabIndex = 1;
-            permission.Text = "Admin";
+            permission.Text = "Employee";
+            permission.TextAlign = ContentAlignment.TopCenter;
             // 
             // username
             // 
-            username.AutoSize = true;
             username.Font = new Font("Constantia", 12F, FontStyle.Bold, GraphicsUnit.Point);
             username.ForeColor = Color.FromArgb(88, 85, 78);
-            username.Location = new Point(60, 91);
+            username.Location = new Point(43, 100);
             username.Name = "username";
             username.Size = new Size(113, 19);
             username.TabIndex = 1;
             username.Text = "Tama Nguyen";
+            username.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // avatar_Image
             // 
             avatar_Image.Image = Properties.Resources.user_24px;
-            avatar_Image.Location = new Point(84, 13);
-            avatar_Image.MaximumSize = new Size(60, 60);
+            avatar_Image.Location = new Point(60, 0);
+            avatar_Image.MaximumSize = new Size(80, 80);
             avatar_Image.MinimumSize = new Size(35, 35);
             avatar_Image.Name = "avatar_Image";
-            avatar_Image.Size = new Size(60, 60);
+            avatar_Image.Size = new Size(80, 80);
             avatar_Image.SizeMode = PictureBoxSizeMode.Zoom;
             avatar_Image.TabIndex = 0;
             avatar_Image.TabStop = false;
@@ -139,7 +142,7 @@ namespace PetStoreManagementApp
             slideBar_Container.Dock = DockStyle.Left;
             slideBar_Container.Location = new Point(0, 0);
             slideBar_Container.MaximumSize = new Size(249, 582);
-            slideBar_Container.MinimumSize = new Size(42, 582);
+            slideBar_Container.MinimumSize = new Size(65, 582);
             slideBar_Container.Name = "slideBar_Container";
             slideBar_Container.Size = new Size(249, 582);
             slideBar_Container.TabIndex = 3;
@@ -156,29 +159,38 @@ namespace PetStoreManagementApp
             // 
             // menu_Button
             // 
+            menu_Button.FlatAppearance.BorderSize = 0;
             menu_Button.FlatStyle = FlatStyle.Flat;
             menu_Button.Font = new Font("Constantia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
             menu_Button.ForeColor = Color.FromArgb(88, 85, 78);
             menu_Button.Location = new Point(0, 0);
             menu_Button.MaximumSize = new Size(243, 38);
-            menu_Button.MinimumSize = new Size(38, 38);
+            menu_Button.MinimumSize = new Size(65, 38);
             menu_Button.Name = "menu_Button";
             menu_Button.Size = new Size(243, 38);
             menu_Button.TabIndex = 1;
-            menu_Button.Text = "☰      ";
+            menu_Button.Text = "  ☰      ";
             menu_Button.TextAlign = ContentAlignment.MiddleLeft;
             menu_Button.UseVisualStyleBackColor = false;
             menu_Button.Click += menu_Button_Click;
             // 
             // info_Container
             // 
-            info_Container.Controls.Add(avatar_Image);
-            info_Container.Controls.Add(username);
-            info_Container.Controls.Add(permission);
+            info_Container.Controls.Add(panel14);
             info_Container.Location = new Point(3, 47);
             info_Container.Name = "info_Container";
-            info_Container.Size = new Size(243, 143);
+            info_Container.Size = new Size(243, 137);
             info_Container.TabIndex = 4;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(avatar_Image);
+            panel14.Controls.Add(username);
+            panel14.Controls.Add(permission);
+            panel14.Location = new Point(20, 3);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(200, 131);
+            panel14.TabIndex = 6;
             // 
             // petManager_Button
             // 
@@ -187,22 +199,23 @@ namespace PetStoreManagementApp
             petManager_Button.FlatStyle = FlatStyle.Flat;
             petManager_Button.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             petManager_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            petManager_Button.Image = (Image)resources.GetObject("petManager_Button.Image");
+            petManager_Button.Image = Properties.Resources.paw_new;
             petManager_Button.ImageAlign = ContentAlignment.MiddleLeft;
-            petManager_Button.Location = new Point(3, 204);
+            petManager_Button.Location = new Point(3, 198);
             petManager_Button.MaximumSize = new Size(243, 38);
-            petManager_Button.MinimumSize = new Size(38, 38);
+            petManager_Button.MinimumSize = new Size(65, 38);
             petManager_Button.Name = "petManager_Button";
             petManager_Button.Size = new Size(243, 38);
             petManager_Button.TabIndex = 1;
             petManager_Button.Text = "              Pet Manager";
             petManager_Button.TextAlign = ContentAlignment.MiddleLeft;
             petManager_Button.UseVisualStyleBackColor = false;
+            petManager_Button.Click += petManager_Button_Click;
             // 
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Location = new Point(3, 248);
+            panel6.Location = new Point(3, 242);
             panel6.Name = "panel6";
             panel6.Size = new Size(243, 2);
             panel6.TabIndex = 15;
@@ -210,7 +223,7 @@ namespace PetStoreManagementApp
             // panel5
             // 
             panel5.Controls.Add(service_Button);
-            panel5.Location = new Point(3, 256);
+            panel5.Location = new Point(3, 250);
             panel5.MaximumSize = new Size(243, 38);
             panel5.MinimumSize = new Size(42, 38);
             panel5.Name = "panel5";
@@ -224,22 +237,23 @@ namespace PetStoreManagementApp
             service_Button.FlatStyle = FlatStyle.Flat;
             service_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             service_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            service_Button.Image = (Image)resources.GetObject("service_Button.Image");
+            service_Button.Image = Properties.Resources.dog_treat_new;
             service_Button.ImageAlign = ContentAlignment.MiddleLeft;
             service_Button.Location = new Point(0, 0);
             service_Button.MaximumSize = new Size(243, 38);
-            service_Button.MinimumSize = new Size(38, 38);
+            service_Button.MinimumSize = new Size(65, 38);
             service_Button.Name = "service_Button";
             service_Button.Size = new Size(243, 38);
             service_Button.TabIndex = 12;
             service_Button.Text = "              Service";
             service_Button.TextAlign = ContentAlignment.MiddleLeft;
             service_Button.UseVisualStyleBackColor = false;
+            service_Button.Click += service_Button_Click;
             // 
             // panel7
             // 
-            panel7.BackColor = Color.FromArgb(124, 139, 114);
-            panel7.Location = new Point(3, 300);
+            panel7.BackColor = Color.White;
+            panel7.Location = new Point(3, 294);
             panel7.Name = "panel7";
             panel7.Size = new Size(243, 2);
             panel7.TabIndex = 15;
@@ -247,7 +261,7 @@ namespace PetStoreManagementApp
             // panel4
             // 
             panel4.Controls.Add(customer_Button);
-            panel4.Location = new Point(3, 308);
+            panel4.Location = new Point(3, 302);
             panel4.MaximumSize = new Size(243, 38);
             panel4.MinimumSize = new Size(42, 38);
             panel4.Name = "panel4";
@@ -261,22 +275,23 @@ namespace PetStoreManagementApp
             customer_Button.FlatStyle = FlatStyle.Flat;
             customer_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             customer_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            customer_Button.Image = (Image)resources.GetObject("customer_Button.Image");
+            customer_Button.Image = Properties.Resources.laughing_new;
             customer_Button.ImageAlign = ContentAlignment.MiddleLeft;
             customer_Button.Location = new Point(0, 0);
             customer_Button.MaximumSize = new Size(243, 38);
-            customer_Button.MinimumSize = new Size(38, 38);
+            customer_Button.MinimumSize = new Size(65, 38);
             customer_Button.Name = "customer_Button";
             customer_Button.Size = new Size(243, 38);
             customer_Button.TabIndex = 10;
             customer_Button.Text = "              Customers";
             customer_Button.TextAlign = ContentAlignment.MiddleLeft;
             customer_Button.UseVisualStyleBackColor = false;
+            customer_Button.Click += customer_Button_Click;
             // 
             // panel8
             // 
-            panel8.BackColor = Color.FromArgb(124, 139, 114);
-            panel8.Location = new Point(3, 352);
+            panel8.BackColor = Color.White;
+            panel8.Location = new Point(3, 346);
             panel8.Name = "panel8";
             panel8.Size = new Size(243, 2);
             panel8.TabIndex = 15;
@@ -284,7 +299,7 @@ namespace PetStoreManagementApp
             // panel2
             // 
             panel2.Controls.Add(wareHouse_Button);
-            panel2.Location = new Point(3, 360);
+            panel2.Location = new Point(3, 354);
             panel2.MaximumSize = new Size(243, 38);
             panel2.MinimumSize = new Size(42, 38);
             panel2.Name = "panel2";
@@ -298,22 +313,23 @@ namespace PetStoreManagementApp
             wareHouse_Button.FlatStyle = FlatStyle.Flat;
             wareHouse_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             wareHouse_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            wareHouse_Button.Image = (Image)resources.GetObject("wareHouse_Button.Image");
+            wareHouse_Button.Image = Properties.Resources.package_new;
             wareHouse_Button.ImageAlign = ContentAlignment.MiddleLeft;
             wareHouse_Button.Location = new Point(0, 0);
             wareHouse_Button.MaximumSize = new Size(243, 38);
-            wareHouse_Button.MinimumSize = new Size(38, 38);
+            wareHouse_Button.MinimumSize = new Size(65, 38);
             wareHouse_Button.Name = "wareHouse_Button";
             wareHouse_Button.Size = new Size(243, 38);
             wareHouse_Button.TabIndex = 12;
             wareHouse_Button.Text = "              Warehouse";
             wareHouse_Button.TextAlign = ContentAlignment.MiddleLeft;
             wareHouse_Button.UseVisualStyleBackColor = false;
+            wareHouse_Button.Click += wareHouse_Button_Click;
             // 
             // panel10
             // 
-            panel10.BackColor = Color.FromArgb(124, 139, 114);
-            panel10.Location = new Point(3, 404);
+            panel10.BackColor = Color.White;
+            panel10.Location = new Point(3, 398);
             panel10.Name = "panel10";
             panel10.Size = new Size(243, 2);
             panel10.TabIndex = 16;
@@ -321,7 +337,7 @@ namespace PetStoreManagementApp
             // panel11
             // 
             panel11.Controls.Add(about_Button);
-            panel11.Location = new Point(3, 412);
+            panel11.Location = new Point(3, 406);
             panel11.MaximumSize = new Size(243, 38);
             panel11.MinimumSize = new Size(42, 38);
             panel11.Name = "panel11";
@@ -335,21 +351,22 @@ namespace PetStoreManagementApp
             about_Button.FlatStyle = FlatStyle.Flat;
             about_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             about_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            about_Button.Image = (Image)resources.GetObject("about_Button.Image");
+            about_Button.Image = Properties.Resources.info_new;
             about_Button.ImageAlign = ContentAlignment.MiddleLeft;
             about_Button.Location = new Point(0, 0);
             about_Button.MaximumSize = new Size(243, 38);
-            about_Button.MinimumSize = new Size(38, 38);
+            about_Button.MinimumSize = new Size(65, 38);
             about_Button.Name = "about_Button";
             about_Button.Size = new Size(243, 38);
             about_Button.TabIndex = 12;
             about_Button.Text = "              About";
             about_Button.TextAlign = ContentAlignment.MiddleLeft;
             about_Button.UseVisualStyleBackColor = false;
+            about_Button.Click += about_Button_Click;
             // 
             // panel12
             // 
-            panel12.Location = new Point(3, 456);
+            panel12.Location = new Point(3, 450);
             panel12.Name = "panel12";
             panel12.Size = new Size(243, 33);
             panel12.TabIndex = 17;
@@ -357,7 +374,7 @@ namespace PetStoreManagementApp
             // panel13
             // 
             panel13.Controls.Add(setting_Button);
-            panel13.Location = new Point(3, 495);
+            panel13.Location = new Point(3, 489);
             panel13.MaximumSize = new Size(243, 38);
             panel13.MinimumSize = new Size(42, 38);
             panel13.Name = "panel13";
@@ -366,28 +383,30 @@ namespace PetStoreManagementApp
             // 
             // setting_Button
             // 
+            setting_Button.FlatAppearance.BorderSize = 0;
             setting_Button.FlatAppearance.MouseOverBackColor = Color.FromArgb(249, 251, 231);
             setting_Button.FlatStyle = FlatStyle.Flat;
             setting_Button.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             setting_Button.ForeColor = Color.FromArgb(88, 85, 78);
-            setting_Button.Image = (Image)resources.GetObject("setting_Button.Image");
+            setting_Button.Image = Properties.Resources.settings_new;
             setting_Button.ImageAlign = ContentAlignment.MiddleLeft;
             setting_Button.Location = new Point(0, 0);
             setting_Button.MaximumSize = new Size(243, 38);
-            setting_Button.MinimumSize = new Size(38, 38);
+            setting_Button.MinimumSize = new Size(65, 38);
             setting_Button.Name = "setting_Button";
             setting_Button.Size = new Size(243, 38);
             setting_Button.TabIndex = 12;
             setting_Button.Text = "              Settings";
             setting_Button.TextAlign = ContentAlignment.MiddleLeft;
             setting_Button.UseVisualStyleBackColor = false;
+            setting_Button.Click += setting_Button_Click;
             // 
             // panel9
             // 
             panel9.Controls.Add(versionNumber);
-            panel9.Location = new Point(3, 539);
+            panel9.Location = new Point(3, 533);
             panel9.MaximumSize = new Size(243, 38);
-            panel9.MinimumSize = new Size(42, 38);
+            panel9.MinimumSize = new Size(65, 38);
             panel9.Name = "panel9";
             panel9.Size = new Size(243, 38);
             panel9.TabIndex = 15;
@@ -410,7 +429,8 @@ namespace PetStoreManagementApp
             // headerBar
             // 
             headerBar.BackColor = Color.FromArgb(250, 240, 215);
-            headerBar.Controls.Add(button1);
+            headerBar.Controls.Add(notification_Button);
+            headerBar.Controls.Add(darkmode_Button);
             headerBar.Controls.Add(containerName);
             headerBar.Controls.Add(closeApp_Button);
             headerBar.Controls.Add(logout_Button);
@@ -423,6 +443,33 @@ namespace PetStoreManagementApp
             headerBar.MouseMove += headerBar_MouseMove;
             headerBar.MouseUp += headerBar_MouseUp;
             // 
+            // notification_Button
+            // 
+            notification_Button.FlatAppearance.BorderSize = 0;
+            notification_Button.FlatStyle = FlatStyle.Flat;
+            notification_Button.Image = (Image)resources.GetObject("notification_Button.Image");
+            notification_Button.ImageAlign = ContentAlignment.TopCenter;
+            notification_Button.Location = new Point(607, 2);
+            notification_Button.Name = "notification_Button";
+            notification_Button.Size = new Size(38, 36);
+            notification_Button.TabIndex = 6;
+            notification_Button.TextAlign = ContentAlignment.MiddleLeft;
+            notification_Button.UseVisualStyleBackColor = true;
+            // 
+            // darkmode_Button
+            // 
+            darkmode_Button.FlatAppearance.BorderSize = 0;
+            darkmode_Button.FlatStyle = FlatStyle.Flat;
+            darkmode_Button.Image = Properties.Resources.moon;
+            darkmode_Button.ImageAlign = ContentAlignment.TopCenter;
+            darkmode_Button.Location = new Point(651, 3);
+            darkmode_Button.Name = "darkmode_Button";
+            darkmode_Button.Size = new Size(38, 36);
+            darkmode_Button.TabIndex = 6;
+            darkmode_Button.TextAlign = ContentAlignment.MiddleLeft;
+            darkmode_Button.UseVisualStyleBackColor = true;
+            darkmode_Button.Click += darkMode_Click;
+            // 
             // containerName
             // 
             containerName.AutoSize = true;
@@ -430,9 +477,9 @@ namespace PetStoreManagementApp
             containerName.ForeColor = Color.FromArgb(65, 67, 54);
             containerName.Location = new Point(6, 5);
             containerName.Name = "containerName";
-            containerName.Size = new Size(209, 28);
+            containerName.Size = new Size(218, 28);
             containerName.TabIndex = 0;
-            containerName.Text = "  Pet Store Manager";
+            containerName.Text = "CONTAINER_NAME";
             containerName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // closeApp_Button
@@ -472,20 +519,6 @@ namespace PetStoreManagementApp
             mainInterface.Size = new Size(771, 541);
             mainInterface.TabIndex = 5;
             // 
-            // button1
-            // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(651, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(38, 36);
-            button1.TabIndex = 6;
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // form_Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -502,7 +535,7 @@ namespace PetStoreManagementApp
             slideBar_Container.ResumeLayout(false);
             menu_container.ResumeLayout(false);
             info_Container.ResumeLayout(false);
-            info_Container.PerformLayout();
+            panel14.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -548,6 +581,8 @@ namespace PetStoreManagementApp
         private Button closeApp_Button;
         private Label containerName;
         private Panel mainInterface;
-        private Button button1;
+        private Button darkmode_Button;
+        private Panel panel14;
+        private Button notification_Button;
     }
 }

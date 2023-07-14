@@ -27,6 +27,13 @@ namespace PetStoreManagementApp.Libs.DTO
         public string username { get; set; }
         public string password { get; set; }
         public Permission permission { get; set; }
+
+        public void logout()
+        {
+            username = null;
+            password = null;
+            permission = Permission.customer;
+        }
     }
 
 }
