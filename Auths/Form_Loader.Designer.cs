@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Loader));
             pictureBox1 = new PictureBox();
             loadingBar = new CircularProgressBar.CircularProgressBar();
             label1 = new Label();
@@ -40,7 +41,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.logo;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(-1, -1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(292, 100);
@@ -55,10 +56,10 @@
             loadingBar.BackColor = Color.Transparent;
             loadingBar.Font = new Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point);
             loadingBar.ForeColor = Color.FromArgb(124, 139, 114);
-            loadingBar.InnerColor = Color.FromArgb(255, 222, 180);
+            loadingBar.InnerColor = Color.FromArgb(255, 217, 192);
             loadingBar.InnerMargin = 2;
             loadingBar.InnerWidth = -1;
-            loadingBar.Location = new Point(91, 134);
+            loadingBar.Location = new Point(91, 146);
             loadingBar.MarqueeAnimationSpeed = 2000;
             loadingBar.Name = "loadingBar";
             loadingBar.OuterColor = Color.Gray;
@@ -83,20 +84,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Constantia", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(17, 102);
+            label1.Font = new Font("Mongolian Baiti", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(12, 102);
             label1.Name = "label1";
-            label1.Size = new Size(260, 29);
+            label1.Size = new Size(273, 30);
             label1.TabIndex = 2;
             label1.Text = "PetStore Management";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Constantia", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(93, 256);
+            label2.Font = new Font("Constantia", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(109, 256);
             label2.Name = "label2";
-            label2.Size = new Size(105, 26);
+            label2.Size = new Size(77, 18);
             label2.TabIndex = 2;
             label2.Text = "Loading....";
             // 

@@ -56,6 +56,8 @@ namespace PetStoreManagementApp.Pages
             // 
             // dataGridView_warehouse
             // 
+            dataGridView_warehouse.BackgroundColor = Color.FromArgb(248, 232, 238);
+            dataGridView_warehouse.BorderStyle = BorderStyle.None;
             dataGridView_warehouse.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_warehouse.Columns.AddRange(new DataGridViewColumn[] { name, age, species, pet_owner, services, get_vaccinated, get_examined, good_health });
             dataGridView_warehouse.Location = new Point(12, 162);
@@ -107,10 +109,10 @@ namespace PetStoreManagementApp.Pages
             // lab_search
             // 
             lab_search.AutoSize = true;
-            lab_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_search.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_search.Location = new Point(34, 14);
             lab_search.Name = "lab_search";
-            lab_search.Size = new Size(57, 21);
+            lab_search.Size = new Size(59, 19);
             lab_search.TabIndex = 5;
             lab_search.Text = "Search";
             // 
@@ -125,39 +127,59 @@ namespace PetStoreManagementApp.Pages
             // 
             // btn_uwu
             // 
+            btn_uwu.BackColor = Color.FromArgb(165, 241, 233);
+            btn_uwu.FlatAppearance.BorderSize = 0;
+            btn_uwu.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_uwu.FlatStyle = FlatStyle.Flat;
+            btn_uwu.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_uwu.Location = new Point(414, 99);
             btn_uwu.Name = "btn_uwu";
             btn_uwu.Size = new Size(64, 37);
             btn_uwu.TabIndex = 39;
             btn_uwu.Text = "UwU";
-            btn_uwu.UseVisualStyleBackColor = true;
+            btn_uwu.UseVisualStyleBackColor = false;
             // 
             // btn_delete
             // 
+            btn_delete.BackColor = Color.FromArgb(165, 241, 233);
+            btn_delete.FlatAppearance.BorderSize = 0;
+            btn_delete.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_delete.FlatStyle = FlatStyle.Flat;
+            btn_delete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_delete.Location = new Point(414, 52);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(64, 37);
             btn_delete.TabIndex = 38;
             btn_delete.Text = "Delete";
-            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.UseVisualStyleBackColor = false;
             // 
             // btn_edit
             // 
+            btn_edit.BackColor = Color.FromArgb(165, 241, 233);
+            btn_edit.FlatAppearance.BorderSize = 0;
+            btn_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_edit.FlatStyle = FlatStyle.Flat;
+            btn_edit.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_edit.Location = new Point(344, 99);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(64, 37);
             btn_edit.TabIndex = 37;
             btn_edit.Text = "Edit";
-            btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.UseVisualStyleBackColor = false;
             // 
             // btn_add
             // 
+            btn_add.BackColor = Color.FromArgb(165, 241, 233);
+            btn_add.FlatAppearance.BorderSize = 0;
+            btn_add.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_add.FlatStyle = FlatStyle.Flat;
+            btn_add.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add.Location = new Point(344, 52);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(64, 37);
             btn_add.TabIndex = 36;
             btn_add.Text = "Add";
-            btn_add.UseVisualStyleBackColor = true;
+            btn_add.UseVisualStyleBackColor = false;
             // 
             // txt_unit
             // 
@@ -189,30 +211,30 @@ namespace PetStoreManagementApp.Pages
             // lab_price
             // 
             lab_price.AutoSize = true;
-            lab_price.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_price.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_price.Location = new Point(34, 115);
             lab_price.Name = "lab_price";
-            lab_price.Size = new Size(47, 21);
+            lab_price.Size = new Size(51, 19);
             lab_price.TabIndex = 32;
             lab_price.Text = "Price:";
             // 
             // lab_unit
             // 
             lab_unit.AutoSize = true;
-            lab_unit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_unit.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_unit.Location = new Point(34, 94);
             lab_unit.Name = "lab_unit";
-            lab_unit.Size = new Size(42, 21);
+            lab_unit.Size = new Size(44, 19);
             lab_unit.TabIndex = 31;
             lab_unit.Text = "Unit:";
             // 
             // lab_quantity
             // 
             lab_quantity.AutoSize = true;
-            lab_quantity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_quantity.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_quantity.Location = new Point(34, 73);
             lab_quantity.Name = "lab_quantity";
-            lab_quantity.Size = new Size(73, 21);
+            lab_quantity.Size = new Size(77, 19);
             lab_quantity.TabIndex = 30;
             lab_quantity.Text = "Quantity:";
             // 
@@ -228,10 +250,10 @@ namespace PetStoreManagementApp.Pages
             // lab_nameitems
             // 
             lab_nameitems.AutoSize = true;
-            lab_nameitems.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_nameitems.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_nameitems.Location = new Point(34, 52);
             lab_nameitems.Name = "lab_nameitems";
-            lab_nameitems.Size = new Size(97, 21);
+            lab_nameitems.Size = new Size(98, 19);
             lab_nameitems.TabIndex = 28;
             lab_nameitems.Text = "Name Items:";
             // 

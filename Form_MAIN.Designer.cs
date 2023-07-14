@@ -510,7 +510,7 @@ namespace PetStoreManagementApp
             // 
             // mainInterface
             // 
-            mainInterface.BackColor = Color.White;
+            mainInterface.BackColor = Color.FromArgb(248, 232, 238);
             mainInterface.Dock = DockStyle.Fill;
             mainInterface.Location = new Point(249, 41);
             mainInterface.MaximumSize = new Size(1163, 543);

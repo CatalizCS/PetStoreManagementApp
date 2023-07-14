@@ -64,6 +64,8 @@
             // 
             // dataGridView_petmanager
             // 
+            dataGridView_petmanager.BackgroundColor = Color.FromArgb(248, 232, 238);
+            dataGridView_petmanager.BorderStyle = BorderStyle.None;
             dataGridView_petmanager.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_petmanager.Columns.AddRange(new DataGridViewColumn[] { name, age, species, pet_owner, services, get_vaccinated, get_examined, good_health });
             dataGridView_petmanager.Location = new Point(12, 162);
@@ -124,20 +126,20 @@
             // lab_search
             // 
             lab_search.AutoSize = true;
-            lab_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_search.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_search.Location = new Point(34, 14);
             lab_search.Name = "lab_search";
-            lab_search.Size = new Size(57, 21);
+            lab_search.Size = new Size(59, 19);
             lab_search.TabIndex = 2;
             lab_search.Text = "Search";
             // 
             // lab_name
             // 
             lab_name.AutoSize = true;
-            lab_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_name.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_name.Location = new Point(39, 58);
             lab_name.Name = "lab_name";
-            lab_name.Size = new Size(55, 21);
+            lab_name.Size = new Size(55, 19);
             lab_name.TabIndex = 3;
             lab_name.Text = "Name:";
             // 
@@ -153,30 +155,30 @@
             // lab_age
             // 
             lab_age.AutoSize = true;
-            lab_age.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_age.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_age.Location = new Point(39, 79);
             lab_age.Name = "lab_age";
-            lab_age.Size = new Size(40, 21);
+            lab_age.Size = new Size(41, 19);
             lab_age.TabIndex = 5;
             lab_age.Text = "Age:";
             // 
             // lab_species
             // 
             lab_species.AutoSize = true;
-            lab_species.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_species.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_species.Location = new Point(39, 100);
             lab_species.Name = "lab_species";
-            lab_species.Size = new Size(65, 21);
+            lab_species.Size = new Size(68, 19);
             lab_species.TabIndex = 6;
             lab_species.Text = "Species:";
             // 
             // lab_petowner
             // 
             lab_petowner.AutoSize = true;
-            lab_petowner.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_petowner.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_petowner.Location = new Point(39, 121);
             lab_petowner.Name = "lab_petowner";
-            lab_petowner.Size = new Size(85, 21);
+            lab_petowner.Size = new Size(92, 19);
             lab_petowner.TabIndex = 7;
             lab_petowner.Text = "Pet Owner:";
             // 
@@ -210,10 +212,10 @@
             // lab_services
             // 
             lab_services.AutoSize = true;
-            lab_services.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_services.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_services.Location = new Point(297, 58);
             lab_services.Name = "lab_services";
-            lab_services.Size = new Size(115, 21);
+            lab_services.Size = new Size(119, 19);
             lab_services.TabIndex = 11;
             lab_services.Text = "Services in use:";
             // 
@@ -230,30 +232,30 @@
             // lab_vaccinated
             // 
             lab_vaccinated.AutoSize = true;
-            lab_vaccinated.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_vaccinated.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_vaccinated.Location = new Point(298, 79);
             lab_vaccinated.Name = "lab_vaccinated";
-            lab_vaccinated.Size = new Size(114, 21);
+            lab_vaccinated.Size = new Size(121, 19);
             lab_vaccinated.TabIndex = 13;
             lab_vaccinated.Text = "Get vaccinated:";
             // 
             // lab_health
             // 
             lab_health.AutoSize = true;
-            lab_health.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_health.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_health.Location = new Point(298, 121);
             lab_health.Name = "lab_health";
-            lab_health.Size = new Size(98, 21);
+            lab_health.Size = new Size(100, 19);
             lab_health.TabIndex = 14;
             lab_health.Text = "Good health:";
             // 
             // lab_examined
             // 
             lab_examined.AutoSize = true;
-            lab_examined.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_examined.Font = new Font("Lato", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lab_examined.Location = new Point(298, 100);
             lab_examined.Name = "lab_examined";
-            lab_examined.Size = new Size(108, 21);
+            lab_examined.Size = new Size(113, 19);
             lab_examined.TabIndex = 15;
             lab_examined.Text = "Get examined:";
             // 
@@ -289,44 +291,65 @@
             // 
             // btn_add
             // 
+            btn_add.BackColor = Color.FromArgb(165, 241, 233);
+            btn_add.FlatAppearance.BorderSize = 0;
+            btn_add.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_add.FlatStyle = FlatStyle.Flat;
+            btn_add.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add.Location = new Point(582, 58);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(64, 37);
             btn_add.TabIndex = 19;
             btn_add.Text = "Add";
-            btn_add.UseVisualStyleBackColor = true;
+            btn_add.UseVisualStyleBackColor = false;
             // 
             // btn_edit
             // 
+            btn_edit.BackColor = Color.FromArgb(165, 241, 233);
+            btn_edit.FlatAppearance.BorderSize = 0;
+            btn_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_edit.FlatStyle = FlatStyle.Flat;
+            btn_edit.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_edit.Location = new Point(582, 105);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(64, 37);
             btn_edit.TabIndex = 20;
             btn_edit.Text = "Edit";
-            btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.UseVisualStyleBackColor = false;
             // 
             // btn_delete
             // 
+            btn_delete.BackColor = Color.FromArgb(165, 241, 233);
+            btn_delete.FlatAppearance.BorderSize = 0;
+            btn_delete.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_delete.FlatStyle = FlatStyle.Flat;
+            btn_delete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_delete.Location = new Point(652, 58);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(64, 37);
             btn_delete.TabIndex = 21;
             btn_delete.Text = "Delete";
-            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.UseVisualStyleBackColor = false;
             // 
             // btn_uwu
             // 
+            btn_uwu.BackColor = Color.FromArgb(165, 241, 233);
+            btn_uwu.FlatAppearance.BorderSize = 0;
+            btn_uwu.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_uwu.FlatStyle = FlatStyle.Flat;
+            btn_uwu.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_uwu.Location = new Point(652, 105);
             btn_uwu.Name = "btn_uwu";
             btn_uwu.Size = new Size(64, 37);
             btn_uwu.TabIndex = 22;
             btn_uwu.Text = "UwU";
-            btn_uwu.UseVisualStyleBackColor = true;
+            btn_uwu.UseVisualStyleBackColor = false;
             // 
             // form_PetManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(248, 232, 238);
             ClientSize = new Size(800, 450);
             Controls.Add(btn_uwu);
             Controls.Add(btn_delete);
