@@ -1,4 +1,4 @@
-﻿namespace PetStoreManagementApp
+namespace PetStoreManagementApp
 {
     partial class form_Main
     {

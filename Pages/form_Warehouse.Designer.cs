@@ -1,4 +1,4 @@
-﻿namespace PetStoreManagementApp.Pages
+namespace PetStoreManagementApp.Pages
 {
     partial class form_Warehouse
     {
