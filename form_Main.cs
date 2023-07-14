@@ -1,4 +1,4 @@
-﻿using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 using PetStoreManagementApp.Auths;
 using System.Windows.Forms;
 using PetStoreManagementApp.Dialogs;
