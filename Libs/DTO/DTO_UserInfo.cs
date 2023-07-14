@@ -29,6 +29,17 @@ namespace PetStoreManagementApp.Libs.DTO
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string AvatarURL { get; set; }
+
+        public void logout()
+        {
+            ID = null;
+            FirstName = null;
+            LastName = null;
+            Age = 0;
+            PhoneNumber = null;
+            Email = null;
+            AvatarURL = null;
+        }
     }
 
 }

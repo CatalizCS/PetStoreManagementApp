@@ -88,11 +88,8 @@ namespace PetStoreManagementApp.Libs
             foreach (string name in subNameArray)
             {
                 path += "\\" + name;
-                if (Directory.Exists(path))
-                {
-                    Directory.Delete(path, true);
-                }
             }
+
             path += "\\" + fileName;
             if (File.Exists(path))
             {

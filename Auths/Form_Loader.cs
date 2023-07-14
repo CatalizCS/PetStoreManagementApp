@@ -37,9 +37,13 @@ namespace PetStoreManagementApp.Dialogs
             // load file config.cfg to get database connection string and save it to global variable
         }
 
+        public static ConfigReader? configReader;
+        public static PathManagement? avatarPath;
+
+
         private async void Form_Loader_Load(object sender, EventArgs e)
         {
-            ConfigReader configReader = new ConfigReader("config.cfg");
+            configReader = new ConfigReader("config.cfg");
 
             if (configReader.validateConfig())
             {
@@ -52,9 +56,8 @@ namespace PetStoreManagementApp.Dialogs
                 // check database connection
                 if (DatabaseConnection.Instance.IsConnected())
                 {
-                    loadingBar.Value = 70;
+                    loadingBar.Value = 60;
                     await Task.Delay(1000);
-                    this.Hide();
                     loaded = true;
                 }
                 else
@@ -74,6 +77,10 @@ namespace PetStoreManagementApp.Dialogs
                 Application.Exit();
             }
 
+            avatarPath = new PathManagement("avatars");
+            avatarPath.createIfNotExist();
+            loadingBar.Value = 80;
+
             // check version from github and compare with current version
             if (await VersionChecker.Instance.checkVersion())
             {
@@ -81,6 +88,7 @@ namespace PetStoreManagementApp.Dialogs
             }
             loadingBar.Value = 100;
 
+            this.Hide();
         }
     }
 }

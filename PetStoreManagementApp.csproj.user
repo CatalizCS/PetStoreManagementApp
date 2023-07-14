@@ -16,7 +16,22 @@
     <Compile Update="Libs\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Pages\form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pages\form_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pages\form_PetManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pages\form_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pages\form_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pages\form_Warehouse.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

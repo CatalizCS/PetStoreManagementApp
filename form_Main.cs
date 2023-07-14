@@ -3,6 +3,7 @@ using PetStoreManagementApp.Auths;
 using System.Windows.Forms;
 using PetStoreManagementApp.Dialogs;
 using PetStoreManagementApp.Libs.DTO;
+using PetStoreManagementApp.Pages;
 
 namespace PetStoreManagementApp
 {
@@ -73,11 +74,12 @@ namespace PetStoreManagementApp
                 setting_Button.Width = setting_Button.MinimumSize.Width;
 
                 mainInterface.Width = mainInterface.Width + 10;
-                mainInterface.Location = new System.Drawing.Point(mainInterface.Location.X - 10, 41);
+                mainInterface.Location = new Point(mainInterface.Location.X - 10, 41);
 
-                closeApp_Button.Location = new System.Drawing.Point(closeApp_Button.Location.X + 10, 3);
-                logout_Button.Location = new System.Drawing.Point(logout_Button.Location.X + 10, 3);
-
+                closeApp_Button.Location = new Point(closeApp_Button.Location.X + 10, 3);
+                logout_Button.Location = new Point(logout_Button.Location.X + 10, 3);
+                darkmode_Button.Location = new Point(darkmode_Button.Location.X + 10, 3);
+                notification_Button.Location = new Point(notification_Button.Location.X + 10, 3);
 
 
                 if (slideBar_Container.Width == slideBar_Container.MinimumSize.Width)
@@ -101,10 +103,12 @@ namespace PetStoreManagementApp
                 setting_Button.Width = setting_Button.MaximumSize.Width;
 
                 mainInterface.Width = mainInterface.Width - 10;
-                mainInterface.Location = new System.Drawing.Point(mainInterface.Location.X + 10, 41);
+                mainInterface.Location = new Point(mainInterface.Location.X + 10, 41);
 
-                closeApp_Button.Location = new System.Drawing.Point(closeApp_Button.Location.X - 10, 3);
-                logout_Button.Location = new System.Drawing.Point(logout_Button.Location.X - 10, 3);
+                closeApp_Button.Location = new Point(closeApp_Button.Location.X - 10, 3);
+                logout_Button.Location = new Point(logout_Button.Location.X - 10, 3);
+                darkmode_Button.Location = new Point(darkmode_Button.Location.X - 10, 3);
+                notification_Button.Location = new Point(notification_Button.Location.X - 10, 3);
 
 
                 if (slideBar_Container.Width == slideBar_Container.MaximumSize.Width)
@@ -149,14 +153,104 @@ namespace PetStoreManagementApp
                     break;
             }
 
-
             if (DTO_UserInfo.Instance.AvatarURL != "")
             {
-                avatar_Image.Image = Image.FromFile(Path.Combine(DTO_UserInfo.Instance.AvatarURL));
-            } else
+                if (Form_Loader.avatarPath.findFile(Form_Loader.avatarPath.subName, DTO_UserInfo.Instance.AvatarURL) != null)
+                    avatar_Image.Image = Image.FromFile(Path.Combine(Form_Loader.avatarPath.fullPath, DTO_UserInfo.Instance.AvatarURL));
+            }
+            else
             {
                 avatar_Image.Image = Properties.Resources.user_24px;
             }
+
+            this.petManager_Button_Click(sender, e);
+        }
+
+        private void logout_Button_Click(object sender, EventArgs e)
+        {
+            DTO_UserInfo.Instance.logout();
+            DTO_LoginData.Instance.logout();
+            this.Hide();
+
+            new form_Login().Show();
+        }
+
+
+        private bool isDarkMode = false;
+        private void darkMode_Click(object sender, EventArgs e)
+        {
+            if (isDarkMode)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        // menu button
+        private void petManager_Button_Click(object sender, EventArgs e)
+        {
+            // import form into panel
+            containerName.Text = "Pet Manager";
+            mainInterface.Controls.Clear();
+            form_PetManager petManager = new form_PetManager();
+            petManager.TopLevel = false;
+            mainInterface.Controls.Add(petManager);
+            petManager.Show();
+
+        }
+
+        private void service_Button_Click(object sender, EventArgs e)
+        {
+            containerName.Text = "Service Manager";
+            mainInterface.Controls.Clear();
+            form_Service serviceManager = new form_Service();
+            serviceManager.TopLevel = false;
+            mainInterface.Controls.Add(serviceManager);
+            serviceManager.Show();
+        }
+
+        private void customer_Button_Click(object sender, EventArgs e)
+        {
+            containerName.Text = "Customer Manager";
+            mainInterface.Controls.Clear();
+            form_Customer customerManager = new form_Customer();
+            customerManager.TopLevel = false;
+            mainInterface.Controls.Add(customerManager);
+            customerManager.Show();
+        }
+
+        private void wareHouse_Button_Click(object sender, EventArgs e)
+        {
+            containerName.Text = "WareHouse Manager";
+            mainInterface.Controls.Clear();
+            form_Warehouse wareHouseManager = new form_Warehouse();
+            wareHouseManager.TopLevel = false;
+            mainInterface.Controls.Add(wareHouseManager);
+            wareHouseManager.Show();
+        }
+
+        private void about_Button_Click(object sender, EventArgs e)
+        {
+            containerName.Text = "About";
+            mainInterface.Controls.Clear();
+            form_About about = new form_About();
+            about.TopLevel = false;
+            mainInterface.Controls.Add(about);
+            about.Show();
+        }
+
+        private void setting_Button_Click(object sender, EventArgs e)
+        {
+            containerName.Text = "Setting";
+            mainInterface.Controls.Clear();
+            form_Settings setting = new form_Settings();
+            setting.TopLevel = false;
+            mainInterface.Controls.Add(setting);
+            setting.Show();
+
         }
     }
 }

@@ -38,7 +38,8 @@ namespace PetStoreManagementApp.Libs
 
             if (configReader.GetConfigValue("database.local") == "true")
             {
-                connectionString = String.Format("Data Source={0};Version=3", configReader.GetConfigValue("database.location"));
+                PathManagement databasePath = new PathManagement(configReader.GetConfigValue("database.location"));
+                connectionString = String.Format("Data Source={0};Version=3", databasePath.fullPath);
             }
             else
             {

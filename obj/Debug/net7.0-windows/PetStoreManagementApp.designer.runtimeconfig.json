@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Moritaka\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Moritaka\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\CatalizCS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\CatalizCS\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
