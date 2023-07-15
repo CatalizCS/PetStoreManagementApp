@@ -16,5 +16,10 @@ namespace PetStoreManagementApp.Pages
         {
             InitializeComponent();
         }
+
+        private void form_PetManager_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

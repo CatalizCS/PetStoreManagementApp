@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label5 = new Label();
             label3 = new Label();
-            label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label4 = new Label();
@@ -54,26 +52,13 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 222, 180);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, -2);
             panel1.Name = "panel1";
             panel1.Size = new Size(286, 378);
             panel1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            label5.FlatStyle = FlatStyle.Flat;
-            label5.Font = new Font("Constantia", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(27, 265);
-            label5.Name = "label5";
-            label5.Size = new Size(241, 46);
-            label5.TabIndex = 3;
-            label5.Text = "Right in your hand";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -86,34 +71,23 @@
             label3.Text = "version 1.0.1";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
-            // 
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Constantia", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(31, 164);
-            label2.Name = "label2";
-            label2.Size = new Size(237, 116);
-            label2.TabIndex = 1;
-            label2.Text = "We are pleased to bring the best pet management service in the world!";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Mongolian Baiti", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(51, 124);
+            label1.Font = new Font("Lato", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(32, 201);
             label1.Name = "label1";
-            label1.Size = new Size(202, 30);
+            label1.Size = new Size(218, 35);
             label1.TabIndex = 1;
             label1.Text = "Welcome Back!";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.cute_paww;
-            pictureBox1.Location = new Point(108, 39);
+            pictureBox1.Location = new Point(74, 89);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 74);
+            pictureBox1.Size = new Size(122, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -122,17 +96,17 @@
             // 
             label4.AutoSize = true;
             label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Constantia", 23F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Lato", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(3, 0, 28);
-            label4.Location = new Point(88, 61);
+            label4.Location = new Point(51, 62);
             label4.Name = "label4";
-            label4.Size = new Size(101, 38);
+            label4.Size = new Size(195, 29);
             label4.TabIndex = 2;
-            label4.Text = "Login";
+            label4.Text = "Login to Account";
             // 
             // panel2
             // 
-            panel2.BackColor = Color.White;
+            panel2.BackColor = Color.FromArgb(249, 245, 246);
             panel2.Controls.Add(password);
             panel2.Controls.Add(cancel_Button);
             panel2.Controls.Add(login_Button);
@@ -142,6 +116,7 @@
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(label4);
+            panel2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             panel2.Location = new Point(286, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(273, 376);
@@ -160,11 +135,11 @@
             // 
             // cancel_Button
             // 
-            cancel_Button.BackColor = Color.FromArgb(222, 245, 229);
+            cancel_Button.BackColor = Color.Black;
             cancel_Button.FlatAppearance.BorderSize = 0;
             cancel_Button.FlatStyle = FlatStyle.Flat;
             cancel_Button.Font = new Font("Constantia", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            cancel_Button.ForeColor = Color.Black;
+            cancel_Button.ForeColor = Color.White;
             cancel_Button.Location = new Point(38, 309);
             cancel_Button.Name = "cancel_Button";
             cancel_Button.Size = new Size(204, 46);
@@ -175,7 +150,7 @@
             // 
             // login_Button
             // 
-            login_Button.BackColor = Color.FromArgb(253, 253, 189);
+            login_Button.BackColor = Color.FromArgb(48, 162, 255);
             login_Button.FlatAppearance.BorderSize = 0;
             login_Button.FlatStyle = FlatStyle.Flat;
             login_Button.Font = new Font("Constantia", 16F, FontStyle.Regular, GraphicsUnit.Point);
@@ -184,7 +159,7 @@
             login_Button.Name = "login_Button";
             login_Button.Size = new Size(204, 46);
             login_Button.TabIndex = 2;
-            login_Button.Text = "Let's Go!";
+            login_Button.Text = "Login";
             login_Button.UseVisualStyleBackColor = false;
             login_Button.Click += login_Button_Click;
             // 
@@ -261,7 +236,6 @@
 
         private Panel panel1;
         private Label label3;
-        private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
         private Label label4;
@@ -273,7 +247,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Button cancel_Button;
-        private Label label5;
         private Panel panel3;
     }
 }

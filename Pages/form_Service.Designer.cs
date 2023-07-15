@@ -31,6 +31,14 @@
             txt_search = new TextBox();
             lab_search = new Label();
             dataGridView_service = new DataGridView();
+            name = new DataGridViewTextBoxColumn();
+            age = new DataGridViewTextBoxColumn();
+            species = new DataGridViewTextBoxColumn();
+            pet_owner = new DataGridViewTextBoxColumn();
+            services = new DataGridViewTextBoxColumn();
+            get_vaccinated = new DataGridViewTextBoxColumn();
+            get_examined = new DataGridViewTextBoxColumn();
+            good_health = new DataGridViewTextBoxColumn();
             lab_servicename = new Label();
             lab_unitprice = new Label();
             lab_describe = new Label();
@@ -41,14 +49,6 @@
             btn_delete = new Button();
             btn_edit = new Button();
             btn_add = new Button();
-            good_health = new DataGridViewTextBoxColumn();
-            get_examined = new DataGridViewTextBoxColumn();
-            get_vaccinated = new DataGridViewTextBoxColumn();
-            services = new DataGridViewTextBoxColumn();
-            pet_owner = new DataGridViewTextBoxColumn();
-            species = new DataGridViewTextBoxColumn();
-            age = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView_service).BeginInit();
             SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             // 
             // dataGridView_service
             // 
-            dataGridView_service.BackgroundColor = Color.FromArgb(248, 232, 238);
+            dataGridView_service.BackgroundColor = Color.White;
             dataGridView_service.BorderStyle = BorderStyle.None;
             dataGridView_service.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_service.Columns.AddRange(new DataGridViewColumn[] { name, age, species, pet_owner, services, get_vaccinated, get_examined, good_health });
@@ -82,6 +82,46 @@
             dataGridView_service.RowTemplate.Height = 25;
             dataGridView_service.Size = new Size(776, 276);
             dataGridView_service.TabIndex = 4;
+            // 
+            // name
+            // 
+            name.HeaderText = "Name";
+            name.Name = "name";
+            // 
+            // age
+            // 
+            age.HeaderText = "Age";
+            age.Name = "age";
+            // 
+            // species
+            // 
+            species.HeaderText = "Species";
+            species.Name = "species";
+            // 
+            // pet_owner
+            // 
+            pet_owner.HeaderText = "Pet Owner";
+            pet_owner.Name = "pet_owner";
+            // 
+            // services
+            // 
+            services.HeaderText = "Services in Use";
+            services.Name = "services";
+            // 
+            // get_vaccinated
+            // 
+            get_vaccinated.HeaderText = "Get vaccinated";
+            get_vaccinated.Name = "get_vaccinated";
+            // 
+            // get_examined
+            // 
+            get_examined.HeaderText = "Get examined";
+            get_examined.Name = "get_examined";
+            // 
+            // good_health
+            // 
+            good_health.HeaderText = "Good health";
+            good_health.Name = "good_health";
             // 
             // lab_servicename
             // 
@@ -143,9 +183,8 @@
             // 
             // btn_uwu
             // 
-            btn_uwu.BackColor = Color.FromArgb(165, 241, 233);
-            btn_uwu.FlatAppearance.BorderSize = 0;
-            btn_uwu.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_uwu.BackColor = Color.White;
+            btn_uwu.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_uwu.FlatStyle = FlatStyle.Flat;
             btn_uwu.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_uwu.Location = new Point(568, 105);
@@ -157,9 +196,8 @@
             // 
             // btn_delete
             // 
-            btn_delete.BackColor = Color.FromArgb(165, 241, 233);
-            btn_delete.FlatAppearance.BorderSize = 0;
-            btn_delete.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_delete.BackColor = Color.White;
+            btn_delete.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_delete.FlatStyle = FlatStyle.Flat;
             btn_delete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_delete.Location = new Point(568, 58);
@@ -171,9 +209,8 @@
             // 
             // btn_edit
             // 
-            btn_edit.BackColor = Color.FromArgb(165, 241, 233);
-            btn_edit.FlatAppearance.BorderSize = 0;
-            btn_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_edit.BackColor = Color.White;
+            btn_edit.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_edit.FlatStyle = FlatStyle.Flat;
             btn_edit.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_edit.Location = new Point(498, 105);
@@ -185,9 +222,8 @@
             // 
             // btn_add
             // 
-            btn_add.BackColor = Color.FromArgb(165, 241, 233);
-            btn_add.FlatAppearance.BorderSize = 0;
-            btn_add.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_add.BackColor = Color.White;
+            btn_add.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_add.FlatStyle = FlatStyle.Flat;
             btn_add.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add.Location = new Point(498, 58);
@@ -197,51 +233,11 @@
             btn_add.Text = "Add";
             btn_add.UseVisualStyleBackColor = false;
             // 
-            // good_health
-            // 
-            good_health.HeaderText = "Good health";
-            good_health.Name = "good_health";
-            // 
-            // get_examined
-            // 
-            get_examined.HeaderText = "Get examined";
-            get_examined.Name = "get_examined";
-            // 
-            // get_vaccinated
-            // 
-            get_vaccinated.HeaderText = "Get vaccinated";
-            get_vaccinated.Name = "get_vaccinated";
-            // 
-            // services
-            // 
-            services.HeaderText = "Services in Use";
-            services.Name = "services";
-            // 
-            // pet_owner
-            // 
-            pet_owner.HeaderText = "Pet Owner";
-            pet_owner.Name = "pet_owner";
-            // 
-            // species
-            // 
-            species.HeaderText = "Species";
-            species.Name = "species";
-            // 
-            // age
-            // 
-            age.HeaderText = "Age";
-            age.Name = "age";
-            // 
-            // name
-            // 
-            name.HeaderText = "Name";
-            name.Name = "name";
-            // 
             // form_Service
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 232, 238);
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_uwu);
             Controls.Add(btn_delete);

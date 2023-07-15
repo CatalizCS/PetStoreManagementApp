@@ -64,7 +64,7 @@
             // 
             // dataGridView_petmanager
             // 
-            dataGridView_petmanager.BackgroundColor = Color.FromArgb(248, 232, 238);
+            dataGridView_petmanager.BackgroundColor = Color.White;
             dataGridView_petmanager.BorderStyle = BorderStyle.None;
             dataGridView_petmanager.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_petmanager.Columns.AddRange(new DataGridViewColumn[] { name, age, species, pet_owner, services, get_vaccinated, get_examined, good_health });
@@ -291,9 +291,8 @@
             // 
             // btn_add
             // 
-            btn_add.BackColor = Color.FromArgb(165, 241, 233);
-            btn_add.FlatAppearance.BorderSize = 0;
-            btn_add.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_add.BackColor = Color.White;
+            btn_add.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_add.FlatStyle = FlatStyle.Flat;
             btn_add.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add.Location = new Point(582, 58);
@@ -305,9 +304,8 @@
             // 
             // btn_edit
             // 
-            btn_edit.BackColor = Color.FromArgb(165, 241, 233);
-            btn_edit.FlatAppearance.BorderSize = 0;
-            btn_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_edit.BackColor = Color.White;
+            btn_edit.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_edit.FlatStyle = FlatStyle.Flat;
             btn_edit.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_edit.Location = new Point(582, 105);
@@ -319,9 +317,8 @@
             // 
             // btn_delete
             // 
-            btn_delete.BackColor = Color.FromArgb(165, 241, 233);
-            btn_delete.FlatAppearance.BorderSize = 0;
-            btn_delete.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_delete.BackColor = Color.White;
+            btn_delete.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_delete.FlatStyle = FlatStyle.Flat;
             btn_delete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_delete.Location = new Point(652, 58);
@@ -333,9 +330,8 @@
             // 
             // btn_uwu
             // 
-            btn_uwu.BackColor = Color.FromArgb(165, 241, 233);
-            btn_uwu.FlatAppearance.BorderSize = 0;
-            btn_uwu.FlatAppearance.MouseOverBackColor = Color.FromArgb(127, 233, 222);
+            btn_uwu.BackColor = Color.White;
+            btn_uwu.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_uwu.FlatStyle = FlatStyle.Flat;
             btn_uwu.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btn_uwu.Location = new Point(652, 105);
@@ -349,7 +345,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 232, 238);
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_uwu);
             Controls.Add(btn_delete);
@@ -377,6 +373,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "form_PetManager";
             Text = "form_PetManager";
+            Load += form_PetManager_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_petmanager).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -84,29 +84,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Mongolian Baiti", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 102);
+            label1.Font = new Font("Lato", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(24, 102);
             label1.Name = "label1";
-            label1.Size = new Size(273, 30);
+            label1.Size = new Size(257, 29);
             label1.TabIndex = 2;
             label1.Text = "PetStore Management";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Constantia", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(109, 256);
+            label2.Font = new Font("Constantia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(101, 256);
             label2.Name = "label2";
-            label2.Size = new Size(77, 18);
+            label2.Size = new Size(92, 23);
             label2.TabIndex = 2;
-            label2.Text = "Loading....";
+            label2.Text = "Loading...";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(91, 299);
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(76, 289);
             label3.Name = "label3";
-            label3.Size = new Size(105, 15);
+            label3.Size = new Size(139, 21);
             label3.TabIndex = 3;
             label3.Text = "Made By CatalizCS";
             // 
