@@ -204,7 +204,6 @@
             // btn_uwu
             // 
             btn_uwu.BackColor = Color.White;
-            btn_uwu.FlatAppearance.BorderSize = 0;
             btn_uwu.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_uwu.FlatStyle = FlatStyle.Flat;
             btn_uwu.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -218,7 +217,6 @@
             // btn_delete
             // 
             btn_delete.BackColor = Color.White;
-            btn_delete.FlatAppearance.BorderSize = 0;
             btn_delete.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_delete.FlatStyle = FlatStyle.Flat;
             btn_delete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -232,7 +230,6 @@
             // btn_edit
             // 
             btn_edit.BackColor = Color.White;
-            btn_edit.FlatAppearance.BorderSize = 0;
             btn_edit.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_edit.FlatStyle = FlatStyle.Flat;
             btn_edit.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -246,7 +243,6 @@
             // btn_add
             // 
             btn_add.BackColor = Color.White;
-            btn_add.FlatAppearance.BorderSize = 0;
             btn_add.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btn_add.FlatStyle = FlatStyle.Flat;
             btn_add.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
