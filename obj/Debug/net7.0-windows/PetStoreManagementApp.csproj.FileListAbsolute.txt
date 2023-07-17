@@ -58,13 +58,6 @@ C:\Users\Moritaka\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\refint\
 C:\Users\Moritaka\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.pdb
 C:\Users\Moritaka\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.genruntimeconfig.cache
 C:\Users\Moritaka\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\ref\PetStoreManagementApp.dll
-<<<<<<< Updated upstream
-C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_About.resources
-C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Customer.resources
-C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_PetManager.resources
-C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Service.resources
-C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Warehouse.resources
-=======
 E:\New folder\bin\Debug\net7.0-windows\PetStoreManagementApp.exe
 E:\New folder\bin\Debug\net7.0-windows\PetStoreManagementApp.deps.json
 E:\New folder\bin\Debug\net7.0-windows\PetStoreManagementApp.runtimeconfig.json
@@ -99,4 +92,3 @@ E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Form_Admin.re
 E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Form_Setting_Admin.resources
 E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Ware_House.resources
 E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.About.resources
->>>>>>> Stashed changes

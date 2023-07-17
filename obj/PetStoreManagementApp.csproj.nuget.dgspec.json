@@ -1,22 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
-        "projectName": "PetStoreManagementApp",
-        "projectPath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
-        "packagesPath": "C:\\Users\\CatalizCS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\CatalizCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
     "E:\\New folder\\PetStoreManagementApp.csproj": {}
   },
   "projects": {
@@ -31,7 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
