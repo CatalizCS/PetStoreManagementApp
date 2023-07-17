@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {}
+    "E:\\New folder\\PetStoreManagementApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj": {
+    "E:\\New folder\\PetStoreManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
+        "projectUniqueName": "E:\\New folder\\PetStoreManagementApp.csproj",
         "projectName": "PetStoreManagementApp",
-        "projectPath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
-        "packagesPath": "C:\\Users\\CatalizCS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\obj\\",
+        "projectPath": "E:\\New folder\\PetStoreManagementApp.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\New folder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\CatalizCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -63,9 +63,35 @@ namespace PetStoreManagementApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< Updated upstream
         internal static System.Drawing.Bitmap contrast {
             get {
                 object obj = ResourceManager.GetObject("contrast", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap age_group {
+            get {
+                object obj = ResourceManager.GetObject("age-group", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_left {
+            get {
+                object obj = ResourceManager.GetObject("arrow-left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+>>>>>>> Stashed changes
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +119,15 @@ namespace PetStoreManagementApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< Updated upstream
         internal static System.Drawing.Bitmap dog_treat_new {
             get {
                 object obj = ResourceManager.GetObject("dog_treat_new", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap gmail {
+            get {
+                object obj = ResourceManager.GetObject("gmail", resourceCulture);
+>>>>>>> Stashed changes
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +205,7 @@ namespace PetStoreManagementApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< Updated upstream
         internal static System.Drawing.Bitmap moon {
             get {
                 object obj = ResourceManager.GetObject("moon", resourceCulture);
@@ -186,6 +219,11 @@ namespace PetStoreManagementApp.Properties {
         internal static System.Drawing.Bitmap package_new {
             get {
                 object obj = ResourceManager.GetObject("package_new", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap padlock {
+            get {
+                object obj = ResourceManager.GetObject("padlock", resourceCulture);
+>>>>>>> Stashed changes
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +241,25 @@ namespace PetStoreManagementApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< Updated upstream
         internal static System.Drawing.Bitmap paw_new {
             get {
                 object obj = ResourceManager.GetObject("paw_new", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap refresh__1_ {
+            get {
+                object obj = ResourceManager.GetObject("refresh (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
+>>>>>>> Stashed changes
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +290,16 @@ namespace PetStoreManagementApp.Properties {
         internal static System.Drawing.Bitmap test_avatar {
             get {
                 object obj = ResourceManager.GetObject("test_avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

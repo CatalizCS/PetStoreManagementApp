@@ -1,4 +1,5 @@
-﻿using PetStoreManagementApp.Libs;
+﻿using PetStoreManagementApp.Dialogs;
+using PetStoreManagementApp.Libs;
 using PetStoreManagementApp.Libs.DTO;
 using System;
 using System.Collections.Generic;
@@ -80,6 +81,30 @@ namespace PetStoreManagementApp.Auths
         private void cancel_Button_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label_Sign_up_Click(object sender, EventArgs e)
+        {
+            form_SignUp form_SignUp = new form_SignUp();
+            form_SignUp.Show();
+            this.Hide();
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Call the login_Button_Click method
+                login_Button_Click(sender, e);
+
+                // Prevent further processing of the Enter key
+                e.Handled = true;
+            }
         }
     }
 }

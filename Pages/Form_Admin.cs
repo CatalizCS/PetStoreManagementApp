@@ -10,13 +10,23 @@ using System.Windows.Forms;
 
 namespace PetStoreManagementApp.Pages
 {
-    public partial class form_Settings : Form
+    public partial class Form_Admin : Form
     {
-        public form_Settings()
+        public Form_Admin()
         {
             InitializeComponent();
         }
-        private string avatarURL = "";
+
+        private void button_EmployeeMan_Click(object sender, EventArgs e)
+        {
+            Form_Setting_Admin form_Setting_Admin = new Form_Setting_Admin();
+            form_Setting_Admin.Show();
+            this.Hide();
+            panel_Staff.Show();
+            panel_Change.Hide();
+            panel_Profile.Hide();
+        }
+
         private void button_Change_Avatar_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -33,14 +43,12 @@ namespace PetStoreManagementApp.Pages
                 // Load the selected image into the pictureBox_Avatar control
                 pictureBox_Avatar.Image = Image.FromFile(imagePath);
             }
-            avatarURL = openFileDialog.FileName;
         }
 
         private void pictureBox_Avatar_Click(object sender, EventArgs e)
         {
             button_Change_Avatar_Click(sender, e);
         }
-
         private void clearTextbox()
         {
             textBox_FName.Clear();
@@ -52,60 +60,53 @@ namespace PetStoreManagementApp.Pages
             textBox_Pass_Confirm.Clear();
         }
 
-        private void button_Change_Click(object sender, EventArgs e)
-        {
-            clearTextbox();
-            panel_Change.Show();
-            panel_Profile.Hide();
-            button_Delete.Visible = true;
-        }
-
-        private void form_Settings_Load(object sender, EventArgs e)
-        {
-            form_Main form_Main = new form_Main();
-            panel_Change.Hide();
-            pictureBox_Avatar.Image = form_Main.GetAvatarImage();
-        }
-        public void SetAvatarImage(Image image)
-        {
-            pictureBox_Avatar.Image = image;
-        }
-        private void button_Profile_Click(object sender, EventArgs e)
-        {
-            panel_Profile.Show();
-            panel_Change.Hide();
-            button_Profile.ForeColor = Color.White;
-            button_Profile.BackColor = Color.DodgerBlue;
-            button_Change.ForeColor = Color.DodgerBlue;
-            button_Change.BackColor = Color.White;
-            button_Delete.Visible = false;
-        }
-
-        private void pictureBox_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button_Delete_Click(object sender, EventArgs e)
         {
             clearTextbox();
             button_Profile_Click(sender, e);
         }
 
+        private void button_Change_Click(object sender, EventArgs e)
+        {
+            clearTextbox();
+            panel_Change.Show();
+            panel_Profile.Hide();
+            panel_Staff.Hide();
+            button_Delete.Visible = true;
+        }
+
+        private void button_Profile_Click(object sender, EventArgs e)
+        {
+            panel_Profile.Show();
+            panel_Change.Hide();
+            panel_Staff.Hide();
+        }
+
         private void button_Profile_MouseMove(object sender, MouseEventArgs e)
         {
             panel_Profile.Show();
             panel_Change.Hide();
-            button_Profile.ForeColor = Color.Black;
-            button_Change.ForeColor = Color.DodgerBlue;
+            panel_Staff.Hide();
         }
 
         private void button_Change_MouseMove(object sender, MouseEventArgs e)
         {
             panel_Change.Show();
             panel_Profile.Hide();
-            button_Change.ForeColor = Color.Black;
-            button_Profile.ForeColor = Color.DodgerBlue;
+            panel_Staff.Hide();
+        }
+
+        private void button_EmployeeMan_MouseMove(object sender, MouseEventArgs e)
+        {
+            panel_Staff.Show();
+            panel_Change.Hide();
+            panel_Profile.Hide();
+        }
+
+        private void Form_Admin_Load(object sender, EventArgs e)
+        {
+            form_Main form_Main = new form_Main();
+            pictureBox_Avatar.Image = form_Main.GetAvatarImage();
         }
     }
 }

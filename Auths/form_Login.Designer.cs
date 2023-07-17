@@ -35,6 +35,9 @@
             pictureBox1 = new PictureBox();
             label4 = new Label();
             panel2 = new Panel();
+            checkBox_Remember = new CheckBox();
+            label_Sign_up = new Label();
+            label_Signup = new Label();
             cancel_Button = new Button();
             login_Button = new Button();
             password = new TextBox();
@@ -111,7 +114,7 @@
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Constantia", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(169, 134, 115);
-            label4.Location = new Point(38, 69);
+            label4.Location = new Point(38, 30);
             label4.Name = "label4";
             label4.Size = new Size(204, 29);
             label4.TabIndex = 2;
@@ -119,6 +122,9 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(checkBox_Remember);
+            panel2.Controls.Add(label_Sign_up);
+            panel2.Controls.Add(label_Signup);
             panel2.Controls.Add(cancel_Button);
             panel2.Controls.Add(login_Button);
             panel2.Controls.Add(password);
@@ -133,15 +139,45 @@
             panel2.Size = new Size(273, 376);
             panel2.TabIndex = 3;
             // 
+            // checkBox_Remember
+            // 
+            checkBox_Remember.AutoSize = true;
+            checkBox_Remember.Location = new Point(6, 245);
+            checkBox_Remember.Name = "checkBox_Remember";
+            checkBox_Remember.Size = new Size(104, 19);
+            checkBox_Remember.TabIndex = 22;
+            checkBox_Remember.Text = "Remember me";
+            checkBox_Remember.UseVisualStyleBackColor = true;
+            // 
+            // label_Sign_up
+            // 
+            label_Sign_up.AutoSize = true;
+            label_Sign_up.ForeColor = Color.Purple;
+            label_Sign_up.Location = new Point(172, 352);
+            label_Sign_up.Name = "label_Sign_up";
+            label_Sign_up.Size = new Size(48, 15);
+            label_Sign_up.TabIndex = 21;
+            label_Sign_up.Text = "Sign Up";
+            label_Sign_up.Click += label_Sign_up_Click;
+            // 
+            // label_Signup
+            // 
+            label_Signup.AutoSize = true;
+            label_Signup.Location = new Point(38, 352);
+            label_Signup.Name = "label_Signup";
+            label_Signup.Size = new Size(128, 15);
+            label_Signup.TabIndex = 20;
+            label_Signup.Text = "Don't have an Account";
+            // 
             // cancel_Button
             // 
             cancel_Button.BackColor = Color.Gray;
             cancel_Button.FlatStyle = FlatStyle.Flat;
             cancel_Button.Font = new Font("Constantia", 18F, FontStyle.Regular, GraphicsUnit.Point);
             cancel_Button.ForeColor = Color.White;
-            cancel_Button.Location = new Point(38, 284);
+            cancel_Button.Location = new Point(149, 289);
             cancel_Button.Name = "cancel_Button";
-            cancel_Button.Size = new Size(204, 46);
+            cancel_Button.Size = new Size(111, 44);
             cancel_Button.TabIndex = 3;
             cancel_Button.Text = "Cancel";
             cancel_Button.UseVisualStyleBackColor = false;
@@ -153,9 +189,9 @@
             login_Button.FlatStyle = FlatStyle.Flat;
             login_Button.Font = new Font("Constantia", 18F, FontStyle.Regular, GraphicsUnit.Point);
             login_Button.ForeColor = Color.Black;
-            login_Button.Location = new Point(38, 232);
+            login_Button.Location = new Point(6, 289);
             login_Button.Name = "login_Button";
-            login_Button.Size = new Size(204, 46);
+            login_Button.Size = new Size(92, 44);
             login_Button.TabIndex = 2;
             login_Button.Text = "Login";
             login_Button.UseVisualStyleBackColor = false;
@@ -171,6 +207,8 @@
             password.Name = "password";
             password.Size = new Size(237, 16);
             password.TabIndex = 1;
+            password.TextChanged += password_TextChanged;
+            password.KeyPress += password_KeyPress;
             // 
             // username
             // 
@@ -258,5 +296,8 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Button cancel_Button;
+        private Label label_Signup;
+        private Label label_Sign_up;
+        private CheckBox checkBox_Remember;
     }
 }
