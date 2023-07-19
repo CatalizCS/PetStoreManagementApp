@@ -256,7 +256,7 @@ namespace PetStoreManagementApp.Dialogs
             if (DatabaseConnection.Instance.Execute(query))
             {
                 // insert userinfo
-                query = "INSERT INTO Customer_InfoData (FirstName, LastName, Age, Email) VALUES ('" + textBox_FirstName.Text.ToString() + "', '" + textBox_LastName.Text.ToString() + "', '" + textBox_Age.Text.ToString() + "', '" + textBox_Email.Text.ToString() + "')";
+                query = "INSERT INTO Employee_InfoData (FirstName, LastName, Age, Email) VALUES ('" + textBox_FirstName.Text.ToString() + "', '" + textBox_LastName.Text.ToString() + "', '" + textBox_Age.Text.ToString() + "', '" + textBox_Email.Text.ToString() + "')";
                 if (DatabaseConnection.Instance.Execute(query))
                 {
                     new CustomMessageBox("Registered successfully!").ShowDialog();
