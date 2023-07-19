@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PetStoreManagementApp.Libs.DTO
+﻿namespace PetStoreManagementApp.Libs.DTO
 {
     // instance variables mapping to columns of table
     public enum Permission { admin, employee, customer };

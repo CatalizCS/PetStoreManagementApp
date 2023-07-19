@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PetStoreManagementApp.Libs
+﻿namespace PetStoreManagementApp.Libs
 {
     public class RegexChecker
     {
@@ -26,6 +20,31 @@ namespace PetStoreManagementApp.Libs
         public bool IsValidPassword(string password)
         {
             return System.Text.RegularExpressions.Regex.IsMatch(password, @"^[a-zA-Z0-9_]+$");
+        }
+
+        public bool IsValidEmail(string email)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        }
+
+        public bool IsValidPhoneNumber(string phoneNumber)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, @"^[0-9]+$");
+        }
+
+        public bool IsValidAge(string age)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(age, @"^[0-9]+$");
+        }
+
+        public bool IsValidPrice(string price)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(price, @"^[0-9]+$");
+        }
+
+        public bool IsValidQuantity(string quantity)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(quantity, @"^[0-9]+$");
         }
     }
 }

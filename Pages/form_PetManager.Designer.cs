@@ -28,369 +28,513 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView_petmanager = new DataGridView();
-            name = new DataGridViewTextBoxColumn();
-            age = new DataGridViewTextBoxColumn();
-            species = new DataGridViewTextBoxColumn();
-            pet_owner = new DataGridViewTextBoxColumn();
-            services = new DataGridViewTextBoxColumn();
-            get_vaccinated = new DataGridViewTextBoxColumn();
-            get_examined = new DataGridViewTextBoxColumn();
-            good_health = new DataGridViewTextBoxColumn();
-            txt_search = new TextBox();
-            lab_search = new Label();
-            lab_name = new Label();
-            txt_name = new TextBox();
-            lab_age = new Label();
-            lab_species = new Label();
-            lab_petowner = new Label();
-            txt_age = new TextBox();
-            txt_petowner = new TextBox();
-            txt_species = new TextBox();
-            lab_services = new Label();
-            comboBox_services = new ComboBox();
-            lab_vaccinated = new Label();
-            lab_health = new Label();
-            lab_examined = new Label();
-            checkBox_vaccinated = new CheckBox();
-            checkBox_examined = new CheckBox();
-            checkBox_goodhealth = new CheckBox();
-            btn_add = new Button();
-            btn_edit = new Button();
-            btn_delete = new Button();
-            btn_uwu = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_petmanager).BeginInit();
+            dataGridView = new DataGridView();
+            panel4 = new Panel();
+            panel_Controls = new Panel();
+            panel_Update = new Panel();
+            panel_Delete = new Panel();
+            panel_Add = new Panel();
+            button_Change = new Button();
+            button_Delete = new Button();
+            button_Add = new Button();
+            ownerID_Textbox = new TextBox();
+            ID_Textbox = new TextBox();
+            ID_ComboBox = new ComboBox();
+            label4 = new Label();
+            label_ID = new Label();
+            phone_Textbox = new TextBox();
+            type_Textbox = new TextBox();
+            email_Textbox = new TextBox();
+            age_Textbox = new TextBox();
+            lastName_Textbox = new TextBox();
+            firstName_Textbox = new TextBox();
+            label3 = new Label();
+            fullName_Textbox = new TextBox();
+            label2 = new Label();
+            label_Price = new Label();
+            label1 = new Label();
+            label_Quantity = new Label();
+            label_Name = new Label();
+            panel3 = new Panel();
+            pictureBox2 = new PictureBox();
+            searchBar = new TextBox();
+            label_All = new Label();
+            label_Allproduct = new Label();
+            label_Ware = new Label();
+            pictureBox1 = new PictureBox();
+            label_OverView = new Label();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            panel4.SuspendLayout();
+            panel_Controls.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView_petmanager
+            // dataGridView
             // 
-            dataGridView_petmanager.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_petmanager.Columns.AddRange(new DataGridViewColumn[] { name, age, species, pet_owner, services, get_vaccinated, get_examined, good_health });
-            dataGridView_petmanager.Location = new Point(12, 162);
-            dataGridView_petmanager.Name = "dataGridView_petmanager";
-            dataGridView_petmanager.RowTemplate.Height = 25;
-            dataGridView_petmanager.Size = new Size(776, 276);
-            dataGridView_petmanager.TabIndex = 0;
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AllowUserToResizeColumns = false;
+            dataGridView.AllowUserToResizeRows = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Location = new Point(1, 49);
+            dataGridView.MultiSelect = false;
+            dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.ScrollBars = ScrollBars.Vertical;
+            dataGridView.ShowEditingIcon = false;
+            dataGridView.Size = new Size(588, 265);
+            dataGridView.TabIndex = 2;
+            dataGridView.Click += dataGridView_Click;
             // 
-            // name
+            // panel4
             // 
-            name.HeaderText = "Name";
-            name.Name = "name";
+            panel4.Controls.Add(dataGridView);
+            panel4.Controls.Add(panel_Controls);
+            panel4.Controls.Add(panel3);
+            panel4.Location = new Point(181, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(590, 536);
+            panel4.TabIndex = 4;
             // 
-            // age
+            // panel_Controls
             // 
-            age.HeaderText = "Age";
-            age.Name = "age";
+            panel_Controls.BackColor = Color.White;
+            panel_Controls.Controls.Add(panel_Update);
+            panel_Controls.Controls.Add(panel_Delete);
+            panel_Controls.Controls.Add(panel_Add);
+            panel_Controls.Controls.Add(button_Change);
+            panel_Controls.Controls.Add(button_Delete);
+            panel_Controls.Controls.Add(button_Add);
+            panel_Controls.Controls.Add(ownerID_Textbox);
+            panel_Controls.Controls.Add(ID_Textbox);
+            panel_Controls.Controls.Add(ID_ComboBox);
+            panel_Controls.Controls.Add(label4);
+            panel_Controls.Controls.Add(label_ID);
+            panel_Controls.Controls.Add(phone_Textbox);
+            panel_Controls.Controls.Add(type_Textbox);
+            panel_Controls.Controls.Add(email_Textbox);
+            panel_Controls.Controls.Add(age_Textbox);
+            panel_Controls.Controls.Add(lastName_Textbox);
+            panel_Controls.Controls.Add(firstName_Textbox);
+            panel_Controls.Controls.Add(label3);
+            panel_Controls.Controls.Add(fullName_Textbox);
+            panel_Controls.Controls.Add(label2);
+            panel_Controls.Controls.Add(label_Price);
+            panel_Controls.Controls.Add(label1);
+            panel_Controls.Controls.Add(label_Quantity);
+            panel_Controls.Controls.Add(label_Name);
+            panel_Controls.Location = new Point(0, 314);
+            panel_Controls.Name = "panel_Controls";
+            panel_Controls.Size = new Size(590, 227);
+            panel_Controls.TabIndex = 1;
             // 
-            // species
+            // panel_Update
             // 
-            species.HeaderText = "Species";
-            species.Name = "species";
+            panel_Update.BackColor = Color.DodgerBlue;
+            panel_Update.Location = new Point(401, 209);
+            panel_Update.Name = "panel_Update";
+            panel_Update.Size = new Size(75, 2);
+            panel_Update.TabIndex = 37;
+            panel_Update.Visible = false;
             // 
-            // pet_owner
+            // panel_Delete
             // 
-            pet_owner.HeaderText = "Pet Owner";
-            pet_owner.Name = "pet_owner";
+            panel_Delete.BackColor = Color.DodgerBlue;
+            panel_Delete.Location = new Point(482, 209);
+            panel_Delete.Name = "panel_Delete";
+            panel_Delete.Size = new Size(68, 2);
+            panel_Delete.TabIndex = 41;
+            panel_Delete.Visible = false;
             // 
-            // services
+            // panel_Add
             // 
-            services.HeaderText = "Services in Use";
-            services.Name = "services";
+            panel_Add.BackColor = Color.DodgerBlue;
+            panel_Add.Location = new Point(342, 209);
+            panel_Add.Name = "panel_Add";
+            panel_Add.Size = new Size(53, 2);
+            panel_Add.TabIndex = 36;
             // 
-            // get_vaccinated
+            // button_Change
             // 
-            get_vaccinated.HeaderText = "Get vaccinated";
-            get_vaccinated.Name = "get_vaccinated";
+            button_Change.FlatAppearance.BorderSize = 0;
+            button_Change.FlatStyle = FlatStyle.Flat;
+            button_Change.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button_Change.ForeColor = Color.DodgerBlue;
+            button_Change.Location = new Point(401, 175);
+            button_Change.Name = "button_Change";
+            button_Change.Size = new Size(75, 28);
+            button_Change.TabIndex = 40;
+            button_Change.Text = "UPDATE";
+            button_Change.UseVisualStyleBackColor = true;
+            button_Change.Click += button_Change_Click;
             // 
-            // get_examined
+            // button_Delete
             // 
-            get_examined.HeaderText = "Get examined";
-            get_examined.Name = "get_examined";
+            button_Delete.FlatAppearance.BorderSize = 0;
+            button_Delete.FlatStyle = FlatStyle.Flat;
+            button_Delete.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button_Delete.ForeColor = Color.DodgerBlue;
+            button_Delete.Location = new Point(482, 175);
+            button_Delete.Name = "button_Delete";
+            button_Delete.Size = new Size(68, 28);
+            button_Delete.TabIndex = 39;
+            button_Delete.Text = "DELETE";
+            button_Delete.UseVisualStyleBackColor = true;
+            button_Delete.Click += button_Delete_Click;
             // 
-            // good_health
+            // button_Add
             // 
-            good_health.HeaderText = "Good health";
-            good_health.Name = "good_health";
+            button_Add.FlatAppearance.BorderSize = 0;
+            button_Add.FlatStyle = FlatStyle.Flat;
+            button_Add.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button_Add.ForeColor = Color.DodgerBlue;
+            button_Add.Location = new Point(342, 175);
+            button_Add.Name = "button_Add";
+            button_Add.Size = new Size(53, 28);
+            button_Add.TabIndex = 38;
+            button_Add.Text = "ADD";
+            button_Add.UseVisualStyleBackColor = true;
+            button_Add.Click += button_Add_Click;
             // 
-            // txt_search
+            // ownerID_Textbox
             // 
-            txt_search.BorderStyle = BorderStyle.None;
-            txt_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_search.Location = new Point(97, 14);
-            txt_search.Name = "txt_search";
-            txt_search.Size = new Size(465, 22);
-            txt_search.TabIndex = 1;
+            ownerID_Textbox.BackColor = Color.LightGray;
+            ownerID_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ownerID_Textbox.Location = new Point(401, 31);
+            ownerID_Textbox.Name = "ownerID_Textbox";
+            ownerID_Textbox.Size = new Size(76, 23);
+            ownerID_Textbox.TabIndex = 35;
             // 
-            // lab_search
+            // ID_Textbox
             // 
-            lab_search.AutoSize = true;
-            lab_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_search.Location = new Point(34, 14);
-            lab_search.Name = "lab_search";
-            lab_search.Size = new Size(57, 21);
-            lab_search.TabIndex = 2;
-            lab_search.Text = "Search";
+            ID_Textbox.BackColor = Color.LightGray;
+            ID_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ID_Textbox.Location = new Point(116, 28);
+            ID_Textbox.Name = "ID_Textbox";
+            ID_Textbox.Size = new Size(71, 23);
+            ID_Textbox.TabIndex = 35;
             // 
-            // lab_name
+            // ID_ComboBox
             // 
-            lab_name.AutoSize = true;
-            lab_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_name.Location = new Point(39, 58);
-            lab_name.Name = "lab_name";
-            lab_name.Size = new Size(55, 21);
-            lab_name.TabIndex = 3;
-            lab_name.Text = "Name:";
+            ID_ComboBox.BackColor = Color.LightGray;
+            ID_ComboBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ID_ComboBox.FormattingEnabled = true;
+            ID_ComboBox.Location = new Point(193, 28);
+            ID_ComboBox.Name = "ID_ComboBox";
+            ID_ComboBox.Size = new Size(72, 23);
+            ID_ComboBox.TabIndex = 34;
+            ID_ComboBox.SelectedIndexChanged += ID_ComboBox_SelectedIndexChanged;
             // 
-            // txt_name
+            // label4
             // 
-            txt_name.BorderStyle = BorderStyle.None;
-            txt_name.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_name.Location = new Point(132, 61);
-            txt_name.Name = "txt_name";
-            txt_name.Size = new Size(144, 18);
-            txt_name.TabIndex = 4;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(293, 31);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 25);
+            label4.TabIndex = 33;
+            label4.Text = "Owner ID:";
             // 
-            // lab_age
+            // label_ID
             // 
-            lab_age.AutoSize = true;
-            lab_age.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_age.Location = new Point(39, 79);
-            lab_age.Name = "lab_age";
-            lab_age.Size = new Size(40, 21);
-            lab_age.TabIndex = 5;
-            lab_age.Text = "Age:";
+            label_ID.AutoSize = true;
+            label_ID.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_ID.Location = new Point(35, 28);
+            label_ID.Name = "label_ID";
+            label_ID.Size = new Size(36, 25);
+            label_ID.TabIndex = 33;
+            label_ID.Text = "ID:";
             // 
-            // lab_species
+            // phone_Textbox
             // 
-            lab_species.AutoSize = true;
-            lab_species.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_species.Location = new Point(39, 100);
-            lab_species.Name = "lab_species";
-            lab_species.Size = new Size(65, 21);
-            lab_species.TabIndex = 6;
-            lab_species.Text = "Species:";
+            phone_Textbox.BackColor = Color.LightGray;
+            phone_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            phone_Textbox.Location = new Point(401, 89);
+            phone_Textbox.Name = "phone_Textbox";
+            phone_Textbox.ReadOnly = true;
+            phone_Textbox.Size = new Size(158, 23);
+            phone_Textbox.TabIndex = 32;
             // 
-            // lab_petowner
+            // type_Textbox
             // 
-            lab_petowner.AutoSize = true;
-            lab_petowner.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_petowner.Location = new Point(39, 121);
-            lab_petowner.Name = "lab_petowner";
-            lab_petowner.Size = new Size(85, 21);
-            lab_petowner.TabIndex = 7;
-            lab_petowner.Text = "Pet Owner:";
+            type_Textbox.BackColor = Color.LightGray;
+            type_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            type_Textbox.Location = new Point(114, 86);
+            type_Textbox.Name = "type_Textbox";
+            type_Textbox.Size = new Size(151, 23);
+            type_Textbox.TabIndex = 32;
             // 
-            // txt_age
+            // email_Textbox
             // 
-            txt_age.BorderStyle = BorderStyle.None;
-            txt_age.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_age.Location = new Point(132, 82);
-            txt_age.Name = "txt_age";
-            txt_age.Size = new Size(144, 18);
-            txt_age.TabIndex = 8;
+            email_Textbox.BackColor = Color.LightGray;
+            email_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            email_Textbox.Location = new Point(401, 118);
+            email_Textbox.Name = "email_Textbox";
+            email_Textbox.ReadOnly = true;
+            email_Textbox.Size = new Size(158, 23);
+            email_Textbox.TabIndex = 31;
             // 
-            // txt_petowner
+            // age_Textbox
             // 
-            txt_petowner.BorderStyle = BorderStyle.None;
-            txt_petowner.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_petowner.Location = new Point(132, 124);
-            txt_petowner.Name = "txt_petowner";
-            txt_petowner.Size = new Size(144, 18);
-            txt_petowner.TabIndex = 9;
+            age_Textbox.BackColor = Color.LightGray;
+            age_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            age_Textbox.Location = new Point(114, 115);
+            age_Textbox.Name = "age_Textbox";
+            age_Textbox.Size = new Size(151, 23);
+            age_Textbox.TabIndex = 31;
             // 
-            // txt_species
+            // lastName_Textbox
             // 
-            txt_species.BorderStyle = BorderStyle.None;
-            txt_species.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_species.Location = new Point(132, 103);
-            txt_species.Name = "txt_species";
-            txt_species.Size = new Size(144, 18);
-            txt_species.TabIndex = 10;
+            lastName_Textbox.BackColor = Color.LightGray;
+            lastName_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lastName_Textbox.Location = new Point(483, 60);
+            lastName_Textbox.Name = "lastName_Textbox";
+            lastName_Textbox.ReadOnly = true;
+            lastName_Textbox.Size = new Size(76, 23);
+            lastName_Textbox.TabIndex = 30;
             // 
-            // lab_services
+            // firstName_Textbox
             // 
-            lab_services.AutoSize = true;
-            lab_services.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_services.Location = new Point(297, 58);
-            lab_services.Name = "lab_services";
-            lab_services.Size = new Size(115, 21);
-            lab_services.TabIndex = 11;
-            lab_services.Text = "Services in use:";
+            firstName_Textbox.BackColor = Color.LightGray;
+            firstName_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            firstName_Textbox.Location = new Point(401, 60);
+            firstName_Textbox.Name = "firstName_Textbox";
+            firstName_Textbox.ReadOnly = true;
+            firstName_Textbox.Size = new Size(76, 23);
+            firstName_Textbox.TabIndex = 30;
             // 
-            // comboBox_services
+            // label3
             // 
-            comboBox_services.FlatStyle = FlatStyle.Flat;
-            comboBox_services.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox_services.FormattingEnabled = true;
-            comboBox_services.Location = new Point(418, 59);
-            comboBox_services.Name = "comboBox_services";
-            comboBox_services.Size = new Size(144, 20);
-            comboBox_services.TabIndex = 12;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(314, 89);
+            label3.Name = "label3";
+            label3.Size = new Size(71, 25);
+            label3.TabIndex = 29;
+            label3.Text = "Phone:";
             // 
-            // lab_vaccinated
+            // fullName_Textbox
             // 
-            lab_vaccinated.AutoSize = true;
-            lab_vaccinated.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_vaccinated.Location = new Point(298, 79);
-            lab_vaccinated.Name = "lab_vaccinated";
-            lab_vaccinated.Size = new Size(114, 21);
-            lab_vaccinated.TabIndex = 13;
-            lab_vaccinated.Text = "Get vaccinated:";
+            fullName_Textbox.BackColor = Color.LightGray;
+            fullName_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            fullName_Textbox.Location = new Point(114, 57);
+            fullName_Textbox.Name = "fullName_Textbox";
+            fullName_Textbox.Size = new Size(151, 23);
+            fullName_Textbox.TabIndex = 30;
             // 
-            // lab_health
+            // label2
             // 
-            lab_health.AutoSize = true;
-            lab_health.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_health.Location = new Point(298, 121);
-            lab_health.Name = "lab_health";
-            lab_health.Size = new Size(98, 21);
-            lab_health.TabIndex = 14;
-            lab_health.Text = "Good health:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(327, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 25);
+            label2.TabIndex = 28;
+            label2.Text = "Email:";
             // 
-            // lab_examined
+            // label_Price
             // 
-            lab_examined.AutoSize = true;
-            lab_examined.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lab_examined.Location = new Point(298, 100);
-            lab_examined.Name = "lab_examined";
-            lab_examined.Size = new Size(108, 21);
-            lab_examined.TabIndex = 15;
-            lab_examined.Text = "Get examined:";
+            label_Price.AutoSize = true;
+            label_Price.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Price.Location = new Point(21, 86);
+            label_Price.Name = "label_Price";
+            label_Price.Size = new Size(58, 25);
+            label_Price.TabIndex = 29;
+            label_Price.Text = "Type:";
             // 
-            // checkBox_vaccinated
+            // label1
             // 
-            checkBox_vaccinated.AutoSize = true;
-            checkBox_vaccinated.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_vaccinated.Location = new Point(418, 86);
-            checkBox_vaccinated.Name = "checkBox_vaccinated";
-            checkBox_vaccinated.Size = new Size(15, 14);
-            checkBox_vaccinated.TabIndex = 16;
-            checkBox_vaccinated.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(293, 60);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 25);
+            label1.TabIndex = 27;
+            label1.Text = "Full Name:";
             // 
-            // checkBox_examined
+            // label_Quantity
             // 
-            checkBox_examined.AutoSize = true;
-            checkBox_examined.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_examined.Location = new Point(418, 107);
-            checkBox_examined.Name = "checkBox_examined";
-            checkBox_examined.Size = new Size(15, 14);
-            checkBox_examined.TabIndex = 17;
-            checkBox_examined.UseVisualStyleBackColor = true;
+            label_Quantity.AutoSize = true;
+            label_Quantity.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Quantity.Location = new Point(28, 115);
+            label_Quantity.Name = "label_Quantity";
+            label_Quantity.Size = new Size(51, 25);
+            label_Quantity.TabIndex = 28;
+            label_Quantity.Text = "Age:";
             // 
-            // checkBox_goodhealth
+            // label_Name
             // 
-            checkBox_goodhealth.AutoSize = true;
-            checkBox_goodhealth.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox_goodhealth.Location = new Point(418, 128);
-            checkBox_goodhealth.Name = "checkBox_goodhealth";
-            checkBox_goodhealth.Size = new Size(15, 14);
-            checkBox_goodhealth.TabIndex = 18;
-            checkBox_goodhealth.UseVisualStyleBackColor = true;
+            label_Name.AutoSize = true;
+            label_Name.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Name.Location = new Point(6, 57);
+            label_Name.Name = "label_Name";
+            label_Name.Size = new Size(102, 25);
+            label_Name.TabIndex = 27;
+            label_Name.Text = "Full Name:";
             // 
-            // btn_add
+            // panel3
             // 
-            btn_add.Location = new Point(582, 58);
-            btn_add.Name = "btn_add";
-            btn_add.Size = new Size(64, 37);
-            btn_add.TabIndex = 19;
-            btn_add.Text = "Add";
-            btn_add.UseVisualStyleBackColor = true;
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(pictureBox2);
+            panel3.Controls.Add(searchBar);
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(590, 52);
+            panel3.TabIndex = 0;
             // 
-            // btn_edit
+            // pictureBox2
             // 
-            btn_edit.Location = new Point(582, 105);
-            btn_edit.Name = "btn_edit";
-            btn_edit.Size = new Size(64, 37);
-            btn_edit.TabIndex = 20;
-            btn_edit.Text = "Edit";
-            btn_edit.UseVisualStyleBackColor = true;
+            pictureBox2.Image = Properties.Resources.search;
+            pictureBox2.Location = new Point(248, 20);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(29, 23);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
             // 
-            // btn_delete
+            // searchBar
             // 
-            btn_delete.Location = new Point(652, 58);
-            btn_delete.Name = "btn_delete";
-            btn_delete.Size = new Size(64, 37);
-            btn_delete.TabIndex = 21;
-            btn_delete.Text = "Delete";
-            btn_delete.UseVisualStyleBackColor = true;
+            searchBar.Location = new Point(17, 20);
+            searchBar.Name = "searchBar";
+            searchBar.Size = new Size(225, 23);
+            searchBar.TabIndex = 6;
             // 
-            // btn_uwu
+            // label_All
             // 
-            btn_uwu.Location = new Point(652, 105);
-            btn_uwu.Name = "btn_uwu";
-            btn_uwu.Size = new Size(64, 37);
-            btn_uwu.TabIndex = 22;
-            btn_uwu.Text = "UwU";
-            btn_uwu.UseVisualStyleBackColor = true;
+            label_All.AutoSize = true;
+            label_All.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label_All.ForeColor = Color.White;
+            label_All.Location = new Point(54, 114);
+            label_All.Name = "label_All";
+            label_All.Size = new Size(65, 37);
+            label_All.TabIndex = 8;
+            label_All.Text = "488";
+            // 
+            // label_Allproduct
+            // 
+            label_Allproduct.AutoSize = true;
+            label_Allproduct.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Allproduct.ForeColor = Color.White;
+            label_Allproduct.Location = new Point(21, 95);
+            label_Allproduct.Name = "label_Allproduct";
+            label_Allproduct.Size = new Size(100, 21);
+            label_Allproduct.TabIndex = 7;
+            label_Allproduct.Text = "all products";
+            // 
+            // label_Ware
+            // 
+            label_Ware.AutoSize = true;
+            label_Ware.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label_Ware.ForeColor = Color.White;
+            label_Ware.Location = new Point(26, 489);
+            label_Ware.Name = "label_Ware";
+            label_Ware.Size = new Size(109, 28);
+            label_Ware.TabIndex = 1;
+            label_Ware.Text = "Warehouse";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.logo;
+            pictureBox1.Location = new Point(41, 444);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(80, 42);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // label_OverView
+            // 
+            label_OverView.AutoSize = true;
+            label_OverView.Font = new Font("Montserrat", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label_OverView.ForeColor = Color.White;
+            label_OverView.Location = new Point(21, 33);
+            label_OverView.Name = "label_OverView";
+            label_OverView.Size = new Size(127, 29);
+            label_OverView.TabIndex = 0;
+            label_OverView.Text = "Over View";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(label_All);
+            panel1.Controls.Add(label_Allproduct);
+            panel1.Controls.Add(label_Ware);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label_OverView);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(181, 541);
+            panel1.TabIndex = 3;
             // 
             // form_PetManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btn_uwu);
-            Controls.Add(btn_delete);
-            Controls.Add(btn_edit);
-            Controls.Add(btn_add);
-            Controls.Add(checkBox_goodhealth);
-            Controls.Add(checkBox_examined);
-            Controls.Add(checkBox_vaccinated);
-            Controls.Add(lab_examined);
-            Controls.Add(lab_health);
-            Controls.Add(lab_vaccinated);
-            Controls.Add(comboBox_services);
-            Controls.Add(lab_services);
-            Controls.Add(txt_species);
-            Controls.Add(txt_petowner);
-            Controls.Add(txt_age);
-            Controls.Add(lab_petowner);
-            Controls.Add(lab_species);
-            Controls.Add(lab_age);
-            Controls.Add(txt_name);
-            Controls.Add(lab_name);
-            Controls.Add(lab_search);
-            Controls.Add(txt_search);
-            Controls.Add(dataGridView_petmanager);
+            ClientSize = new Size(771, 541);
+            Controls.Add(panel4);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "form_PetManager";
             Text = "form_PetManager";
-            ((System.ComponentModel.ISupportInitialize)dataGridView_petmanager).EndInit();
+            Load += form_PetManager_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            panel4.ResumeLayout(false);
+            panel_Controls.ResumeLayout(false);
+            panel_Controls.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView_petmanager;
-        private TextBox txt_search;
-        private Label lab_search;
-        private Label lab_name;
-        private TextBox txt_name;
-        private Label lab_age;
-        private Label lab_species;
-        private Label lab_petowner;
-        private TextBox txt_age;
-        private TextBox txt_petowner;
-        private TextBox txt_species;
-        private Label lab_services;
-        private ComboBox comboBox_services;
-        private Label lab_vaccinated;
-        private Label lab_health;
-        private Label lab_examined;
-        private CheckBox checkBox_vaccinated;
-        private CheckBox checkBox_examined;
-        private CheckBox checkBox_goodhealth;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn age;
-        private DataGridViewTextBoxColumn species;
-        private DataGridViewTextBoxColumn pet_owner;
-        private DataGridViewTextBoxColumn services;
-        private DataGridViewTextBoxColumn get_vaccinated;
-        private DataGridViewTextBoxColumn get_examined;
-        private DataGridViewTextBoxColumn good_health;
-        private Button btn_add;
-        private Button btn_edit;
-        private Button btn_delete;
-        private Button btn_uwu;
+        private DataGridView dataGridView;
+        private Panel panel4;
+        private Panel panel_Controls;
+        private Panel panel_Update;
+        private Panel panel_Delete;
+        private Panel panel_Add;
+        private Button button_Change;
+        private Button button_Delete;
+        private Button button_Add;
+        private TextBox ID_Textbox;
+        private ComboBox ID_ComboBox;
+        private Label label_ID;
+        private TextBox type_Textbox;
+        private TextBox age_Textbox;
+        private TextBox fullName_Textbox;
+        private Label label_Price;
+        private Label label_Quantity;
+        private Label label_Name;
+        private Panel panel3;
+        private PictureBox pictureBox2;
+        private TextBox searchBar;
+        private Label label_All;
+        private Label label_Allproduct;
+        private Label label_Ware;
+        private PictureBox pictureBox1;
+        private Label label_OverView;
+        private Panel panel1;
+        private TextBox ownerID_Textbox;
+        private Label label4;
+        private TextBox phone_Textbox;
+        private TextBox email_Textbox;
+        private TextBox lastName_Textbox;
+        private TextBox firstName_Textbox;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PetStoreManagementApp.Libs
+﻿namespace PetStoreManagementApp.Libs
 {
-   public class PathManagement
+    public class PathManagement
     {
         public string subName { get; set; }
         public string fullPath { get; set; }
@@ -19,7 +13,7 @@ namespace PetStoreManagementApp.Libs
         }
 
         public void createIfNotExist()
-        {            
+        {
             string[] subNameArray = subName.Split('\\');
             string path = Directory.GetCurrentDirectory();
             foreach (string name in subNameArray)
@@ -27,7 +21,7 @@ namespace PetStoreManagementApp.Libs
                 path += "\\" + name;
 
                 // check if that path it is a file
-                
+
                 if (!File.Exists(path))
                     if (!File.Exists(path) && !Directory.Exists(path))
                     {
@@ -97,5 +91,5 @@ namespace PetStoreManagementApp.Libs
             }
             return null;
         }
-   }
+    }
 }

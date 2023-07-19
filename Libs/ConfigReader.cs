@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PetStoreManagementApp.Libs
+﻿namespace PetStoreManagementApp.Libs
 {
     public class ConfigReader
     {
@@ -25,17 +19,17 @@ namespace PetStoreManagementApp.Libs
                 foreach (string line in lines)
                 {
                     string[] keyValuePair = line.Split('=');
-                    if (keyValuePair.Length != 2) return false; 
+                    if (keyValuePair.Length != 2) return false;
                 }
                 return true;
-            } 
+            }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
                 return false;
             }
         }
-        
+
         public bool ReadConfig()
         {
             string[] lines = File.ReadAllLines(Path.Combine(currentDirectory, configFilePath.fullPath));
@@ -73,7 +67,7 @@ namespace PetStoreManagementApp.Libs
             catch (Exception e)
             {
                 throw e;
-            } 
+            }
             finally
             {
                 ReadConfig();

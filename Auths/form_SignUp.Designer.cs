@@ -44,9 +44,19 @@
             panel5 = new Panel();
             panel7 = new Panel();
             label9 = new Label();
+            panel_Project = new Panel();
+            label3 = new Label();
+            label1 = new Label();
+            label4 = new Label();
+            pictureBox7 = new PictureBox();
+            panel_proJect_Continue = new Panel();
+            label5 = new Label();
+            label6 = new Label();
+            label10 = new Label();
+            pictureBox8 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             panel_SignUp = new Panel();
-            pictureBox9 = new PictureBox();
+            back = new PictureBox();
             label_Signin = new Label();
             label2 = new Label();
             button2 = new Button();
@@ -59,47 +69,35 @@
             pictureBox6 = new PictureBox();
             panel6 = new Panel();
             panel8 = new Panel();
-            panel_Project = new Panel();
-            label3 = new Label();
-            label1 = new Label();
-            label4 = new Label();
-            pictureBox7 = new PictureBox();
-            panel_proJect_Continue = new Panel();
-            label5 = new Label();
-            label6 = new Label();
-            label10 = new Label();
-            pictureBox8 = new PictureBox();
             timer_Continue = new System.Windows.Forms.Timer(components);
             timer_SignUp = new System.Windows.Forms.Timer(components);
-            pictureBox_Close = new PictureBox();
-            pictureBox10 = new PictureBox();
             flowLayoutPanel1.SuspendLayout();
             panel_Continue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            flowLayoutPanel2.SuspendLayout();
-            panel_SignUp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel_Project.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel_proJect_Continue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_Close).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            flowLayoutPanel2.SuspendLayout();
+            panel_SignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)back).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AllowDrop = true;
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Controls.Add(panel_Continue);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(308, 392);
+            flowLayoutPanel1.Size = new Size(286, 392);
             flowLayoutPanel1.TabIndex = 6;
             // 
             // panel_Continue
@@ -121,8 +119,8 @@
             panel_Continue.Location = new Point(3, 3);
             panel_Continue.MaximumSize = new Size(302, 389);
             panel_Continue.Name = "panel_Continue";
-            panel_Continue.Size = new Size(302, 389);
-            panel_Continue.TabIndex = 6;
+            panel_Continue.Size = new Size(281, 389);
+            panel_Continue.TabIndex = 1;
             // 
             // textBox_Age
             // 
@@ -132,9 +130,9 @@
             textBox_Age.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_Age.Location = new Point(33, 229);
             textBox_Age.Name = "textBox_Age";
+            textBox_Age.PlaceholderText = "Age ";
             textBox_Age.Size = new Size(237, 16);
-            textBox_Age.TabIndex = 22;
-            textBox_Age.Text = "Age ";
+            textBox_Age.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -162,7 +160,7 @@
             label7.Location = new Point(205, 350);
             label7.Name = "label7";
             label7.Size = new Size(43, 15);
-            label7.TabIndex = 21;
+            label7.TabIndex = 4;
             label7.Text = "Sign in";
             label7.Click += label7_Click;
             // 
@@ -184,7 +182,7 @@
             button_Continue.Location = new Point(33, 291);
             button_Continue.Name = "button_Continue";
             button_Continue.Size = new Size(204, 46);
-            button_Continue.TabIndex = 2;
+            button_Continue.TabIndex = 3;
             button_Continue.Text = "Continue";
             button_Continue.UseVisualStyleBackColor = false;
             button_Continue.Click += button_Continue_Click;
@@ -197,9 +195,9 @@
             textBox_LastName.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_LastName.Location = new Point(33, 171);
             textBox_LastName.Name = "textBox_LastName";
+            textBox_LastName.PlaceholderText = "Last Name";
             textBox_LastName.Size = new Size(237, 16);
             textBox_LastName.TabIndex = 1;
-            textBox_LastName.Text = "Last Name";
             // 
             // textBox_FirstName
             // 
@@ -209,9 +207,9 @@
             textBox_FirstName.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_FirstName.Location = new Point(33, 109);
             textBox_FirstName.Name = "textBox_FirstName";
+            textBox_FirstName.PlaceholderText = "First Name";
             textBox_FirstName.Size = new Size(237, 16);
             textBox_FirstName.TabIndex = 0;
-            textBox_FirstName.Text = "First Name";
             // 
             // pictureBox4
             // 
@@ -261,21 +259,135 @@
             label9.TabIndex = 2;
             label9.Text = "Sign Up for Account";
             // 
+            // panel_Project
+            // 
+            panel_Project.BackColor = Color.FromArgb(255, 222, 180);
+            panel_Project.Controls.Add(label3);
+            panel_Project.Controls.Add(label1);
+            panel_Project.Controls.Add(label4);
+            panel_Project.Controls.Add(pictureBox7);
+            panel_Project.Location = new Point(296, 0);
+            panel_Project.MaximumSize = new Size(315, 392);
+            panel_Project.MinimumSize = new Size(10, 378);
+            panel_Project.Name = "panel_Project";
+            panel_Project.RightToLeft = RightToLeft.No;
+            panel_Project.Size = new Size(10, 392);
+            panel_Project.TabIndex = 8;
+            // 
+            // label3
+            // 
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(28, 359);
+            label3.Name = "label3";
+            label3.Size = new Size(241, 19);
+            label3.TabIndex = 2;
+            label3.Text = "version 0.0.1";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(29, 175);
+            label1.Name = "label1";
+            label1.Size = new Size(241, 64);
+            label1.TabIndex = 1;
+            label1.Text = "Welcome back to the best. We're\r\nalways here, waiting for you!\r\n\r\n";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.FlatStyle = FlatStyle.Flat;
+            label4.Font = new Font("Constantia", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(56, 116);
+            label4.Name = "label4";
+            label4.Size = new Size(185, 29);
+            label4.TabIndex = 1;
+            label4.Text = "Welcome Back!";
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.logo;
+            pictureBox7.Location = new Point(109, 71);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(80, 42);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 0;
+            pictureBox7.TabStop = false;
+            // 
+            // panel_proJect_Continue
+            // 
+            panel_proJect_Continue.BackColor = Color.FromArgb(255, 222, 180);
+            panel_proJect_Continue.Controls.Add(label5);
+            panel_proJect_Continue.Controls.Add(label6);
+            panel_proJect_Continue.Controls.Add(label10);
+            panel_proJect_Continue.Controls.Add(pictureBox8);
+            panel_proJect_Continue.Location = new Point(286, 0);
+            panel_proJect_Continue.MaximumSize = new Size(316, 392);
+            panel_proJect_Continue.MinimumSize = new Size(10, 378);
+            panel_proJect_Continue.Name = "panel_proJect_Continue";
+            panel_proJect_Continue.RightToLeft = RightToLeft.Yes;
+            panel_proJect_Continue.Size = new Size(10, 392);
+            panel_proJect_Continue.TabIndex = 9;
+            // 
+            // label5
+            // 
+            label5.FlatStyle = FlatStyle.Flat;
+            label5.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(28, 359);
+            label5.Name = "label5";
+            label5.Size = new Size(241, 19);
+            label5.TabIndex = 2;
+            label5.Text = "version 0.0.1";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.FlatStyle = FlatStyle.Flat;
+            label6.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(32, 158);
+            label6.Name = "label6";
+            label6.Size = new Size(241, 45);
+            label6.TabIndex = 1;
+            label6.Text = "You're almost done with the registration, keep going";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.FlatStyle = FlatStyle.Flat;
+            label10.Font = new Font("Constantia", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(75, 116);
+            label10.Name = "label10";
+            label10.Size = new Size(158, 29);
+            label10.TabIndex = 1;
+            label10.Text = "Almost there";
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.logo;
+            pictureBox8.Location = new Point(112, 71);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(80, 42);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 0;
+            pictureBox8.TabStop = false;
+            // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.BackColor = Color.White;
             flowLayoutPanel2.Controls.Add(panel_SignUp);
-            flowLayoutPanel2.Dock = DockStyle.Right;
-            flowLayoutPanel2.Location = new Point(329, 0);
+            flowLayoutPanel2.Location = new Point(308, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(314, 392);
+            flowLayoutPanel2.Size = new Size(302, 389);
             flowLayoutPanel2.TabIndex = 7;
             // 
             // panel_SignUp
             // 
             panel_SignUp.BackColor = Color.White;
-            panel_SignUp.Controls.Add(pictureBox_Close);
-            panel_SignUp.Controls.Add(pictureBox9);
+            panel_SignUp.Controls.Add(back);
             panel_SignUp.Controls.Add(label_Signin);
             panel_SignUp.Controls.Add(label2);
             panel_SignUp.Controls.Add(button2);
@@ -289,21 +401,21 @@
             panel_SignUp.Controls.Add(panel6);
             panel_SignUp.Controls.Add(panel8);
             panel_SignUp.Location = new Point(3, 3);
-            panel_SignUp.MaximumSize = new Size(311, 400);
+            panel_SignUp.MaximumSize = new Size(302, 389);
             panel_SignUp.Name = "panel_SignUp";
-            panel_SignUp.Size = new Size(308, 389);
+            panel_SignUp.Size = new Size(302, 389);
             panel_SignUp.TabIndex = 5;
             // 
-            // pictureBox9
+            // back
             // 
-            pictureBox9.Image = Properties.Resources.arrow_left;
-            pictureBox9.Location = new Point(17, 20);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(29, 26);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 38;
-            pictureBox9.TabStop = false;
-            pictureBox9.Click += pictureBox9_Click;
+            back.Image = Properties.Resources.arrow_left;
+            back.Location = new Point(15, 17);
+            back.Name = "back";
+            back.Size = new Size(29, 26);
+            back.SizeMode = PictureBoxSizeMode.Zoom;
+            back.TabIndex = 38;
+            back.TabStop = false;
+            back.Click += pictureBox9_Click;
             // 
             // label_Signin
             // 
@@ -313,7 +425,7 @@
             label_Signin.Location = new Point(212, 350);
             label_Signin.Name = "label_Signin";
             label_Signin.Size = new Size(43, 15);
-            label_Signin.TabIndex = 37;
+            label_Signin.TabIndex = 9;
             label_Signin.Text = "Sign in";
             label_Signin.Click += label_Signin_Click;
             // 
@@ -335,9 +447,10 @@
             button2.Location = new Point(64, 291);
             button2.Name = "button2";
             button2.Size = new Size(191, 46);
-            button2.TabIndex = 34;
+            button2.TabIndex = 8;
             button2.Text = "Sign Up";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox_Pass
             // 
@@ -347,9 +460,9 @@
             textBox_Pass.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_Pass.Location = new Point(41, 220);
             textBox_Pass.Name = "textBox_Pass";
+            textBox_Pass.PlaceholderText = "Password";
             textBox_Pass.Size = new Size(248, 16);
-            textBox_Pass.TabIndex = 31;
-            textBox_Pass.Text = "Password";
+            textBox_Pass.TabIndex = 7;
             // 
             // pictureBox2
             // 
@@ -377,9 +490,9 @@
             textBox_Email.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_Email.Location = new Point(41, 109);
             textBox_Email.Name = "textBox_Email";
+            textBox_Email.PlaceholderText = "Email@gmail.com";
             textBox_Email.Size = new Size(237, 16);
-            textBox_Email.TabIndex = 26;
-            textBox_Email.Text = "Email@gmail.com";
+            textBox_Email.TabIndex = 5;
             // 
             // textBox_Username
             // 
@@ -389,9 +502,9 @@
             textBox_Username.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_Username.Location = new Point(41, 162);
             textBox_Username.Name = "textBox_Username";
+            textBox_Username.PlaceholderText = "User Name";
             textBox_Username.Size = new Size(237, 16);
-            textBox_Username.TabIndex = 25;
-            textBox_Username.Text = "User Name";
+            textBox_Username.TabIndex = 6;
             // 
             // pictureBox3
             // 
@@ -429,123 +542,6 @@
             panel8.Size = new Size(281, 2);
             panel8.TabIndex = 28;
             // 
-            // panel_Project
-            // 
-            panel_Project.BackColor = Color.FromArgb(255, 222, 180);
-            panel_Project.Controls.Add(pictureBox10);
-            panel_Project.Controls.Add(label3);
-            panel_Project.Controls.Add(label1);
-            panel_Project.Controls.Add(label4);
-            panel_Project.Controls.Add(pictureBox7);
-            panel_Project.Location = new Point(319, 0);
-            panel_Project.MaximumSize = new Size(311, 450);
-            panel_Project.MinimumSize = new Size(10, 378);
-            panel_Project.Name = "panel_Project";
-            panel_Project.RightToLeft = RightToLeft.Yes;
-            panel_Project.Size = new Size(10, 392);
-            panel_Project.TabIndex = 8;
-            // 
-            // label3
-            // 
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(28, 359);
-            label3.Name = "label3";
-            label3.Size = new Size(241, 19);
-            label3.TabIndex = 2;
-            label3.Text = "version 0.0.1";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(28, 175);
-            label1.Name = "label1";
-            label1.Size = new Size(241, 64);
-            label1.TabIndex = 1;
-            label1.Text = "Welcome back to the best. We're\r\nalways here, waiting for you!\r\n\r\n";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Constantia", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(55, 116);
-            label4.Name = "label4";
-            label4.Size = new Size(185, 29);
-            label4.TabIndex = 1;
-            label4.Text = "Welcome Back!";
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = Properties.Resources.logo;
-            pictureBox7.Location = new Point(108, 71);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(80, 42);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
-            // 
-            // panel_proJect_Continue
-            // 
-            panel_proJect_Continue.BackColor = Color.FromArgb(255, 222, 180);
-            panel_proJect_Continue.Controls.Add(label5);
-            panel_proJect_Continue.Controls.Add(label6);
-            panel_proJect_Continue.Controls.Add(label10);
-            panel_proJect_Continue.Controls.Add(pictureBox8);
-            panel_proJect_Continue.Location = new Point(307, 0);
-            panel_proJect_Continue.MaximumSize = new Size(311, 450);
-            panel_proJect_Continue.MinimumSize = new Size(10, 378);
-            panel_proJect_Continue.Name = "panel_proJect_Continue";
-            panel_proJect_Continue.RightToLeft = RightToLeft.Yes;
-            panel_proJect_Continue.Size = new Size(10, 392);
-            panel_proJect_Continue.TabIndex = 9;
-            // 
-            // label5
-            // 
-            label5.FlatStyle = FlatStyle.Flat;
-            label5.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(28, 359);
-            label5.Name = "label5";
-            label5.Size = new Size(241, 19);
-            label5.TabIndex = 2;
-            label5.Text = "version 0.0.1";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.FlatStyle = FlatStyle.Flat;
-            label6.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(28, 175);
-            label6.Name = "label6";
-            label6.Size = new Size(241, 45);
-            label6.TabIndex = 1;
-            label6.Text = "You're almost done with the registration, keep going";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.FlatStyle = FlatStyle.Flat;
-            label10.Font = new Font("Constantia", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(55, 116);
-            label10.Name = "label10";
-            label10.Size = new Size(216, 29);
-            label10.TabIndex = 1;
-            label10.Text = "Almost there :)))))\r\n";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = Properties.Resources.logo;
-            pictureBox8.Location = new Point(108, 71);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(80, 42);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
-            // 
             // timer_Continue
             // 
             timer_Continue.Interval = 2;
@@ -556,36 +552,18 @@
             timer_SignUp.Interval = 4;
             timer_SignUp.Tick += timer_SignUp_Tick;
             // 
-            // pictureBox_Close
-            // 
-            pictureBox_Close.Image = Properties.Resources.close;
-            pictureBox_Close.Location = new Point(288, 3);
-            pictureBox_Close.Name = "pictureBox_Close";
-            pictureBox_Close.Size = new Size(20, 21);
-            pictureBox_Close.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox_Close.TabIndex = 25;
-            pictureBox_Close.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = Properties.Resources.close;
-            pictureBox10.Location = new Point(268, 3);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(20, 21);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 26;
-            pictureBox10.TabStop = false;
-            // 
             // form_SignUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(643, 392);
-            Controls.Add(panel_proJect_Continue);
+            ClientSize = new Size(610, 392);
             Controls.Add(panel_Project);
+            Controls.Add(panel_proJect_Continue);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(flowLayoutPanel2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "form_SignUp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "form_SignUp";
             Load += form_SignUp_Load;
             flowLayoutPanel1.ResumeLayout(false);
@@ -594,21 +572,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            flowLayoutPanel2.ResumeLayout(false);
-            panel_SignUp.ResumeLayout(false);
-            panel_SignUp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel_Project.ResumeLayout(false);
             panel_Project.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel_proJect_Continue.ResumeLayout(false);
             panel_proJect_Continue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_Close).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            flowLayoutPanel2.ResumeLayout(false);
+            panel_SignUp.ResumeLayout(false);
+            panel_SignUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)back).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -630,7 +606,7 @@
         private PictureBox pictureBox1;
         private Panel panel2;
         private Panel panel_SignUp;
-        private PictureBox pictureBox9;
+        private PictureBox back;
         private Label label_Signin;
         private Label label2;
         private Button button2;
@@ -655,7 +631,5 @@
         private PictureBox pictureBox8;
         private System.Windows.Forms.Timer timer_Continue;
         private System.Windows.Forms.Timer timer_SignUp;
-        private PictureBox pictureBox_Close;
-        private PictureBox pictureBox10;
     }
 }

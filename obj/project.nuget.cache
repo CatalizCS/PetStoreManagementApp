@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
   "dgSpecHash": "9P+ZdDxoF/L7Nzcj1wSJsuE4S2hpzqz6DtwZqiE5anEHbKmOPgzc6BGnyc8GLTW7OYtbsO70gbx2CHXoA6E2FQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\CatalizCS\\Desktop\\PetStoreManagementApp\\PetStoreManagementApp.csproj",
@@ -9,16 +8,6 @@
     "C:\\Users\\CatalizCS\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.118\\stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512",
     "C:\\Users\\CatalizCS\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512",
     "C:\\Users\\CatalizCS\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
-=======
-  "dgSpecHash": "yjThA4YsgtDrXCsPwHe8o9d/91oux4pddYCLE2wh6EW24lKUUxWGYUiIjtVhuKXbaKVY3KypXt/Jl2nN4JMzMQ==",
-  "success": true,
-  "projectFilePath": "E:\\New folder\\PetStoreManagementApp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\DELL\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.118\\stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
->>>>>>> Stashed changes
   ],
   "logs": [
     {

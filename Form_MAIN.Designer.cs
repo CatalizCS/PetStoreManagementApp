@@ -529,7 +529,7 @@ namespace PetStoreManagementApp
             Controls.Add(slideBar_Container);
             FormBorderStyle = FormBorderStyle.None;
             Name = "form_Main";
-            Text = "Form1";
+            Text = "PetStoreManagement";
             Load += form_Main_Load;
             ((System.ComponentModel.ISupportInitialize)avatar_Image).EndInit();
             slideBar_Container.ResumeLayout(false);

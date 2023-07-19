@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox_Close = new PictureBox();
-            label_Review = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             button_Seedetial = new Button();
@@ -62,7 +60,10 @@
             label_Email = new Label();
             label_LastName = new Label();
             label_FName = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_Close).BeginInit();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Avata_Em).BeginInit();
@@ -71,36 +72,17 @@
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // pictureBox_Close
-            // 
-            pictureBox_Close.Image = Properties.Resources.close;
-            pictureBox_Close.Location = new Point(726, 3);
-            pictureBox_Close.Name = "pictureBox_Close";
-            pictureBox_Close.Size = new Size(29, 29);
-            pictureBox_Close.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox_Close.TabIndex = 14;
-            pictureBox_Close.TabStop = false;
-            pictureBox_Close.Click += pictureBox_Close_Click;
-            // 
-            // label_Review
-            // 
-            label_Review.AutoSize = true;
-            label_Review.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label_Review.Location = new Point(11, 7);
-            label_Review.Name = "label_Review";
-            label_Review.Size = new Size(181, 28);
-            label_Review.TabIndex = 0;
-            label_Review.Text = "Employee Manager";
-            // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(pictureBox_Close);
-            panel1.Controls.Add(label_Review);
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(button2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(755, 38);
+            panel1.Size = new Size(771, 38);
             panel1.TabIndex = 4;
             // 
             // panel2
@@ -118,7 +100,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 38);
             panel2.Name = "panel2";
-            panel2.Size = new Size(755, 257);
+            panel2.Size = new Size(771, 257);
             panel2.TabIndex = 5;
             // 
             // button_Seedetial
@@ -237,9 +219,9 @@
             panel3.Controls.Add(label_LastName);
             panel3.Controls.Add(label_FName);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 284);
+            panel3.Location = new Point(0, 323);
             panel3.Name = "panel3";
-            panel3.Size = new Size(755, 218);
+            panel3.Size = new Size(771, 218);
             panel3.TabIndex = 6;
             // 
             // panel_Update
@@ -450,20 +432,62 @@
             label_FName.TabIndex = 13;
             label_FName.Text = "FIRST NAME";
             // 
+            // panel4
+            // 
+            panel4.BackColor = Color.DodgerBlue;
+            panel4.Location = new Point(122, 33);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(113, 2);
+            panel4.TabIndex = 30;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.DodgerBlue;
+            panel5.Location = new Point(3, 33);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(113, 2);
+            panel5.TabIndex = 31;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.DodgerBlue;
+            button1.Location = new Point(122, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 29);
+            button1.TabIndex = 32;
+            button1.Text = "Management";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.DodgerBlue;
+            button2.Location = new Point(3, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(113, 29);
+            button2.TabIndex = 33;
+            button2.Text = "Account";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form_Setting_Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(755, 502);
+            ClientSize = new Size(771, 541);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Setting_Admin";
             Text = "Form_Setting_Admin";
             Load += Form_Setting_Admin_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox_Close).EndInit();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Avata_Em).EndInit();
@@ -475,8 +499,6 @@
         }
 
         #endregion
-        private PictureBox pictureBox_Close;
-        private Label label_Review;
         private Panel panel1;
         private Panel panel2;
         private DataGridView dataGridView_ListEm;
@@ -509,5 +531,9 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox_Avata_Em;
         private Button button_Seedetial;
+        private Panel panel4;
+        private Panel panel5;
+        private Button button1;
+        private Button button2;
     }
 }

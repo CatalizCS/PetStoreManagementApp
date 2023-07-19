@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Auths\form_Login.cs">
+    <Compile Update="Auths\Form_Loader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Auths\Form_Loader.cs">
+    <Compile Update="Auths\form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Auths\form_SignUp.cs">
@@ -13,11 +14,22 @@
     <Compile Update="form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Libs\BetterButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Libs\BetterSearchBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Libs\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-<<<<<<< Updated upstream
+    <Compile Update="Dialogs\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pages\form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pages\Settings\form_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Pages\form_Customer.cs">
@@ -27,25 +39,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Pages\form_Service.cs">
-=======
-    <Compile Update="Pages\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Pages\Form_Admin.cs">
->>>>>>> Stashed changes
+    <Compile Update="Pages\Settings\form_Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Pages\form_Settings.cs">
+    <Compile Update="Pages\Settings\form_Setting_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< Updated upstream
-    <Compile Update="Pages\form_Warehouse.cs">
-=======
-    <Compile Update="Pages\Form_Setting_Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Pages\Ware_House.cs">
->>>>>>> Stashed changes
+    <Compile Update="Pages\form_WareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

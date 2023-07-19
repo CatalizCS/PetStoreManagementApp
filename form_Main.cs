@@ -1,9 +1,8 @@
-using System.Runtime.InteropServices;
 using PetStoreManagementApp.Auths;
-using System.Windows.Forms;
 using PetStoreManagementApp.Dialogs;
 using PetStoreManagementApp.Libs.DTO;
 using PetStoreManagementApp.Pages;
+using System.Runtime.InteropServices;
 
 namespace PetStoreManagementApp
 {
@@ -145,11 +144,8 @@ namespace PetStoreManagementApp
                 case Permission.admin:
                     permission.Text = "Admin";
                     break;
-                case Permission.employee:
-                    permission.Text = "Employee";
-                    break;
                 default:
-                    permission.Text = "Customer";
+                    permission.Text = "Employee";
                     break;
             }
 
@@ -226,7 +222,7 @@ namespace PetStoreManagementApp
         {
             containerName.Text = "WareHouse Manager";
             mainInterface.Controls.Clear();
-            form_Warehouse wareHouseManager = new form_Warehouse();
+            form_WareHouse wareHouseManager = new form_WareHouse();
             wareHouseManager.TopLevel = false;
             mainInterface.Controls.Add(wareHouseManager);
             wareHouseManager.Show();
@@ -244,13 +240,24 @@ namespace PetStoreManagementApp
 
         private void setting_Button_Click(object sender, EventArgs e)
         {
-            containerName.Text = "Setting";
             mainInterface.Controls.Clear();
-            form_Settings setting = new form_Settings();
-            setting.TopLevel = false;
-            mainInterface.Controls.Add(setting);
-            setting.Show();
+            if (DTO_LoginData.Instance.permission == Permission.employee)
+            {
+                containerName.Text = "Employee Settings";
+                form_Employee settings = new form_Employee();
+                settings.TopLevel = false;
+                mainInterface.Controls.Add(settings);
+                settings.Show();
 
+            }
+            else
+            {
+                containerName.Text = "Admin Settings";
+                form_Admin settings = new form_Admin();
+                settings.TopLevel = false;
+                mainInterface.Controls.Add(settings);
+                settings.Show();
+            }
         }
     }
 }

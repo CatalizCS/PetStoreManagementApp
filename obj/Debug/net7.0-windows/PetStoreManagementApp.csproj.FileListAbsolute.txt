@@ -26,7 +26,6 @@ C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetSto
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\bin\Debug\net7.0-windows\CircularProgressBar.dll
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\bin\Debug\net7.0-windows\WinFormAnimation.dll
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Dialogs.Form_Loader.resources
-C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Settings.resources
 C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Dialogs.form_SignUp.resources
 C:\Users\Moritaka\Desktop\PetStoreManagementApp\bin\Debug\net7.0-windows\PetStoreManagementApp.exe
 C:\Users\Moritaka\Desktop\PetStoreManagementApp\bin\Debug\net7.0-windows\PetStoreManagementApp.deps.json
@@ -92,3 +91,12 @@ E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Form_Admin.re
 E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Form_Setting_Admin.resources
 E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Ware_House.resources
 E:\New folder\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.About.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_About.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Form_Admin.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Customer.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_PetManager.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Service.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Form_Setting_Admin.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Warehouse.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.form_Employee.resources
+C:\Users\CatalizCS\Desktop\PetStoreManagementApp\obj\Debug\net7.0-windows\PetStoreManagementApp.Pages.Forms.CustomMessageBox.resources

@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data.SQLite;
+﻿using PetStoreManagementApp.Libs.DTO;
 using System.Data;
-using PetStoreManagementApp.Libs.DTO;
-using System.Drawing.Text;
+using System.Data.SQLite;
 
 namespace PetStoreManagementApp.Libs
 {
@@ -47,7 +40,7 @@ namespace PetStoreManagementApp.Libs
                 string database = configReader.GetConfigValue("database.database");
                 string username = configReader.GetConfigValue("database.username");
                 string password = configReader.GetConfigValue("database.password");
-            
+
                 connectionString = String.Format("Server={0};Database={1};User Id={2};Password={3};", server, database, username, password);
             }
         }
@@ -91,18 +84,35 @@ namespace PetStoreManagementApp.Libs
             }
         }
 
-        public bool SetData(string query)
+        public bool Execute(string query)
+        {
+            Console.WriteLine(query);
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    return command.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public DataTable ReadToDataTable(string query)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
                 SQLiteCommand command = new SQLiteCommand(query, connection);
-                return command.ExecuteNonQuery() > 0;
+                SQLiteDataReader reader = command.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                return dataTable;
             }
         }
 
         public bool CheckExist(string query)
         {
+            Console.WriteLine(query);
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
@@ -115,7 +125,7 @@ namespace PetStoreManagementApp.Libs
         }
 
         public void test()
-        {   
+        {
             Console.WriteLine(connectionString);
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -130,6 +140,22 @@ namespace PetStoreManagementApp.Libs
                 }
             }
 
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                SQLiteCommand command = new SQLiteCommand("SELECT * FROM Depot", connection);
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                Console.WriteLine(dataTable.Rows);
+
+                foreach (DataColumn row in dataTable.Columns)
+                {
+                    Console.WriteLine(row.ColumnName);
+                }
+            }
+
         }
 
         // USER PART
@@ -141,9 +167,6 @@ namespace PetStoreManagementApp.Libs
                 connection.Open();
                 switch (userType)
                 {
-                    case Permission.customer:
-                        command = new SQLiteCommand("SELECT * FROM Customer_InfoData WHERE ID = @ID", connection);
-                        break;
                     case Permission.employee:
                     case Permission.admin:
                         command = new SQLiteCommand("SELECT * FROM Employee_InfoData WHERE ID = @ID", connection);
@@ -161,18 +184,22 @@ namespace PetStoreManagementApp.Libs
 
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    Console.WriteLine("1" + row["ID"] + " | " + row["FirstName"] + " | " + row["LastName"] + " | " + row["Age"] + " | " + row["PhoneNumber"] + " | " + row["Email"] + " | " + row["AvatarURL"]);
+                    Console.WriteLine(row["ID"] + " - " + row["FirstName"] + " - " + row["LastName"] + " - " + row["Gender"] + " - " + row["Age"] + " - " + row["PhoneNumber"] + " - " + row["Email"] + " - " + row["Notes"] + " - " + row["AvatarURL"]);
                 }
 
                 if (dataTable.Rows.Count > 0)
                 {
                     DTO_UserInfo.Instance.ID = dataTable.Rows[0]["ID"].ToString();
+                    DTO_UserInfo.Instance.Gender = dataTable.Rows[0]["Gender"].ToString();
                     DTO_UserInfo.Instance.FirstName = dataTable.Rows[0]["FirstName"].ToString();
                     DTO_UserInfo.Instance.LastName = dataTable.Rows[0]["LastName"].ToString();
                     DTO_UserInfo.Instance.Age = int.Parse(dataTable.Rows[0]["Age"].ToString());
                     DTO_UserInfo.Instance.PhoneNumber = dataTable.Rows[0]["PhoneNumber"].ToString();
                     DTO_UserInfo.Instance.Email = dataTable.Rows[0]["Email"].ToString();
+                    DTO_UserInfo.Instance.Notes = dataTable.Rows[0]["Notes"].ToString();
                     DTO_UserInfo.Instance.AvatarURL = dataTable.Rows[0]["AvatarURL"].ToString();
+
+                    return;
                 }
                 else throw new Exception("User not found"); // TODO: Add form for user input data
             }
@@ -192,6 +219,7 @@ namespace PetStoreManagementApp.Libs
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                Console.WriteLine(dataTable.Rows.Count);
 
                 // save username and password to DTO for later use
                 if (dataTable.Rows.Count > 0)
@@ -203,15 +231,12 @@ namespace PetStoreManagementApp.Libs
                     {
                         DTO_LoginData.Instance.permission = Permission.admin;
                     }
-                    else if (dataTable.Rows[0]["permission"].ToString() == "employee")
+                    else
                     {
                         DTO_LoginData.Instance.permission = Permission.employee;
                     }
-                    else
-                    {
-                        DTO_LoginData.Instance.permission = Permission.customer;
-                    }
-                } else throw new Exception("Invalid username or password");
+                }
+                else throw new Exception("Invalid username or password");
                 return dataTable.Rows[0]["ID"].ToString();
             }
         }

@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PetStoreManagementApp.Pages
+﻿namespace PetStoreManagementApp.Pages
 {
     public partial class Form_Setting_Admin : Form
     {
@@ -72,7 +62,18 @@ namespace PetStoreManagementApp.Pages
         private void Form_Setting_Admin_Load(object sender, EventArgs e)
         {
             form_Main form_Main = new form_Main();
-            pictureBox_Avata_Em.Image = form_Main.GetAvatarImage();
+            //pictureBox_Avata_Em.Image = form_Main.GetAvatarImage();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form_Admin settings = new form_Admin();
+            settings.TopLevel = false;
+            // get the panel which is in form_Main
+            Panel panel = this.Parent as Panel;
+            panel.Controls.Clear();
+            panel.Controls.Add(settings);
+            settings.Show();
         }
     }
 }
