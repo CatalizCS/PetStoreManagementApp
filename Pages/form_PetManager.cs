@@ -11,10 +11,22 @@ namespace PetStoreManagementApp.Pages
             InitializeComponent();
         }
 
-        private void form_PetManager_Load(object sender, EventArgs e)
+        private void updateData()
         {
             DataTable PetData = DatabaseConnection.Instance.ReadToDataTable("SELECT * FROM Customer_PetData");
             dataGridView.DataSource = PetData;
+            ID_ComboBox.Items.Clear();
+            foreach (DataRow row in PetData.Rows)
+            {
+                ID_ComboBox.Items.Add(row["ID"]);
+            }
+
+            label_All.Text = dataGridView.Rows.Count.ToString();
+        }
+
+        private void form_PetManager_Load(object sender, EventArgs e)
+        {
+            updateData();
             dataGridView.Columns[0].HeaderText = "Mã thú cưng";
             dataGridView.Columns[1].HeaderText = "Tên thú cưng";
             dataGridView.Columns[2].HeaderText = "Tuổi";
@@ -22,13 +34,6 @@ namespace PetStoreManagementApp.Pages
             dataGridView.Columns[4].HeaderText = "Mã chủ nhân";
 
             dataGridView.AutoGenerateColumns = false;
-            foreach (DataRow row in PetData.Rows)
-            {
-                Console.WriteLine(dataGridView.Rows.Count);
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
-
-            label_All.Text = PetData.Rows.Count.ToString();
         }
 
         private void dataGridView_Click(object sender, EventArgs e)
@@ -84,18 +89,9 @@ namespace PetStoreManagementApp.Pages
             {
                 new CustomMessageBox("Vui lòng nhập mã chủ nhân").ShowDialog();
             }
-
-
             string query = "INSERT INTO Customer_PetData (FullName, Age, Type, OwnerID) VALUES ('" + fullName_Textbox.Text + "', '" + age_Textbox.Text + "', '" + type_Textbox.Text + "', '" + ownerID_Textbox.Text + "')";
             DatabaseConnection.Instance.ExecuteNonQuery(query);
-
-            DataTable PetData = DatabaseConnection.Instance.ReadToDataTable("SELECT * FROM Customer_PetData");
-            dataGridView.DataSource = PetData;
-            ID_ComboBox.Items.Clear();
-            foreach (DataRow row in PetData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
 
             new CustomMessageBox("Thêm thú cưng thành công").ShowDialog();
         }
@@ -133,15 +129,7 @@ namespace PetStoreManagementApp.Pages
 
             string query = "UPDATE Customer_PetData SET FullName = '" + fullName_Textbox.Text + "', Age = '" + age_Textbox.Text + "', Type = '" + type_Textbox.Text + "', OwnerID = '" + ownerID_Textbox.Text + "' WHERE ID = '" + ID_Textbox.Text + "'";
             DatabaseConnection.Instance.ExecuteNonQuery(query);
-
-            DataTable PetData = DatabaseConnection.Instance.ReadToDataTable("SELECT * FROM Customer_PetData");
-            dataGridView.DataSource = PetData;
-            ID_ComboBox.Items.Clear();
-
-            foreach (DataRow row in PetData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
 
             new CustomMessageBox("Chỉnh sửa thú cưng thành công").ShowDialog();
         }
@@ -156,15 +144,7 @@ namespace PetStoreManagementApp.Pages
 
             string query = "DELETE FROM Customer_PetData WHERE ID = '" + ID_Textbox.Text + "'";
             DatabaseConnection.Instance.ExecuteNonQuery(query);
-
-            DataTable PetData = DatabaseConnection.Instance.ReadToDataTable("SELECT * FROM Customer_PetData");
-            dataGridView.DataSource = PetData;
-
-            ID_ComboBox.Items.Clear();
-            foreach (DataRow row in PetData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
 
             new CustomMessageBox("Xóa thú cưng thành công").ShowDialog();
         }
@@ -173,6 +153,15 @@ namespace PetStoreManagementApp.Pages
         {
             ID_Textbox.Text = ID_ComboBox.Items[ID_ComboBox.SelectedIndex].ToString();
             dataGridView_Click(sender, e);
+        }
+
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            // search by ID, FullName, Type, OwnerID
+            string query = "SELECT * FROM Customer_PetData WHERE ID LIKE '%" + searchBar.Text + "%' OR FullName LIKE '%" + searchBar.Text + "%' OR Type LIKE '%" + searchBar.Text + "%' OR OwnerID LIKE '%" + searchBar.Text + "%'";
+            DataTable PetData = DatabaseConnection.Instance.ReadToDataTable(query);
+            dataGridView.DataSource = PetData;
+            label_All.Text = dataGridView.Rows.Count.ToString();
         }
     }
 }

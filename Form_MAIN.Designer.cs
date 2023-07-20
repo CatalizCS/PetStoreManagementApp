@@ -59,8 +59,6 @@ namespace PetStoreManagementApp
             versionNumber = new Label();
             slideBarTimer = new System.Windows.Forms.Timer(components);
             headerBar = new Panel();
-            notification_Button = new Button();
-            darkmode_Button = new Button();
             containerName = new Label();
             closeApp_Button = new Button();
             logout_Button = new Button();
@@ -429,8 +427,6 @@ namespace PetStoreManagementApp
             // headerBar
             // 
             headerBar.BackColor = Color.FromArgb(250, 240, 215);
-            headerBar.Controls.Add(notification_Button);
-            headerBar.Controls.Add(darkmode_Button);
             headerBar.Controls.Add(containerName);
             headerBar.Controls.Add(closeApp_Button);
             headerBar.Controls.Add(logout_Button);
@@ -442,33 +438,6 @@ namespace PetStoreManagementApp
             headerBar.MouseDown += headerBar_MouseDown;
             headerBar.MouseMove += headerBar_MouseMove;
             headerBar.MouseUp += headerBar_MouseUp;
-            // 
-            // notification_Button
-            // 
-            notification_Button.FlatAppearance.BorderSize = 0;
-            notification_Button.FlatStyle = FlatStyle.Flat;
-            notification_Button.Image = (Image)resources.GetObject("notification_Button.Image");
-            notification_Button.ImageAlign = ContentAlignment.TopCenter;
-            notification_Button.Location = new Point(607, 2);
-            notification_Button.Name = "notification_Button";
-            notification_Button.Size = new Size(38, 36);
-            notification_Button.TabIndex = 6;
-            notification_Button.TextAlign = ContentAlignment.MiddleLeft;
-            notification_Button.UseVisualStyleBackColor = true;
-            // 
-            // darkmode_Button
-            // 
-            darkmode_Button.FlatAppearance.BorderSize = 0;
-            darkmode_Button.FlatStyle = FlatStyle.Flat;
-            darkmode_Button.Image = Properties.Resources.moon;
-            darkmode_Button.ImageAlign = ContentAlignment.TopCenter;
-            darkmode_Button.Location = new Point(651, 3);
-            darkmode_Button.Name = "darkmode_Button";
-            darkmode_Button.Size = new Size(38, 36);
-            darkmode_Button.TabIndex = 6;
-            darkmode_Button.TextAlign = ContentAlignment.MiddleLeft;
-            darkmode_Button.UseVisualStyleBackColor = true;
-            darkmode_Button.Click += darkMode_Click;
             // 
             // containerName
             // 
@@ -528,8 +497,9 @@ namespace PetStoreManagementApp
             Controls.Add(headerBar);
             Controls.Add(slideBar_Container);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Main";
-            Text = "PetStoreManagement";
+            Text = "PetStoreManagement - Main Menu";
             Load += form_Main_Load;
             ((System.ComponentModel.ISupportInitialize)avatar_Image).EndInit();
             slideBar_Container.ResumeLayout(false);
@@ -581,8 +551,6 @@ namespace PetStoreManagementApp
         private Button closeApp_Button;
         private Label containerName;
         private Panel mainInterface;
-        private Button darkmode_Button;
         private Panel panel14;
-        private Button notification_Button;
     }
 }

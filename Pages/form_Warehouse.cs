@@ -253,10 +253,11 @@ namespace PetStoreManagementApp.Pages
 
         private void searchBar_TextChanged(object sender, EventArgs e)
         {
-            // search theo tên sản phẩm
-            string query = "SELECT * FROM Depot WHERE NameProduct LIKE '%" + searchBar.Text + "%'";
+            // search by name or ID
+            string query = "SELECT * FROM Depot WHERE NameProduct LIKE '%" + searchBar.Text + "%' OR ID LIKE '%" + searchBar.Text + "%'";
             DataTable wareHouseData = DatabaseConnection.Instance.ReadToDataTable(query);
             dataGridView_Product.DataSource = wareHouseData;
+            label_All.Text = wareHouseData.Rows.Count.ToString();
         }
     }
 }

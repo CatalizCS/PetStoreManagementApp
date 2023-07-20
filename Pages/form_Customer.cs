@@ -12,21 +12,28 @@ namespace PetStoreManagementApp.Pages
             InitializeComponent();
         }
 
-        private void form_Customer_Load(object sender, EventArgs e)
+        private void updateData()
         {
             DataTable customerData = DatabaseConnection.Instance.ReadToDataTable("SELECT ID, FirstName, LastName, PhoneNumber, Email FROM Customer_InfoData");
             dataGridView.DataSource = customerData;
+
+            ID_ComboBox.Items.Clear();
+            foreach (DataRow row in customerData.Rows)
+            {
+                ID_ComboBox.Items.Add(row["ID"]);
+            }
+
+            label_All.Text = dataGridView.Rows.Count.ToString();
+        }
+
+        private void form_Customer_Load(object sender, EventArgs e)
+        {
+            updateData();
             dataGridView.Columns[0].HeaderText = "Mã khách hàng";
             dataGridView.Columns[1].HeaderText = "Họ";
             dataGridView.Columns[2].HeaderText = "Tên";
             dataGridView.Columns[3].HeaderText = "Số điện thoại";
             dataGridView.Columns[4].HeaderText = "Email";
-
-            dataGridView.AutoGenerateColumns = false;
-            foreach (DataRow row in customerData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
         }
 
         private void dataGridView_Click(object sender, EventArgs e)
@@ -82,16 +89,7 @@ namespace PetStoreManagementApp.Pages
             {
                 query = "INSERT INTO Customer_InfoData (FirstName, LastName, PhoneNumber, Email) VALUES ('" + firstName_TextBox.Text + "', '" + lastName_TextBox.Text + "', '" + phone_TextBox.Text + "', '" + email_TextBox.Text + "')";
                 DatabaseConnection.Instance.ExecuteQuery(query);
-
-                query = "SELECT ID, FirstName, LastName, PhoneNumber, Email FROM Customer_InfoData";
-                customerData = DatabaseConnection.Instance.ReadToDataTable(query);
-                dataGridView.DataSource = customerData;
-
-                ID_ComboBox.Items.Clear();
-                foreach (DataRow row in customerData.Rows)
-                {
-                    ID_ComboBox.Items.Add(row["ID"]);
-                }
+                updateData();
 
                 new CustomMessageBox("Thêm khách hàng thành công").ShowDialog();
                 form_Customer_Load(sender, e);
@@ -118,16 +116,7 @@ namespace PetStoreManagementApp.Pages
 
             string query = "UPDATE Customer_InfoData SET FirstName = '" + firstName_TextBox.Text + "', LastName = '" + lastName_TextBox.Text + "', PhoneNumber = '" + phone_TextBox.Text + "', Email = '" + email_TextBox.Text + "' WHERE ID = '" + ID_Textbox.Text + "'";
             DatabaseConnection.Instance.ExecuteQuery(query);
-
-            query = "SELECT ID, FirstName, LastName, PhoneNumber, Email FROM Customer_InfoData";
-            DataTable customerData = DatabaseConnection.Instance.ReadToDataTable(query);
-            dataGridView.DataSource = customerData;
-
-            ID_ComboBox.Items.Clear();
-            foreach (DataRow row in customerData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
 
             new CustomMessageBox("Chỉnh sửa khách hàng thành công").ShowDialog();
         }
@@ -142,16 +131,7 @@ namespace PetStoreManagementApp.Pages
 
             string query = "DELETE FROM Customer_InfoData WHERE ID = '" + ID_Textbox.Text + "'";
             DatabaseConnection.Instance.ExecuteQuery(query);
-
-            query = "SELECT ID, FirstName, LastName, PhoneNumber, Email FROM Customer_InfoData";
-            DataTable customerData = DatabaseConnection.Instance.ReadToDataTable(query);
-            dataGridView.DataSource = customerData;
-            ID_ComboBox.Items.Clear();
-
-            foreach (DataRow row in customerData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
 
             new CustomMessageBox("Xóa khách hàng thành công").ShowDialog();
         }
@@ -193,7 +173,19 @@ namespace PetStoreManagementApp.Pages
                     return;
                 }
             }
+        }
 
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            // search by ID, first name, last name, phone number, email
+            string query = "SELECT ID, FirstName, LastName, PhoneNumber, Email FROM Customer_InfoData WHERE ID LIKE '%" + searchBar.Text + "%' OR FirstName LIKE '%" + searchBar.Text + "%' OR LastName LIKE '%" + searchBar.Text + "%' OR PhoneNumber LIKE '%" + searchBar.Text + "%' OR Email LIKE '%" + searchBar.Text + "%'";
+            dataGridView.DataSource = DatabaseConnection.Instance.ReadToDataTable(query);
+            if (dataGridView.Rows.Count > 0)
+            {
+                dataGridView.Rows[0].Selected = true;
+                label_All.Text = dataGridView.Rows.Count.ToString();
+                dataGridView_Click(sender, e);
+            }
         }
     }
 }

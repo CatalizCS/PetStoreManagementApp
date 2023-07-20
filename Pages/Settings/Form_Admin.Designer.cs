@@ -95,7 +95,8 @@
             // 
             confirmPass_Textbox.Location = new Point(171, 121);
             confirmPass_Textbox.Name = "confirmPass_Textbox";
-            confirmPass_Textbox.Size = new Size(170, 23);
+            confirmPass_Textbox.PasswordChar = '*';
+            confirmPass_Textbox.Size = new Size(176, 23);
             confirmPass_Textbox.TabIndex = 2;
             // 
             // label8
@@ -212,6 +213,7 @@
             // 
             newpass_Textbox.Location = new Point(144, 83);
             newpass_Textbox.Name = "newpass_Textbox";
+            newpass_Textbox.PasswordChar = '*';
             newpass_Textbox.Size = new Size(203, 23);
             newpass_Textbox.TabIndex = 2;
             // 
@@ -374,6 +376,7 @@
             changeAvater_Button.Text = "Change";
             changeAvater_Button.TextColor = Color.White;
             changeAvater_Button.UseVisualStyleBackColor = false;
+            changeAvater_Button.Click += changeAvater_Button_Click;
             // 
             // avatar_Image
             // 

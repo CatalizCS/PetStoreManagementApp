@@ -77,9 +77,6 @@ namespace PetStoreManagementApp
 
                 closeApp_Button.Location = new Point(closeApp_Button.Location.X + 10, 3);
                 logout_Button.Location = new Point(logout_Button.Location.X + 10, 3);
-                darkmode_Button.Location = new Point(darkmode_Button.Location.X + 10, 3);
-                notification_Button.Location = new Point(notification_Button.Location.X + 10, 3);
-
 
                 if (slideBar_Container.Width == slideBar_Container.MinimumSize.Width)
                 {
@@ -106,8 +103,6 @@ namespace PetStoreManagementApp
 
                 closeApp_Button.Location = new Point(closeApp_Button.Location.X - 10, 3);
                 logout_Button.Location = new Point(logout_Button.Location.X - 10, 3);
-                darkmode_Button.Location = new Point(darkmode_Button.Location.X - 10, 3);
-                notification_Button.Location = new Point(notification_Button.Location.X - 10, 3);
 
 
                 if (slideBar_Container.Width == slideBar_Container.MaximumSize.Width)
@@ -166,23 +161,9 @@ namespace PetStoreManagementApp
         {
             DTO_UserInfo.Instance.logout();
             DTO_LoginData.Instance.logout();
+
             this.Hide();
-
             new form_Login().Show();
-        }
-
-
-        private bool isDarkMode = false;
-        private void darkMode_Click(object sender, EventArgs e)
-        {
-            if (isDarkMode)
-            {
-
-            }
-            else
-            {
-
-            }
         }
 
         // menu button
@@ -195,7 +176,6 @@ namespace PetStoreManagementApp
             petManager.TopLevel = false;
             mainInterface.Controls.Add(petManager);
             petManager.Show();
-
         }
 
         private void service_Button_Click(object sender, EventArgs e)

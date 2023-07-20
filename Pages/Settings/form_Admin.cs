@@ -25,6 +25,7 @@ namespace PetStoreManagementApp.Pages
             permission_Textbox.Text = DTO_LoginData.Instance.username;
             permission_Textbox.Text = DTO_LoginData.Instance.permission.ToString();
 
+            username_Textbox.Text = DTO_LoginData.Instance.username;
 
             if (DTO_UserInfo.Instance.AvatarURL != "")
             {
@@ -117,6 +118,40 @@ namespace PetStoreManagementApp.Pages
             panel.Controls.Clear();
             panel.Controls.Add(settings);
             settings.Show();
+        }
+
+        private void changeAvater_Button_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string sourcePath = openFileDialog.FileName;
+                string extension = Path.GetExtension(sourcePath);
+                string fileName = Path.GetRandomFileName();
+                fileName = fileName.Split('.')[0];
+
+                try
+                {
+                    string destinationPath = Path.Combine(Form_Loader.avatarPath.fullPath, fileName + extension);
+                    Console.WriteLine(destinationPath.ToString());
+                    File.Copy(sourcePath, destinationPath, true);
+                    DTO_UserInfo.Instance.AvatarURL = fileName + extension;
+                    string query = "UPDATE Employee_InfoData SET AvatarURL = '" + fileName + extension + "' WHERE ID = '" + DTO_UserInfo.Instance.ID + "'";
+
+                    DatabaseConnection.Instance.ExecuteQuery(query);
+
+                    avatar_Image.Image = Image.FromFile(destinationPath);
+                    new CustomMessageBox("Cập nhật ảnh đại diện thành công").ShowDialog();
+                }
+                catch (Exception error)
+                {
+                    Console.WriteLine(error.Message);
+                    new CustomMessageBox("Cập nhật ảnh đại diện thất bại").ShowDialog();
+                    return;
+                }
+            }
         }
     }
 }

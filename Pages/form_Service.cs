@@ -11,19 +11,27 @@ namespace PetStoreManagementApp.Pages
             InitializeComponent();
         }
 
-        private void form_Service_Load(object sender, EventArgs e)
+        private void updateData()
         {
             DataTable serviceData = DatabaseConnection.Instance.ReadToDataTable("SELECT ID, Name, price FROM Service_InfoData");
             dataGridView.DataSource = serviceData;
-            dataGridView.Columns[0].HeaderText = "Mã dịch vụ";
-            dataGridView.Columns[1].HeaderText = "Tên dịch vụ";
-            dataGridView.Columns[2].HeaderText = "Tổng Giá";
 
-            dataGridView.AutoGenerateColumns = false;
+            ID_ComboBox.Items.Clear();
             foreach (DataRow row in serviceData.Rows)
             {
                 ID_ComboBox.Items.Add(row["ID"]);
             }
+
+            label_All.Text = dataGridView.Rows.Count.ToString();
+        }
+
+        private void form_Service_Load(object sender, EventArgs e)
+        {
+            updateData();
+            dataGridView.Columns[0].HeaderText = "Mã dịch vụ";
+            dataGridView.Columns[1].HeaderText = "Tên dịch vụ";
+            dataGridView.Columns[2].HeaderText = "Tổng Giá";
+            dataGridView.AutoGenerateColumns = false;
         }
 
         private void dataGridView_Click(object sender, EventArgs e)
@@ -91,7 +99,7 @@ namespace PetStoreManagementApp.Pages
                     DataTable depotPriceData = DatabaseConnection.Instance.ReadToDataTable(query);
                     if (depotPriceData.Rows.Count > 0)
                     {
-                        totalPrice_Textbox.Text = (int.Parse(totalPrice_Textbox.Text) + int.Parse(depotPriceData.Rows[0]["Price"].ToString())).ToString();
+                        totalPrice_Textbox.Text = (long.Parse(totalPrice_Textbox.Text) + long.Parse(depotPriceData.Rows[0]["Price"].ToString())).ToString();
                     }
                     else
                     {
@@ -111,14 +119,7 @@ namespace PetStoreManagementApp.Pages
                 new CustomMessageBox("Thêm dịch vụ thất bại!").ShowDialog();
             }
 
-            DataTable serviceData = DatabaseConnection.Instance.ReadToDataTable("SELECT ID, Name, price FROM Service_InfoData");
-            dataGridView.DataSource = serviceData;
-
-            ID_ComboBox.Items.Clear();
-            foreach (DataRow row in serviceData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
         }
 
         private void button_Change_Click(object sender, EventArgs e)
@@ -170,14 +171,7 @@ namespace PetStoreManagementApp.Pages
                 new CustomMessageBox("Sửa dịch vụ thất bại!").ShowDialog();
             }
 
-            DataTable serviceData = DatabaseConnection.Instance.ReadToDataTable("SELECT ID, Name, price FROM Service_InfoData");
-            dataGridView.DataSource = serviceData;
-
-            ID_ComboBox.Items.Clear();
-            foreach (DataRow row in serviceData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
@@ -199,14 +193,7 @@ namespace PetStoreManagementApp.Pages
                 new CustomMessageBox("Xóa dịch vụ thất bại!").ShowDialog();
             }
 
-            DataTable serviceData = DatabaseConnection.Instance.ReadToDataTable("SELECT ID, Name, price FROM Service_InfoData");
-            dataGridView.DataSource = serviceData;
-
-            ID_ComboBox.Items.Clear();
-            foreach (DataRow row in serviceData.Rows)
-            {
-                ID_ComboBox.Items.Add(row["ID"]);
-            }
+            updateData();
         }
 
         private void depotAdd_Click(object sender, EventArgs e)
@@ -245,6 +232,28 @@ namespace PetStoreManagementApp.Pages
             ID_Depot.Items.Remove(depotID.Text);
             ID_Depot.Refresh();
             depotID.Text = "";
+        }
+
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            // search by name or id
+            string query = "SELECT * FROM Service_InfoData WHERE Name LIKE '%" + searchBar.Text + "%' OR ID LIKE '%" + searchBar.Text + "%'";
+            DataTable data = DatabaseConnection.Instance.ReadToDataTable(query);
+            if (data.Rows.Count > 0)
+            {
+                dataGridView.DataSource = data;
+                label_All.Text = data.Rows.Count.ToString();
+                dataGridView_Click(sender, e);
+            }
+            else
+            {
+                dataGridView.DataSource = null;
+            }
+        }
+
+        private void ID_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ID_Textbox.Text = ID_ComboBox.Items[ID_ComboBox.SelectedIndex].ToString();
         }
     }
 }

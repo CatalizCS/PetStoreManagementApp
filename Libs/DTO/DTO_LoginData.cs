@@ -1,7 +1,7 @@
 ﻿namespace PetStoreManagementApp.Libs.DTO
 {
     // instance variables mapping to columns of table
-    public enum Permission { admin, employee, customer };
+    public enum Permission { admin, employee };
     public class DTO_LoginData
     {
         private static DTO_LoginData instance;
@@ -26,7 +26,7 @@
         {
             username = null;
             password = null;
-            permission = Permission.customer;
+            permission = Permission.employee;
         }
     }
 

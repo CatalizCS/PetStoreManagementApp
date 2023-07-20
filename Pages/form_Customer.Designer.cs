@@ -333,7 +333,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.search;
-            pictureBox2.Location = new Point(414, 20);
+            pictureBox2.Location = new Point(517, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(29, 23);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -342,10 +342,11 @@
             // 
             // searchBar
             // 
-            searchBar.Location = new Point(183, 20);
+            searchBar.Location = new Point(286, 12);
             searchBar.Name = "searchBar";
             searchBar.Size = new Size(225, 23);
             searchBar.TabIndex = 6;
+            searchBar.TextChanged += searchBar_TextChanged;
             // 
             // panel1
             // 
@@ -366,7 +367,7 @@
             label_All.AutoSize = true;
             label_All.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
             label_All.ForeColor = Color.White;
-            label_All.Location = new Point(54, 114);
+            label_All.Location = new Point(76, 116);
             label_All.Name = "label_All";
             label_All.Size = new Size(65, 37);
             label_All.TabIndex = 8;
@@ -379,20 +380,20 @@
             label_Allproduct.ForeColor = Color.White;
             label_Allproduct.Location = new Point(21, 95);
             label_Allproduct.Name = "label_Allproduct";
-            label_Allproduct.Size = new Size(100, 21);
+            label_Allproduct.Size = new Size(132, 21);
             label_Allproduct.TabIndex = 7;
-            label_Allproduct.Text = "all products";
+            label_Allproduct.Text = "Total Customers";
             // 
             // label_Ware
             // 
             label_Ware.AutoSize = true;
             label_Ware.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label_Ware.ForeColor = Color.White;
-            label_Ware.Location = new Point(26, 489);
+            label_Ware.Location = new Point(31, 489);
             label_Ware.Name = "label_Ware";
-            label_Ware.Size = new Size(109, 28);
+            label_Ware.Size = new Size(96, 28);
             label_Ware.TabIndex = 1;
-            label_Ware.Text = "Warehouse";
+            label_Ware.Text = "Customer";
             // 
             // pictureBox1
             // 
@@ -409,11 +410,11 @@
             label_OverView.AutoSize = true;
             label_OverView.Font = new Font("Montserrat", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label_OverView.ForeColor = Color.White;
-            label_OverView.Location = new Point(21, 33);
+            label_OverView.Location = new Point(21, 49);
             label_OverView.Name = "label_OverView";
-            label_OverView.Size = new Size(127, 29);
+            label_OverView.Size = new Size(120, 29);
             label_OverView.TabIndex = 0;
-            label_OverView.Text = "Over View";
+            label_OverView.Text = "OverView";
             // 
             // form_Customer
             // 

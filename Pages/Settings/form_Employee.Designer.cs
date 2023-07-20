@@ -52,13 +52,13 @@
             label9 = new Label();
             label11 = new Label();
             label10 = new Label();
-            confirmPass_Textbox = new TextBox();
             label8 = new Label();
-            newpass_Textbox = new TextBox();
             permission_Textbox = new TextBox();
             username_Textbox = new TextBox();
             cancel_Button = new Libs.BetterButton();
             save_Button = new Libs.BetterButton();
+            newPassword_Textbox = new TextBox();
+            confirmPassword_Textbox = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)avatar_Image).BeginInit();
             panel3.SuspendLayout();
@@ -93,6 +93,7 @@
             changeAvater_Button.Text = "Change";
             changeAvater_Button.TextColor = Color.White;
             changeAvater_Button.UseVisualStyleBackColor = false;
+            changeAvater_Button.Click += changeAvater_Button_Click;
             // 
             // avatar_Image
             // 
@@ -246,13 +247,13 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(confirmPassword_Textbox);
+            panel4.Controls.Add(newPassword_Textbox);
             panel4.Controls.Add(panel6);
             panel4.Controls.Add(label9);
             panel4.Controls.Add(label11);
             panel4.Controls.Add(label10);
-            panel4.Controls.Add(confirmPass_Textbox);
             panel4.Controls.Add(label8);
-            panel4.Controls.Add(newpass_Textbox);
             panel4.Controls.Add(permission_Textbox);
             panel4.Controls.Add(username_Textbox);
             panel4.Location = new Point(0, 271);
@@ -310,13 +311,6 @@
             label10.TabIndex = 1;
             label10.Text = "New password:";
             // 
-            // confirmPass_Textbox
-            // 
-            confirmPass_Textbox.Location = new Point(171, 121);
-            confirmPass_Textbox.Name = "confirmPass_Textbox";
-            confirmPass_Textbox.Size = new Size(170, 23);
-            confirmPass_Textbox.TabIndex = 2;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -326,13 +320,6 @@
             label8.Size = new Size(95, 21);
             label8.TabIndex = 1;
             label8.Text = "Username: ";
-            // 
-            // newpass_Textbox
-            // 
-            newpass_Textbox.Location = new Point(144, 83);
-            newpass_Textbox.Name = "newpass_Textbox";
-            newpass_Textbox.Size = new Size(203, 23);
-            newpass_Textbox.TabIndex = 2;
             // 
             // permission_Textbox
             // 
@@ -390,6 +377,26 @@
             save_Button.UseVisualStyleBackColor = false;
             save_Button.Click += save_Button_Click;
             // 
+            // newPassword_Textbox
+            // 
+            newPassword_Textbox.BackColor = Color.LightGray;
+            newPassword_Textbox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            newPassword_Textbox.Location = new Point(144, 82);
+            newPassword_Textbox.Name = "newPassword_Textbox";
+            newPassword_Textbox.PasswordChar = '*';
+            newPassword_Textbox.Size = new Size(197, 25);
+            newPassword_Textbox.TabIndex = 25;
+            // 
+            // confirmPassword_Textbox
+            // 
+            confirmPassword_Textbox.BackColor = Color.LightGray;
+            confirmPassword_Textbox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            confirmPassword_Textbox.Location = new Point(171, 121);
+            confirmPassword_Textbox.Name = "confirmPassword_Textbox";
+            confirmPassword_Textbox.PasswordChar = '*';
+            confirmPassword_Textbox.Size = new Size(170, 25);
+            confirmPassword_Textbox.TabIndex = 26;
+            // 
             // form_Employee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -446,10 +453,10 @@
         private TextBox username_Textbox;
         private Label label11;
         private Label label10;
-        private TextBox confirmPass_Textbox;
-        private TextBox newpass_Textbox;
         private TextBox permission_Textbox;
         private Libs.BetterButton cancel_Button;
         private Libs.BetterButton save_Button;
+        private TextBox newPassword_Textbox;
+        private TextBox confirmPassword_Textbox;
     }
 }

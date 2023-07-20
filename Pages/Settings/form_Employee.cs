@@ -52,22 +52,22 @@ namespace PetStoreManagementApp.Pages
             DTO_UserInfo.Instance.PhoneNumber = phoneNumber_Textbox.Text == null ? DTO_UserInfo.Instance.PhoneNumber : phoneNumber_Textbox.Text;
             DTO_UserInfo.Instance.Notes = notes_Textbox.Text == null ? DTO_UserInfo.Instance.Notes : notes_Textbox.Text;
 
-            if (newpass_Textbox.Text != "" || confirmPass_Textbox.Text != "")
+            if (newPassword_Textbox.Text != "" || confirmPassword_Textbox.Text != "")
             {
-                if (!RegexChecker.Instance.IsValidUsername(newpass_Textbox.Text))
+                if (!RegexChecker.Instance.IsValidUsername(newPassword_Textbox.Text))
                 {
                     new CustomMessageBox("Password must be at least 8 characters, including letters, numbers and special characters!").ShowDialog();
                     return;
                 }
 
-                if (newpass_Textbox.Text != confirmPass_Textbox.Text)
+                if (newPassword_Textbox.Text != confirmPassword_Textbox.Text)
                 {
                     new CustomMessageBox("Confirm password does not match!").ShowDialog();
                     return;
                 }
 
                 string updatePass = "UPDATE LoginData SET " +
-                    "Password = '" + newpass_Textbox.Text + "' WHERE Username = '" + DTO_LoginData.Instance.username + "'";
+                    "Password = '" + newPassword_Textbox.Text + "' WHERE Username = '" + DTO_LoginData.Instance.username + "'";
 
                 if (DatabaseConnection.Instance.Execute(updatePass))
                 {
@@ -105,6 +105,40 @@ namespace PetStoreManagementApp.Pages
                 return;
             }
 
+        }
+
+        private void changeAvater_Button_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string sourcePath = openFileDialog.FileName;
+                string extension = Path.GetExtension(sourcePath);
+                string fileName = Path.GetRandomFileName();
+                fileName = fileName.Split('.')[0];
+
+                try
+                {
+                    string destinationPath = Path.Combine(Form_Loader.avatarPath.fullPath, fileName + extension);
+                    Console.WriteLine(destinationPath.ToString());
+                    File.Copy(sourcePath, destinationPath, true);
+                    DTO_UserInfo.Instance.AvatarURL = fileName + extension;
+                    string query = "UPDATE Employee_InfoData SET AvatarURL = '" + fileName + extension + "' WHERE ID = '" + DTO_UserInfo.Instance.ID + "'";
+
+                    DatabaseConnection.Instance.ExecuteQuery(query);
+
+                    avatar_Image.Image = Image.FromFile(destinationPath);
+                    new CustomMessageBox("Cập nhật ảnh đại diện thành công").ShowDialog();
+                }
+                catch (Exception error)
+                {
+                    Console.WriteLine(error.Message);
+                    new CustomMessageBox("Cập nhật ảnh đại diện thất bại").ShowDialog();
+                    return;
+                }
+            }
         }
     }
 }

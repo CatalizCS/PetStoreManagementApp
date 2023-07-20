@@ -1,6 +1,7 @@
 ﻿using PetStoreManagementApp.Dialogs;
 using PetStoreManagementApp.Libs;
 using PetStoreManagementApp.Libs.DTO;
+using PetStoreManagementApp.Pages.Forms;
 using System.Runtime.InteropServices;
 
 namespace PetStoreManagementApp.Auths
@@ -35,7 +36,7 @@ namespace PetStoreManagementApp.Auths
             // check username and password empty or not validate
             if (usernameText == "" || passwordText == "")
             {
-                MessageBox.Show("Please enter username and password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                new CustomMessageBox("Please enter username and password!").ShowDialog();
                 password.Text = "";
                 username.Focus();
                 return;
@@ -43,7 +44,7 @@ namespace PetStoreManagementApp.Auths
 
             if (!RegexChecker.Instance.IsValidUsername(usernameText) || !RegexChecker.Instance.IsValidPassword(passwordText))
             {
-                MessageBox.Show("Username or password is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                new CustomMessageBox("Username or password is invalid!").ShowDialog();
                 password.Text = "";
                 username.Focus();
                 return;
@@ -61,8 +62,8 @@ namespace PetStoreManagementApp.Auths
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                MessageBox.Show("Username or password is incorrect!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+                new CustomMessageBox("Username or password is incorrect!").ShowDialog();
                 password.Text = "";
                 username.Focus();
                 return;

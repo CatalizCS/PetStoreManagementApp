@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Login));
             panel1 = new Panel();
             label3 = new Label();
             label2 = new Label();
@@ -205,6 +206,7 @@
             password.ForeColor = Color.FromArgb(169, 134, 115);
             password.Location = new Point(33, 198);
             password.Name = "password";
+            password.PasswordChar = '*';
             password.Size = new Size(237, 16);
             password.TabIndex = 1;
             password.TextChanged += password_TextChanged;
@@ -266,9 +268,10 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "form_Login";
+            Text = "PetStoreManagement - Login";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

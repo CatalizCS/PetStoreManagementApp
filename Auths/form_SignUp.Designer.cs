@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_SignUp));
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel_Continue = new Panel();
             textBox_Age = new TextBox();
@@ -460,6 +461,7 @@
             textBox_Pass.ForeColor = Color.FromArgb(169, 134, 115);
             textBox_Pass.Location = new Point(41, 220);
             textBox_Pass.Name = "textBox_Pass";
+            textBox_Pass.PasswordChar = '*';
             textBox_Pass.PlaceholderText = "Password";
             textBox_Pass.Size = new Size(248, 16);
             textBox_Pass.TabIndex = 7;
@@ -562,9 +564,10 @@
             Controls.Add(flowLayoutPanel1);
             Controls.Add(flowLayoutPanel2);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_SignUp";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "form_SignUp";
+            Text = "PetStoreManagement - SignUp";
             Load += form_SignUp_Load;
             flowLayoutPanel1.ResumeLayout(false);
             panel_Continue.ResumeLayout(false);

@@ -83,7 +83,7 @@
             label_All.AutoSize = true;
             label_All.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
             label_All.ForeColor = Color.White;
-            label_All.Location = new Point(54, 114);
+            label_All.Location = new Point(70, 114);
             label_All.Name = "label_All";
             label_All.Size = new Size(65, 37);
             label_All.TabIndex = 8;
@@ -94,7 +94,7 @@
             label_Allproduct.AutoSize = true;
             label_Allproduct.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label_Allproduct.ForeColor = Color.White;
-            label_Allproduct.Location = new Point(21, 95);
+            label_Allproduct.Location = new Point(26, 93);
             label_Allproduct.Name = "label_Allproduct";
             label_Allproduct.Size = new Size(100, 21);
             label_Allproduct.TabIndex = 7;
@@ -105,7 +105,7 @@
             label_Ware.AutoSize = true;
             label_Ware.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label_Ware.ForeColor = Color.White;
-            label_Ware.Location = new Point(26, 489);
+            label_Ware.Location = new Point(27, 489);
             label_Ware.Name = "label_Ware";
             label_Ware.Size = new Size(109, 28);
             label_Ware.TabIndex = 1;
@@ -114,7 +114,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(41, 444);
+            pictureBox1.Location = new Point(42, 444);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(80, 42);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@
             label_OverView.AutoSize = true;
             label_OverView.Font = new Font("Montserrat", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label_OverView.ForeColor = Color.White;
-            label_OverView.Location = new Point(21, 33);
+            label_OverView.Location = new Point(21, 49);
             label_OverView.Name = "label_OverView";
             label_OverView.Size = new Size(127, 29);
             label_OverView.TabIndex = 0;
@@ -145,7 +145,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.search;
-            pictureBox2.Location = new Point(248, 20);
+            pictureBox2.Location = new Point(514, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(29, 23);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -154,7 +154,7 @@
             // 
             // searchBar
             // 
-            searchBar.Location = new Point(17, 20);
+            searchBar.Location = new Point(283, 12);
             searchBar.Name = "searchBar";
             searchBar.Size = new Size(225, 23);
             searchBar.TabIndex = 6;
@@ -259,9 +259,9 @@
             // 
             ID_Textbox.BackColor = Color.LightGray;
             ID_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ID_Textbox.Location = new Point(95, 12);
+            ID_Textbox.Location = new Point(137, 12);
             ID_Textbox.Name = "ID_Textbox";
-            ID_Textbox.Size = new Size(151, 23);
+            ID_Textbox.Size = new Size(69, 23);
             ID_Textbox.TabIndex = 35;
             // 
             // comboBox_ID
@@ -269,77 +269,77 @@
             comboBox_ID.BackColor = Color.LightGray;
             comboBox_ID.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox_ID.FormattingEnabled = true;
-            comboBox_ID.Location = new Point(252, 12);
+            comboBox_ID.Location = new Point(238, 12);
             comboBox_ID.Name = "comboBox_ID";
-            comboBox_ID.Size = new Size(142, 23);
+            comboBox_ID.Size = new Size(81, 23);
             comboBox_ID.TabIndex = 34;
             // 
             // label_ID
             // 
             label_ID.AutoSize = true;
-            label_ID.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label_ID.Location = new Point(17, 15);
+            label_ID.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_ID.Location = new Point(86, 9);
             label_ID.Name = "label_ID";
-            label_ID.Size = new Size(18, 15);
+            label_ID.Size = new Size(36, 25);
             label_ID.TabIndex = 33;
-            label_ID.Text = "ID";
+            label_ID.Text = "ID:";
             // 
             // price_Textbox
             // 
             price_Textbox.BackColor = Color.LightGray;
             price_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            price_Textbox.Location = new Point(95, 93);
+            price_Textbox.Location = new Point(137, 93);
             price_Textbox.Name = "price_Textbox";
-            price_Textbox.Size = new Size(151, 23);
+            price_Textbox.Size = new Size(182, 23);
             price_Textbox.TabIndex = 32;
             // 
             // quantity_Textbox
             // 
             quantity_Textbox.BackColor = Color.LightGray;
             quantity_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            quantity_Textbox.Location = new Point(95, 64);
+            quantity_Textbox.Location = new Point(137, 64);
             quantity_Textbox.Name = "quantity_Textbox";
-            quantity_Textbox.Size = new Size(151, 23);
+            quantity_Textbox.Size = new Size(182, 23);
             quantity_Textbox.TabIndex = 31;
             // 
             // name_Textbox
             // 
             name_Textbox.BackColor = Color.LightGray;
             name_Textbox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            name_Textbox.Location = new Point(95, 37);
+            name_Textbox.Location = new Point(137, 35);
             name_Textbox.Name = "name_Textbox";
-            name_Textbox.Size = new Size(151, 23);
+            name_Textbox.Size = new Size(182, 23);
             name_Textbox.TabIndex = 30;
             // 
             // label_Price
             // 
             label_Price.AutoSize = true;
-            label_Price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label_Price.Location = new Point(17, 96);
+            label_Price.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Price.Location = new Point(55, 90);
             label_Price.Name = "label_Price";
-            label_Price.Size = new Size(38, 15);
+            label_Price.Size = new Size(59, 25);
             label_Price.TabIndex = 29;
-            label_Price.Text = "PRICE";
+            label_Price.Text = "Price:";
             // 
             // label_Quantity
             // 
             label_Quantity.AutoSize = true;
-            label_Quantity.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label_Quantity.Location = new Point(17, 67);
+            label_Quantity.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Quantity.Location = new Point(30, 61);
             label_Quantity.Name = "label_Quantity";
-            label_Quantity.Size = new Size(63, 15);
+            label_Quantity.Size = new Size(92, 25);
             label_Quantity.TabIndex = 28;
-            label_Quantity.Text = "QUANTITY";
+            label_Quantity.Text = "Quantity:";
             // 
             // label_Name
             // 
             label_Name.AutoSize = true;
-            label_Name.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label_Name.Location = new Point(17, 40);
+            label_Name.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label_Name.Location = new Point(55, 32);
             label_Name.Name = "label_Name";
-            label_Name.Size = new Size(41, 15);
+            label_Name.Size = new Size(67, 25);
             label_Name.TabIndex = 27;
-            label_Name.Text = "NAME";
+            label_Name.Text = "Name:";
             // 
             // panel4
             // 

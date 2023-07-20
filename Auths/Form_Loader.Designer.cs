@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Loader));
             pictureBox1 = new PictureBox();
             loadingBar = new CircularProgressBar.CircularProgressBar();
             label1 = new Label();
@@ -121,6 +122,7 @@
             Controls.Add(loadingBar);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form_Loader";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PetStoreManagement - Loading";
